@@ -1,0 +1,1000 @@
+ 1013  tar -xjvf /tmp/firefox-4.0b11.tar.bz2 
+ 1014  cd tmp
+ 1015  ls
+ 1016  ls -l
+ 1017  cd ..
+ 1018  cd firefox/
+ 1019  ls
+ 1020  cd ..
+ 1021  ls firefox/ -l
+ 1022  cd firefox/
+ 1023  bash run-mozilla.sh 
+ 1024  bash firefox
+ 1025  bash firefox-bin 
+ 1026  sudo touch /etc/default/google-chrome 
+ 1027  sudo touch /etc/default/
+ 1028  sudo touch /etc/default/google-talkplugin 
+ 1029  ping
+ 1030  ping 192.168.1.1
+ 1031  iconfig
+ 1032  ifconfig
+ 1033  lspi
+ 1034  lspci
+ 1035  dhclient
+ 1036  sudo dhclient
+ 1037  sudo dhclient3
+ 1038  lspci
+ 1039  sudo dhclient eth0
+ 1040  ping 192.168.254.254
+ 1041  sudo /etc/init.d/networking restart
+ 1042  ping -c 3 -W 10 ubuntu.com
+ 1043  ifconfig 
+ 1044  gnome-config
+ 1045  editconf
+ 1046  sudo apt-get upgrade google-chrome
+ 1047  sudo apt-get upgrade --help
+ 1048  sudo apt-get dist-upgrade 
+ 1049  panel-test-applets 
+ 1050  appletviewer 
+ 1051  bpython 
+ 1052  cd workspace1/BasicoExemploProcessing/Learning_Processing_A_Beginners_Guide_t_Programming_Images_Animation_and_Interaction/
+ 1053  ls
+ 1054  cd Intersection/
+ 1055  ls
+ 1056  geany Intersection.html Intersection.pjs 
+ 1057  ls
+ 1058  cd workspace1/BasicoExemploProcessing/Learning_Processing_A_Beginners_Guide_t_Programming_Images_Animation_and_Interaction/
+ 1059  ls
+ 1060  cd..
+ 1061  cd ..
+ 1062  ls
+ 1063  gedit processing-1.0.0.js 
+ 1064  cd Learning_Processing_A_Beginners_Guide_t_Programming_Images_Animation_and_Interaction/
+ 1065  ls
+ 1066  cd CatcherMouse/
+ 1067  ls
+ 1068  geany catcher_mouse.pjs 
+ 1069  wget https://disciplinas.dcc.ufba.br/pub/MATA64/SemestreCorrente/2009-2_-_IA_-_Planejamento.pdf
+ 1070  view 2009-2_-_IA_-_Planejamento.pdf 
+ 1071  gnome-op 2009-2_-_IA_-_Planejamento.pdf 
+ 1072  gnome-open 2009-2_-_IA_-_Planejamento.pdf 
+ 1073  sudo apt-get install git
+ 1074  sudo apt-get install mercurial
+ 1075  sudo apt-get install mercurial-git 
+ 1076  git
+ 1077  [A
+ 1078  sudo apt-get install git-core 
+ 1079  git-doc
+ 1080  sudo apt-get install git-core 
+ 1081  sudo apt-get install git-doc
+ 1082  find .pdf
+ 1083  find *.pdf
+ 1084  gnome-open 2009-2_-_IA_-_Planejamento.pdf 
+ 1085  globaltime 
+ 1086  mendeleydesktop 
+ 1087  gnome-open 2009-2_-_IA_-_Planejamento.pdf 
+ 1088  bpython 
+ 1089  cd Downloads/
+ 1090  tar -xfv thrift-b1139424416009c980a9634c44f2806f469f8c1c.tar.gz 
+ 1091  tar -xfz thrift-b1139424416009c980a9634c44f2806f469f8c1c.tar.gz 
+ 1092  tar -xfr thrift-b1139424416009c980a9634c44f2806f469f8c1c.tar.gztar.gz 
+ 1093  cd Downloads/
+ 1094  apt-cache search 3g
+ 1095  tar -xvf thrift-b1139424416009c980a9634c44f2806f469f8c1c.tar.gz 
+ 1096  cd ..
+ 1097  eclipse -data workspace
+ 1098  sudo apt-get update mendeley
+ 1099  sudo apt-get update 
+ 1100  sudo apt-get install mendeleydesktop 
+ 1101  gitg
+ 1102  sudo apt-get install geogebra
+ 1103  git config --global user.name "Nielson"
+ 1104  git --htlp
+ 1105  git --help
+ 1106  git commit 
+ 1107  git commit -h
+ 1108  git fetch -h
+ 1109  git sta -h
+ 1110  git status  -h
+ 1111  git stash  -h
+ 1112  git -h
+ 1113  cd workspace/
+ 1114  mkdir imat
+ 1115  cd imat/
+ 1116  git init
+ 1117  touch README
+ 1118  git add README 
+ 1119  git status
+ 1120  git commit -m 'first commit'
+ 1121  git remote add origin git@github.com:Nielson/imat.git
+ 1122  git push origion master
+ 1123  git push origin master
+ 1124  git --global user.name "Nielson"
+ 1125  git config --global user.name "Nielson"
+ 1126  git config --global user.email nielsonnas@gmail.com
+ 1127  git push  origin master
+ 1128  git config --global user.email nielsonsport@gmail.com
+ 1129  git push  origin master
+ 1130  git config --global user.name "Nielson Santana"
+ 1131  git push  origin master
+ 1132  git push origin master
+ 1133  cd ~/.ssh/
+ 1134  ls
+ 1135  mkdir key_backup
+ 1136  ls
+ 1137  ls known_hosts 
+ 1138  vim known_hosts
+ 1139  ssh-keygen -t rsa -C "nielsonnas@gmail.com"
+ 1140  ssh-keygen -t rsa -C "nielsonsport@gmail.com"
+ 1141  ssh-keygen -t rsa -C "nielsonnas@gmail.com"
+ 1142  ssh-keygen -t rsa -C "nielsonnas@gmail.com"
+ 1143  ssh-add
+ 1144  ssh-keygen -t rsa -C "nielsonsport@gmail.com"
+ 1145  ssh-add id_rsa
+ 1146  ssh-keygen -t rsa -C "nielsonnas@gmail.com"
+ 1147  ssh-add id_rsa
+ 1148  cd ~/Downloads/
+ 1149  rm *.ico
+ 1150  ls
+ 1151  bpython 
+ 1152  cd workspace/imat/
+ 1153  ls
+ 1154  git push origin master 
+ 1155  git config --global user.email nielsonnas@gmail.com
+ 1156  git push origin master 
+ 1157  git config --global user.name "nielson"
+ 1158  git push origin master 
+ 1159  ssh git@github.com
+ 1160  git config --global user.email nielsonsport@gmail.com
+ 1161  ssh git@github.com
+ 1162  git config --global user.email nielsonnas@gmail.com
+ 1163  ssh git@github.com
+ 1164  git push origin master 
+ 1165  cd workspace/
+ 1166  mkdir pug_challenge
+ 1167  mkdir pugpe_challenge
+ 1168  rm pug_challenge/
+ 1169  rm pug_challenge
+ 1170  rm -rf pug_challenge
+ 1171  cd pugpe_challenge/
+ 1172  git clone git@github.com:Nielson/pugpe_challenge.git
+ 1173  ls
+ 1174  cd ..
+ 1175  mv pugpe_challenge/ pugpe_challenge1
+ 1176  cp pugpe_challenge1/pugpe_challenge 
+ 1177  cp pugpe_challenge1/pugpe_challenge ~/workspace/
+ 1178  cp pugpe_challenge1/pugpe_challenge/ ~/workspace/
+ 1179  cp -rf  pugpe_challenge1/pugpe_challenge/ ~/workspace/
+ 1180  ls
+ 1181  ls pugpe_challenge
+ 1182  rm -rf pugpe_challenge1
+ 1183  cd pugpe_challenge/
+ 1184  ls
+ 1185  ls -h
+ 1186  ls -i
+ 1187  ls
+ 1188  ls -l
+ 1189  git remote add upstream git@github.com:Nielson/pugpe_challenge.git
+ 1190  git fetch upstream
+ 1191  git commit -a -m "Resposta Nielson"
+ 1192  git push origin master
+ 1193  cd workspace/
+ 1194  ls
+ 1195  cd imat/
+ 1196  ls
+ 1197  ls -r
+ 1198  ls -R
+ 1199  vim README 
+ 1200  ls
+ 1201  eclipse ~/workspace/
+ 1202  rm -rf ~/workspace1
+ 1203  ls
+ 1204  eclipse -data ~/workspace/
+ 1205  ls -R
+ 1206  rm *.js   ~/Desktop/
+ 1207  rm *.js ~/Desktop/
+ 1208  rm *.js ~/Desktop
+ 1209  rm ~/Desktop/*.js
+ 1210  cd workspace/
+ 1211  cd imat/
+ 1212  ls
+ 1213  rm processing-0.7.min.js 
+ 1214  rm processing-0.9.1.min.js 
+ 1215  ls -R paginas/
+ 1216  geany paginas/in
+ 1217  geany paginas/InsertionSort.html 
+ 1218  cd workspace/orderanim/
+ 1219  ls OrderAnim/ -l
+ 1220  ls OrderAnim/ -l -R
+ 1221  ls -l -R OrderAnim/
+ 1222  ls -R OrderAnim/
+ 1223  cd ../BasicoExemploProcessing/
+ 1224  ls
+ 1225  geany MovendoColuna/movimento.pjs 
+ 1226  cd Desktop/
+ 1227  wget http://wwwp.fc.unesp.br/~mauri/Down/Winmatpr.pdf
+ 1228  wget http://inf.unisul.br/~ines/workcomp/cd/pdfs/2378.pdf
+ 1229  wget http://tecnologiasnaeducacao.pro.br/revista/a1n1/art14.pdf
+ 1230  cp *.pdf Ler\ Artigos/
+ 1231  cp ~/Desktop/*.pdf Ler\ Artigos/
+ 1232  ls
+ 1233  cp ~/Desktop/*.pdf "Ler\ Artigos"
+ 1234  cp ~/Desktop/*.pdf "Ler  Artigos"
+ 1235  cp ~/Desktop/*.pdf "Ler Artigos"
+ 1236  ls
+ 1237  mv *.pdf "Ler Artigos"
+ 1238  ls
+ 1239  cd Desktop/Ler\ Artigos/
+ 1240  wget ftp://ftp-acd.puc-campinas.edu.br/pub/professores/ceatec/lombardo/Prat_Excel_2010/FerreiraPenereiroCoradi_CIEM.pdf
+ 1241  wget http://www.uel.br/revistas/uel/index.php/antiteses/article/view/4415
+ 1242  ls
+ 1243  gnome-open 4415 
+ 1244  wget http://www.uel.br/revistas/uel/index.php/antiteses/article/view/4415/5657
+ 1245  gnome-open 5657 
+ 1246  gnome-open http://tecnologiasnaeducacao.pro.br/revista/a1n1/art14.pdf
+ 1247  wget http://tecnologiasnaeducacao.pro.br/revista/a1n1/art14.pdf
+ 1248  cd workspace/pugpe_challenge/
+ 1249  geany desafio_20110211/desafio.py
+ 1250  cd ../../Desktop/ ; httrack http://gettingreal.37signals.com/GR_por.php
+ 1251  cd Ensino\ MAtemática/
+ 1252  wget http://gepete.zionsoft.com.br/downloads/educacao_matematica.pdf
+ 1253  wget http://www.springerlink.com/content/x567j100820j3338/fulltext.pdf
+ 1254  wget Desktop/Ensino\ MAtemática/ http://www.springerlink.com/content/x567j100820j[B3338/fulltext.pdf
+ 1255  cd Desktop/Ensino\ MAtemática/
+ 1256  ls
+ 1257  wget http://www.fae.ufmg.br/ebrapem/completos/06-10.pdf
+ 1258  wget http://www.youblisher.com/files/publications/8/47851/pdf.pdf
+ 1259  ls
+ 1260  cd workspace/imat/
+ 1261  ls
+ 1262  cd ../
+ 1263  cd BasicoExemploProcessing/docProcessingjs/
+ 1264  ls
+ 1265  cd processingjs.org/
+ 1266  cd blog/
+ 1267  ls ../source/
+ 1268  cd workspace/BasicoExemploProcessing/
+ 1269  ls
+ 1270  cd MovendoColuna/
+ 1271  ls
+ 1272  21
+ 1273  ls
+ 1274  google-chrome movimento.html 
+ 1275  nautilus *
+ 1276  nautilus 
+ 1277  cd ..
+ 1278  mkdir docProcessingjs
+ 1279  cd docProcessingjs/
+ 1280  httrack http://processingjs.org/
+ 1281  httrack --help
+ 1282  httrack --continue
+ 1283  cd workspace/BasicoExemploProcessing/docProcessingjs/
+ 1284  httrack --continue
+ 1285  httrack http://processingjs.org/reference
+ 1286  cd Downloads/
+ 1287  ls
+ 1288  rm WikiToSpeech.apk 
+ 1289  killall chrome 
+ 1290  killall nautilus 
+ 1291  killall geany 
+ 1292  logout 
+ 1293  sudo logout 
+ 1294  exit
+ 1295  sudo killall gnome-session 
+ 1296  cd workspace/BasicoExemploProcessing/MovendoColuna/
+ 1297  ls
+ 1298  google-chrome movimento.html 
+ 1299  geany movimento.pjs 
+ 1300  cd workspace/BasicoExemploProcessing/MovendoColuna/
+ 1301  geany *
+ 1302  cd Desktop/Ensino\ MAtemática/
+ 1303  httrack http://limc.ufrj.br/htem4/papers/53.pdf
+ 1304  cd ~/workspace/imat/
+ 1305  ls
+ 1306  ls -R
+ 1307  cd paginas/
+ 1308  rm HeapSort.html QuickSort.html MergeSort.html 
+ 1309  ls
+ 1310  cd ..
+ 1311  ls -R
+ 1312  git add README 
+ 1313  vim index
+ 1314  vim index.html 
+ 1315  ls
+ 1316  git add EsbocoFerramentadeensinodeMatrizes.doc
+ 1317  git commit -a -m "Adicionei um esbolço de como poderá ser o design da ferramenta."
+ 1318  git push origin master 
+ 1319  cd Desktop/Ensino\ MAtemática/
+ 1320  ls
+ 1321  ls limc.ufrj.br/
+ 1322  ls limc.ufrj.br/htem4/
+ 1323  ls limc.ufrj.br/htem4/papers/
+ 1324  ls limc.ufrj.br/htem4/papers/rm hts-cache/
+ 1325  ls limc.ufrj.br/htem4/papers/rm -RF hts-cache/
+ 1326  ls limc.ufrj.br/htem4/papers/rm -rf hts-cache/
+ 1327  rm -rf hts-cache/
+ 1328  rm -rf limc.ufrj.br/
+ 1329  ls
+ 1330  wget http://limc.ufrj.br/htem4/papers/53.pdf
+ 1331  wget http://www.dominiopublico.gov.br/download/texto/cp027981.pdf
+ 1332  gnome-open cp027981.pdf 
+ 1333  apvlv 
+ 1334  killall apt-get 
+ 1335  sudo killall apt-get 
+ 1336  sudo dpkg --configure -a
+ 1337  cd workspace/imat/
+ 1338  mv matriz.js  matriz.pjs
+ 1339  vim matriz.pjs 
+ 1340  mv matriz.pjs  matriz.js
+ 1341  vim matriz.pjs 
+ 1342  vim matriz.js 
+ 1343  gnome-text-editor 
+ 1344  killall get
+ 1345  killall GET
+ 1346  sudo killall apt-get 
+ 1347  sudo killall update-notifier 
+ 1348  cd Downloads/Softwares\ Ensino\ Matemática/
+ 1349  wget http://objetoseducacionais2.mec.gov.br/bitstream/handle/mec/15651/Calculo%20del%20determinante%20de%20una%20matriz%20por%20la%20regla%20de%20Sarrus.exe?sequence=1&o=d
+ 1350  wget http://objetoseducacionais2.mec.gov.br/bitstream/handle/mec/10457/ttoolpc.zip
+ 1351  wget http://objetoseducacionais2.mec.gov.br/bitstream/handle/mec/11809/Matrix%20multiplication.zip
+ 1352  wget http://recursostic.educacion.es//bancoimagenes/ArchivosAnimaciones/DVD01/CD01/185520_am_1.swf
+ 1353  ls
+ 1354  cd workspace/imat/
+ 1355  vim e
+ 1356  vim
+ 1357  cd workspace/imat/
+ 1358  vim 
+ 1359  cd workspace/pugpe_challenge/
+ 1360  ls
+ 1361  git clone  https://github.com/frenetic/pugpe_challenge.git
+ 1362  ls
+ 1363  cd pugpe_challenge/
+ 1364  ls
+ 1365  cd desafio_20110211/
+ 1366  ls
+ 1367  vim desafio.py 
+ 1368  sudo killall apt-get
+ 1369  sudo killall GET
+ 1370  gconf-editor 
+ 1371  rhythmbox -v
+ 1372  rhythmbox --help
+ 1373  rhythmbox --v
+ 1374  rhythmbox --help-all
+ 1375  sudo apt-get install xchat
+ 1376  cd workspace/pugpe_challenge/
+ 1377  ls
+ 1378  rm pugpe_challenge/
+ 1379  rm -r pugpe_challenge/
+ 1380  rm -rf pugpe_challenge/
+ 1381  ls
+ 1382  cd desafio_20110211/
+ 1383  vim desafio.py
+ 1384  bpython 
+ 1385  cd workspace/pugpe_challenge/
+ 1386  ls
+ 1387  ls desafio_20110211/
+ 1388  rm desafio_20110211/desafio.pyc 
+ 1389  ls desafio_20110211/
+ 1390  git push origin master 
+ 1391  git push origin test1
+ 1392  git commit -a -m "Adicionando uma nova função para a competição do pug-challenge."
+ 1393  git push origin master 
+ 1394  /etc/init.d/vboxdrv setup
+ 1395  sudo /etc/init.d/vboxdrv setup
+ 1396  cd workspace/
+ 1397  cd Desktop/Ensino\ MAtemática/; wget http://repository.alt.ac.uk/218/1/ALT_J_Vol4_No3_1996_Educational%20software%20design_%20A.pdf
+ 1398  wget http://www.ime.uerj.br/professores/neide/txt200352152926DEZ%20ETAPAS%20PARA%20O%20DESENVOLVIMENTO.pdf
+ 1399  apt-cache search html to pdf
+ 1400  apt-cache search "html to pdf"
+ 1401  sudo apt-get install wkhtmltopdf 
+ 1402  sudo apt-get install libqt4-webkit
+ 1403  sudo aptitude install libqt4-webkit
+ 1404  wget http://www.pdfonfly.com/pdfs/http___www.senac.br_BTS_222_boltec222d.htm.pdf
+ 1405  cd ~/Desktop/
+ 1406  wget http://www.ecid.com.br/demonstracao/Desenho/VideoAula/VideoDesenho/player.html
+ 1407  httrack http://www.ecid.com.br/demonstracao/Desenho/VideoAula/VideoDesenho/player.html
+ 1408  cd workspace/pugpe_challenge/luciano
+ 1409  mkdir workspace/pugpe_challenge/luciano
+ 1410  cd workspace/pugpe_challenge/luciano
+ 1411  git clone https://github.com/lucrodsilva/pugpe_challenge.gitc
+ 1412  cd ..
+ 1413  rm -rf luciano/
+ 1414  ls
+ 1415  git push origin master 
+ 1416  cd ../imat/
+ 1417  git commit -a -m "teste commit"
+ 1418  git push origin master 
+ 1419  git commit -a -m "teste commit"
+ 1420  git push origin master 
+ 1421  git config --global user.name "nielsonsantana"
+ 1422  git config --global user.email "nielsonnas@gmail.com"
+ 1423  git remote add origin git@github.com:nielsonsantana/imat.git
+ 1424  git remote rename origin git@github.com:nielsonsantana/imat.git
+ 1425  git remote rename git@github.com:nielsonsantana/imat.git
+ 1426  git remote rename git@github.com:nielsonsantana/imat.git  git@github.com:nielsonsantana/imat.git
+ 1427  git remote rename git@github.com:Nielson/imat.git  git@github.com:nielsonsantana/imat.git
+ 1428  git remote rename  git@github.com:Nielson/imat.git origin git@github.com:nielsonsantana/imat.git
+ 1429  git remote rename Nielson nielsonsantana
+ 1430  git remote rename git@github.com:Nielson/imat.git  git@github.com:nielsonsantana/imat.git
+ 1431  git remote rename "
+ 1432  git remote origi rm  git@github.com:Nielson/imat.git
+ 1433  git remote rm origin 
+ 1434  git remote add origin1 [core]
+ 1435  repositoryformatversion = 0
+ 1436  filemode = true
+ 1437  bare = false
+ 1438  logallrefupdates = true
+ 1439  [remote "origin"]
+ 1440  url = git@github.com:Nielson/imat.git
+ 1441  fetch = +refs/heads/*:refs/remotes/origin/*
+ 1442  git remote rm origin1
+ 1443  git remote add origin1 git@github.com:nielsonsantana/imat.git
+ 1444  git commit -a -m "Mudando o projeto de repositório"
+ 1445  git push origin1 master 
+ 1446  git config --global user.name "nielsonsantana"
+ 1447  git push origin1 master 
+ 1448  bpython 
+ 1449  top
+ 1450  cd workspace/pugpe_challenge/
+ 1451  cd ..
+ 1452  cp pugpe_challenge/ pugpe_challenge1
+ 1453  cp pugpe_challenge pugpe_challenge1
+ 1454  cp -rf pugpe_challenge pugpe_challenge1
+ 1455  ls
+ 1456  cd ..
+ 1457  ls
+ 1458  cd workspace/pugpe_challenge/
+ 1459  ls
+ 1460  cd ..
+ 1461  cp pugpe_challenge ~/pugpe_challenge1
+ 1462  cp /pugpe_challenge pugpe_challenge1
+ 1463  cp pugpe_challenge/ pugpe_challenge1
+ 1464  cp -rf pugpe_challenge/ pugpe_challenge1
+ 1465  ls
+ 1466  cd pugpe_challenge1
+ 1467  ls
+ 1468  ls pugpe_challenge/
+ 1469  rm -rf pugpe_challenge/
+ 1470  ls desafio_20110211/
+ 1471  cd ../pugpe_challenge
+ 1472  ls
+ 1473  cd .git/
+ 1474  ls
+ 1475  vim config 
+ 1476  cd ..
+ 1477  git remote rm origin 
+ 1478  git remote add origin git@github.com:nielsonsantana/pugpe_challenge.git
+ 1479  git fetch origin 
+ 1480  ls
+ 1481  ls desafio_20110211/
+ 1482  vim desafio_20110211/desafio.py 
+ 1483  git remote rm upstream 
+ 1484  git remote add upstream git@github.com:nielsonsantana/pugpe_challenge.git
+ 1485  git fetch upstream 
+ 1486  git merge upstream/master 
+ 1487  ls
+ 1488  cd desafio_2011021
+ 1489  cd desafio_20110219
+ 1490  ls
+ 1491  vim desafio.py 
+ 1492  python desafio.py 
+ 1493  vim desafio.py 
+ 1494  cd workspace/pugpe_challenge
+ 1495  vim .git/config 
+ 1496  cd ..
+ 1497  git clone https://github.com/jayferd/latexlive.git
+ 1498  ls -R latexlive
+ 1499  google-chrome latexlive/demo.html 
+ 1500  cd latexlive/old/
+ 1501  google-chrome demo.html 
+ 1502  cd ..
+ 1503  cd..
+ 1504  cd ..
+ 1505  rm latexlive/
+ 1506  git clone https://github.com/rafaelcaricio/pugpe_challenge.git
+ 1507  mkdir rafac;git clone https://github.com/rafaelcaricio/pugpe_challenge.git
+ 1508  mkdir rafac;cd rafac/; git clone https://github.com/rafaelcaricio/pugpe_challenge.git
+ 1509  ls
+ 1510  cd pugpe_challenge/
+ 1511  ls
+ 1512  cd desafio_20110211/
+ 1513  ls
+ 1514  vim desa
+ 1515  vim desafio.py 
+ 1516  cd workspace/pugpe_challenge/
+ 1517  ls
+ 1518  cd desafio_20110219
+ 1519  vim desafio.py 
+ 1520  cd ..
+ 1521  vim desafio_20110219/desafio.py 
+ 1522  git fetch upstream 
+ 1523  ls
+ 1524  vim desafio_20110219/desafio.py 
+ 1525  git fetch upstream 
+ 1526  vim desafio_20110219/desafio.py 
+ 1527  sudo shutdown -h 5:40
+ 1528  cd workspace/pugpe_challenge/desafio_20110219/
+ 1529  vim desafio.py 
+ 1530  vim ../desafio_20110211/desafio.py 
+ 1531  vim ../../rafac/pugpe_challenge/desafio_20110211/desafio.py 
+ 1532  vim desafio.py 
+ 1533  bpython 
+ 1534  cd workspace/pugpe_challenge
+ 1535  rm -rf ../pugpe_challenge1
+ 1536  ls
+ 1537  vim  desafio_20110219/
+ 1538  sudo apt-get install imagination
+ 1539  vim  workspace/pugpe_challenge/desafio_20110219/desafio.py 
+ 1540  bpython 
+ 1541  mv  Downloads/workshopmarcel-100312081537-phpapp02.pdf ~/Desktop/
+ 1542  rm Downloads/tec_projetos_mecanicos_organizacao_curricular.pdf 
+ 1543  vim  workspace/pugpe_challenge/desafio_20110219/desafio.py 
+ 1544  cd workspace/pugpe_challenge/
+ 1545  git merge upstream/master 
+ 1546  git status 
+ 1547  git stage
+ 1548  git stash
+ 1549  git --help
+ 1550  git pull upstream master 
+ 1551  git pull -s subtree desafio_20110219
+ 1552  git pull -s subtree upstream
+ 1553  git pull -s subtree upstream master
+ 1554  git merge FETCH_HEAD 
+ 1555  git pull -s subtree upstream testbranch
+ 1556  git remote add pug_pe https://github.com/pugpe/pugpe_challenge.git
+ 1557  git pull pug_pe master
+ 1558  git merge FETCH_HEAD 
+ 1559  bpython 
+ 1560  vim  workspace/pugpe_challenge/desafio_20110219/desafio.py 
+ 1561  bpython 
+ 1562  cd workspace/pugpe_challenge/
+ 1563  git commit -a -m "Minha solução para o II Desafio do PUG-Challenge."
+ 1564  git push origin master 
+ 1565  git commit -a -m "Modificação na função DFS_Recursive."
+ 1566  git push origin master 
+ 1567  cd ..
+ 1568  rm -rf quiz_logico/
+ 1569  cd quiz_logico/
+ 1570  ant devmode
+ 1571  ant build
+ 1572  dc ..
+ 1573  cd ..
+ 1574  cd gwtAppEngineTeste/
+ 1575  ant devmod
+ 1576  cd ..
+ 1577  cd ../MyDownloads/gwt-2.1.0/
+ 1578  ant build
+ 1579  ant build ../SmartGWT/
+ 1580  ant build ../SmartGWT
+ 1581  ant
+ 1582  ant build ../SmartGWT/Showcase/
+ 1583  ant build ../SmartGWT/Showcase/build.xml
+ 1584  ant build ../SmartGWT/Showcase
+ 1585  cd Desktop/
+ 1586  touch desafioMarcel.py
+ 1587  cd ../workspace/quiz_logico/
+ 1588  git init 
+ 1589  ls
+ 1590  rm -rf ../quiz_logico
+ 1591  cd ..
+ 1592  cd workspace/QuizLogico
+ 1593  help --youtube-dl
+ 1594  youtube-dl
+ 1595  cd Desktop/
+ 1596  http://www.youtube.com/user/ronaldoframos#p/c/6/cYYPGSS6NwA
+ 1597  youtube-dl http://www.youtube.com/user/ronaldoframos#p/c/6/cYYPGSS6NwA
+ 1598  youtube-dl http://www.youtube.com/user/ronaldoframos#p/c/51430F6C54953B73/6/cYYPGSS6NwA
+ 1599  apt-cache search youtube
+ 1600  apt-cache search youtube download
+ 1601  slimrat --h
+ 1602  slimrat --help
+ 1603  slimrat --address http://www.youtube.com/watch?v=zJ4c3AVGNv0
+ 1604  slimrat --man
+ 1605  nano
+ 1606  slimrat --help
+ 1607  slimrat --check http://www.youtube.com/watch?v=zJ4c3AVGNv0
+ 1608  cd workspace/
+ 1609  svn checkout http://latex-lab.googlecode.com/svn/trunk/ latex-lab-read-only
+ 1610  cd workspace/
+ 1611  cd latex-lab-read-only/
+ 1612  ls -R
+ 1613  mplayer Desktop/Video-0002.mp4 
+ 1614  faad ;
+ 1615  sudo apt-get remove acroread 
+ 1616  mplayer 
+ 1617  gmplayer -vo
+ 1618  gmplayer -vo help
+ 1619  apt-cache search edit config
+ 1620  gconf-editor 
+ 1621  cd Desktop/
+ 1622  cd ..
+ 1623  cd Downloads/
+ 1624  tar -xj amrwb-7.0.0.3.tar.bz2 
+ 1625  tar -xjvf amrwb-7.0.0.3.tar.bz2 
+ 1626  cd amrwb-7.0.0.3/
+ 1627  ./configure 
+ 1628  make
+ 1629  su make install
+ 1630  sudo make install
+ 1631  aplay
+ 1632  command
+ 1633  apt-cache search add application
+ 1634  apt-cache search add application gnome
+ 1635  apt-cache search application gnome
+ 1636  vim /etc/mplayer/mplayer.conf
+ 1637  vim /etc/mplayer/mplayer.conf 
+ 1638  sudo vim /etc/mplayer/mplayer.conf 
+ 1639  vim /home/nielson/.mplayer/gui.conf 
+ 1640  sudo vim /home/nielson/.mplayer/gui.conf 
+ 1641  sudo apt-cache search libdv
+ 1642  sudo apt-get install libdv4
+ 1643  sudo apt-get install libdvd0 
+ 1644  sudo apt-get install libopencore-amrnb0
+ 1645  sudo apt-get install libopencore-amrnb0-dbg 
+ 1646  sudo /etc/apt/sources.list.d/
+ 1647  sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
+ 1648  lsb_release 
+ 1649  lsb_release -cs
+ 1650  lsb_release -h
+ 1651  lsb_release -v
+ 1652  lsb_release -c
+ 1653  lsb_release -a
+ 1654  lsb_release -ca
+ 1655  lsb_release -as
+ 1656  sudo apt-get update 
+ 1657  sudo apt-get install libavcodec-extra-52 
+ 1658  cd Downloads/
+ 1659  cd amrwb-7.0.0.3/
+ 1660  su
+ 1661  sudo su
+ 1662  sudo make uninstall
+ 1663  sudo apt-get install vlc
+ 1664  apt-cache search picasa
+ 1665  sudo apt-get install dfo
+ 1666  sudo apt-get install openshot
+ 1667  sudo apt-get install 
+ 1668  sudo apt-get install emacs
+ 1669  sudo apt-get install jython
+ 1670  jython
+ 1671  jythonc --h
+ 1672  jythonc -h
+ 1673  cd workspace/
+ 1674  vim .project 
+ 1675  mv .project project 
+ 1676  ls
+ 1677  cd interpreter/
+ 1678  java -jar jython_installer-2.5.0.jar --help
+ 1679  java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t minimum -i src -j javaHome
+ 1680  java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t standard -e demo doc
+ 1681  java -jar jython_installer-2.5.0.jar --help
+ 1682  java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t standard -e demo doc -i src -j javaHome
+ 1683  sudo java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t standard -e demo doc -i src -j javaHome
+ 1684  java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t minimum -i src -j javaHome
+ 1685  rm -rf targetDirectory
+ 1686  sudo java -jar jython_installer-2.5.0.jar -s -d targetDirectory -t standard -e demo doc -i src -j javaHome
+ 1687  python
+ 1688  bpython 
+ 1689  geany -h
+ 1690  cd workspace/
+ 1691  cd ..
+ 1692  ls
+ 1693  python pyjamas-0.7/bootstrap.py /ateste
+ 1694  python pyjamas-0.7/bootstrap.py atest
+ 1695  python pyjamas-0.7/bootstrap.py pyjamas-0.7/atest
+ 1696  python pyjamas-0.7/bootstrap.py 
+ 1697  mv pyjamas-0.7 pyjamas
+ 1698  cd pyjamas/
+ 1699  python bootstrap.py 
+ 1700  ls bin/
+ 1701  export PATH=`pwp`/bin:$PATH
+ 1702  export PATH=`pwd`/bin:$PATH
+ 1703  ls -l
+ 1704  ls -l /bin/
+ 1705  ls -l bin/
+ 1706  ls -l -t bin/
+ 1707  cd .. && mkdir atestPyjama
+ 1708  ls
+ 1709  cd atestPyjama/
+ 1710  ls
+ 1711  pyjsbuild 
+ 1712  pyjsbuild helloword.py
+ 1713  mkdir hellword && touch helloword.py
+ 1714  ls
+ 1715  ls -R
+ 1716  lsls
+ 1717  ls
+ 1718  pyjsbuild helloword.py
+ 1719  ls -R
+ 1720  rm hellword/
+ 1721  rm-rf  hellword/
+ 1722  rm -rf  hellword/
+ 1723  rm -rf
+ 1724  touch helloword.py 
+ 1725  pyjsbuild helloword.py 
+ 1726  ls
+ 1727  mv ../../Downloads/build.sh 
+ 1728  mv ../../Downloads/build.sh ../atestPyjama/
+ 1729  ls
+ 1730  vim build.sh 
+ 1731  builtin 
+ 1732  ls
+ 1733  sh build.sh 
+ 1734  vim helloword.py 
+ 1735  vim http://pyjs.org/examples/splitpanel/SplitPanel.py
+ 1736  sh build.sh 
+ 1737  mv output/ HelloWord/
+ 1738  cd ..
+ 1739  cd TestesPyjama/HelloWord/
+ 1740  touch public
+ 1741  cd public
+ 1742  ls
+ 1743  rm public 
+ 1744  mkdir public
+ 1745  cd public/
+ 1746  touch helloword.css
+ 1747  cim helloword.css 
+ 1748  vim helloword.css 
+ 1749  ls
+ 1750  cd ..
+ 1751  ls
+ 1752  cd ..
+ 1753  ls
+ 1754  cp -rf HelloWord/ Helloword/
+ 1755  cp -rf HelloWord Helloword/
+ 1756  cp -rf HelloWord/* Helloword/
+ 1757  vim helloword/output/helloword.html 
+ 1758  apt-cache search w2p
+ 1759  cd workspace/
+ 1760  hg clone https://bitbucket.org/railcar88/pyjamas_blog
+ 1761  cd pyjamas_blog/
+ 1762  ls
+ 1763  bpython 
+ 1764  bpython pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_1/src" $options Blog
+ 1765  pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_1/src" $options Blog
+ 1766  ../pyjamas/bin/pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_1/src" $options Blog
+ 1767  cd media/
+ 1768  ../pyjamas/bin/pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_1/src" $options Blog
+ 1769  ../../pyjamas/bin/pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_1/src" $options Blog
+ 1770  cd workspace/bibliotecas/
+ 1771  ls
+ 1772  ls -l
+ 1773  rm -rf Django-1.2.3 Django-1.2.3 (2) 
+ 1774  rm -rf Django-1.2.3 "Django-1.2.3 (2)" 
+ 1775  ls
+ 1776  rm -rf "Django-1.2.3 (3)" 
+ 1777  ls
+ 1778  ls -l
+ 1779  chmod +x Django-1.2.3.tar.gz 
+ 1780  ls
+ 1781  ls -l
+ 1782  chmod 777 Django-1.2.3.tar.gz 
+ 1783  ls
+ 1784  ls -l
+ 1785  chmod +x Django-1.2.3.tar.gz 
+ 1786  ls -l
+ 1787  chmod 733 Django-1.2.3.tar.gz 
+ 1788  ls -l
+ 1789  chmod 711 Django-1.2.3.tar.gz 
+ 1790  ls -l
+ 1791  chmod 721 Django-1.2.3.tar.gz 
+ 1792  ls -l
+ 1793  chmod 741 Django-1.2.3.tar.gz 
+ 1794  ls -l
+ 1795  chmod 761 Django-1.2.3.tar.gz 
+ 1796  ls -l
+ 1797  chmod 71 Django-1.2.3.tar.gz 
+ 1798  ls -l
+ 1799  chmod 700 Django-1.2.3.tar.gz 
+ 1800  ls -l
+ 1801  chmod 700ls Django-1.2.3.tar.gz 
+ 1802  ls
+ 1803  ls -l
+ 1804  ls -h
+ 1805  ls --help
+ 1806  hg clone https://bitbucket.org/wkornewald/djangotoolbox
+ 1807  ls
+ 1808  rm django-nonrel
+ 1809  rm "django-nonrel"
+ 1810  rm `django-nonrel`
+ 1811  sudo rm `django-nonrel`
+ 1812  vim /home/nielson/workspace/bibliotecas/django-nonrel
+ 1813  rm -rf /home/nielson/workspace/bibliotecas/django-nonrel
+ 1814  ls
+ 1815  rm -rf /home/nielson/workspace/bibliotecas/django-nonrel
+ 1816  sudo rm -rf /home/nielson/workspace/bibliotecas/django-nonrel
+ 1817  killall nautilus 
+ 1818  ln --help
+ 1819  ln -s djangoappengine/ ../pyjamas_blog/
+ 1820  ln -s djangotoolbox/ ../pyjamas_blog/
+ 1821  cd ..
+ 1822  git clone  https://github.com/franciscosouza/gaeseries.git
+ 1823  top
+ 1824  cd Downloads/
+ 1825  cp rpc-hello ../workspace/
+ 1826  cp -fr rpc-hello ../workspace/
+ 1827  cd ../workspace/exemplos && git clone  https://github.com/kanarci/gwtgaedemo.git
+ 1828  mkdir exemplos && cd ../workspace/exemplos && git clone  https://github.com/kanarci/gwtgaedemo.git
+ 1829  rm -rf exemplo
+ 1830  rm -rf exemplos/
+ 1831  cd ../workspace/ && mkdir exemplos && cd exemplos  && git clone  https://github.com/kanarci/gwtgaedemo.git
+ 1832  vn checkout http://gwt-mvc-example.googlecode.com/svn/trunk/ gwt-mvc-example-read-only
+ 1833  svn checkout http://gwt-mvc-example.googlecode.com/svn/trunk/ gwt-mvc-example-read-only
+ 1834  cd workspace/pugpe_challenge/
+ 1835  git commit -a -m "Minha solução para o III desafio do PUG-PE"
+ 1836  git push origin master 
+ 1837  git pull origin master
+ 1838  geany desafio_20110227/desafio.py 
+ 1839  exit
+ 1840  vim  workspace/pugpe_challenge/desafio_20110227/desafio.py 
+ 1841  exit
+ 1842  bpython 
+ 1843  exit
+ 1844  top
+ 1845  cd workspace/
+ 1846  cd quizlogico/
+ 1847  git init 
+ 1848  git add src/
+ 1849  git status
+ 1850  git add src/
+ 1851  git status
+ 1852  git rm src/br/com/ufrpe/quizlogico/client/professor/AlunoPanel.java
+ 1853  git status
+ 1854  git rm src/br/com/ufrpe/quizlogico/client/aluno/AlunoPanel.java
+ 1855  git rm src/br/com/ufrpe/quizlogico/client/admin/AlunoPanel.java
+ 1856  git add src/
+ 1857  git status
+ 1858  git add 
+ 1859  git add .
+ 1860  git status
+ 1861  git rm war/WEB-INF/
+ 1862  git rm -r war/WEB-INF/
+ 1863  git rm -rf war/WEB-INF/
+ 1864  git status
+ 1865  cd workspace/quizlogico/
+ 1866  git remote add origin git@github.com:nielsonsantana/quiz_logico.git
+ 1867  touch README
+ 1868  vim README 
+ 1869  bpython 
+ 1870  pip pyjamas
+ 1871  pip install pyjamas
+ 1872  export PATH=~/workspace/google_appengine/appcfg.py:$PATH
+ 1873  export PATH=~/workspace/google_appengine/dev_appserver.py:$PATH
+ 1874  cd workspace/ExemplosAppEngine/
+ 1875  vim tasks/tasks.py 
+ 1876  ../google_appengine/dev_appserver.py tasks/
+ 1877  vim tasks/tasks.py 
+ 1878  ls -R
+ 1879  vim tasks/tasks.py 
+ 1880  ../google_appengine/dev_appserver.py tasks/
+ 1881  cd workspace/quizlogico/
+ 1882  ls
+ 1883  git status 
+ 1884  git add src/
+ 1885  git status --help
+ 1886  git status -h
+ 1887  git status -u
+ 1888  ls -l
+ 1889  git status
+ 1890  git add README war/quizlogico/WEB-INF/*.xml
+ 1891  git status
+ 1892  git commit -a -m "Adicionando estrutura inicial da ferramenta"
+ 1893  git push origin master
+ 1894  cd ..
+ 1895  vim  workspace/pugpe_challenge/desafio_20110227/desafio.py 
+ 1896  cd .. && vim  workspace/pugpe_challenge/desafio_20110227/desafio.py 
+ 1897  cd workspace/pugpe_challenge/
+ 1898  git status 
+ 1899  git commit -a -m "Retirando parametro desnecessário nos casos de teste e alterando a função tuplify1, pois estava com erro caso se o parametro n fosse maior que 2"
+ 1900  git push origin master
+ 1901  cd ..
+ 1902  ls 
+ 1903  ls quizlogico/ -R
+ 1904  ls QuizLogico/
+ 1905  ls -l
+ 1906  ls imat/ -R
+ 1907  cd imat/
+ 1908  ls ../interpreter/
+ 1909  ls
+ 1910  ../google_appengine/dev_appserver.py 
+ 1911  ../google_appengine/dev_appserver.py ../imat/
+ 1912  ../google_appengine/dev_appserver.py -h
+ 1913  ../google_appengine/dev_appserver.py -p 8890
+ 1914  ../google_appengine/dev_appserver.py -p 8890 ../imat/
+ 1915  ../pyjamas/bin/pyjsbuild 
+ 1916  ../pyjamas/bin/pyjsbuild ferramenta
+ 1917  ../pyjamas/bin/pyjsbuild ferramenta.py
+ 1918  ../pyjamas/bin/pyjampiler ferramenta.py
+ 1919  mkdir ferramenta
+ 1920  touch ferramenta.py
+ 1921  ../pyjamas/ ferramenta
+ 1922  ../pyjamas/bin/pyjampiler ferramenta
+ 1923  cd ../pyjamas
+ 1924  python bootstrap.py 
+ 1925  ls
+ 1926  pyjamas$ export PATH=~/tools/pyjamas/bin:$PATH
+ 1927  export PATH=~/tools/pyjamas/bin:$PATH
+ 1928  pwd
+ 1929  ls
+ 1930  cd ../../
+ 1931  mkdir tools/pyjamas/bin
+ 1932  mkdir tools
+ 1933  cd tools/
+ 1934  mkdir pyjamas
+ 1935  cd ..
+ 1936  cd tools/
+ 1937  cd pyjamas/
+ 1938  mkdir bin
+ 1939  cd /home/nielson/workspace/pyjamas
+ 1940  export PATH=~/tools/pyjamas/bin:$PATH
+ 1941  export PATH=/bin:$PATH
+ 1942  export PATH=bin:$PATH
+ 1943  cd examples/
+ 1944  cd helloworld/
+ 1945  cd ../../
+ 1946  export PATH=~/workspace/pyjamas/bin:$PATH
+ 1947  cd examples/
+ 1948  cd helloworld/
+ 1949  pyjsbuild Hello.py 
+ 1950  pyjsbpy
+ 1951  bpython 
+ 1952  export PATH=~/workspace/pyjamas/bin:$PATH
+ 1953  sudo export PATH=~/workspace/pyjamas/bin:$PATH
+ 1954  export PATH=~/workspace/pyjamas/bin:$PATH
+ 1955  sudo su
+ 1956  reset
+ 1957  bash build.sh 
+ 1958  export PATH=~/workspace/pyjamas/bin:$PATH
+ 1959  bpython 
+ 1960  cd workspace/imat/
+ 1961  pyjsbuild -help
+ 1962  chmod +x run.sh 
+ 1963  ls
+ 1964  ls -l
+ 1965  run.sh
+ 1966  bash run.sh
+ 1967  python ~/workspace/pyjamas/examples/djangoweb/manage.py runserver
+ 1968  python /home/nielson/workspace/pyjamas/examples/djangotasks/manage.py runserver
+ 1969  python /home/nielson/workspace/pyjamas/examples/djangowanted/manage.py runserver
+ 1970  python /home/nielson/workspace/pyjamas/examples/djangotasks/manage.py runserver
+ 1971  ls -l
+ 1972  chmod +x app.yaml 
+ 1973  ls -l
+ 1974  bash run.sh 
+ 1975  bash build.sh 
+ 1976  cd src/
+ 1977  mkdir soma
+ 1978  mkdir subtracao
+ 1979  mkdir 
+ 1980  cd ..
+ 1981  bash build.sh 
+ 1982  bash run.sh 
+ 1983  gnome-open Downloads/pyjamas_the_book.pdf 
+ 1984  cd workspace/imat/ferramenta/
+ 1985  bash build.sh 
+ 1986  [A
+ 1987  bash build.sh 
+ 1988  ../../pyjamas/bin/pyjsbuild -h
+ 1989  bash build.sh 
+ 1990  bpython 
+ 1991  bash build.sh 
+ 1992  cd workspace/imat/
+ 1993  bash deploy.sh 
+ 1994  ls
+ 1995  bash deploy.sh 
+ 1996  ../google_appengine/appcfp.py  ../imat
+ 1997  ../google_appengine/appcfg.py ../imat
+ 1998  bash deploy.sh 
+ 1999  ../google_appengine/appcfg.py ../imat
+ 2000  bash run.sh 
+ 2001  ../google_appengine/appcfg.py ../imat
+ 2002  bash deploy.sh 
+ 2003  cd ../ && ../google_appengine/appcfg.py ../imat
+ 2004  google_appengine/appcfg.py ../imat
+ 2005  google_appengine/appcfg.py imat
+ 2006  bash deploy.sh 
+ 2007  cd imat/
+ 2008* 
+ 2009  bash deploy.sh 
+ 2010  ../google_appengine/appcfg.py help
+ 2011  ../google_appengine/appcfg.py -help
+ 2012  history >> output.txt

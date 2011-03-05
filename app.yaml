@@ -1,0 +1,45 @@
+application: e-math
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /recursos
+  static_dir: recursos
+
+- url: /lib
+  static_dir: lib
+
+#- url: /ferramenta/output/CanvasProcessing\.html
+  #static_files: /ferramenta/output/CanvasProcessing.html
+  #upload: /ferramenta/output/(.*)
+
+- url: /output
+  static_dir: output
+
+#- url: /output/(.*\.(css|js))
+  #static_dir: output
+
+#- url: /public/.*
+  #static_dir: static/public
+  
+#- url: /public/(.*)
+  #static_files: static/public/\1
+  #upload: static/public/(.*)
+
+#- url: /output/(.*\.(css|js|html))
+#  static_dir: output
+
+#- url: /public/(.*)
+  #static_files: static/output/\1
+  #upload: static/output/(.*)
+
+#- url: /(.*\.(css|js))
+#  static_files: static/\1
+#  upload: static/(.*\.(css|js))
+#- url: /paginas/.*
+  #script: index.py
+
+- url: /
+  script: index.py
