@@ -247,6 +247,13 @@ a, a:visited, a:hover {
 }
 
 .gwt-Image {
+
+}
+
+.gwt-ImageButton {
+  cursor: pointer;
+  cursor: hand;
+/*  border: 1px outset #ccc;*/
 }
 
 .gwt-Label {

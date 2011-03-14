@@ -592,7 +592,7 @@ function prepare_app() {
         };
         wait();
     }
-    wait_for_loading_modules(app_imported, ['pyjamas.ui','pyjamas.ui.TabBar','pyjamas.ui.FocusWidget','pyjamas.ui.PopupPanel','pyjamas.ui.Widget','pyjamas.Canvas2D','pyjamas.ui.ClickListener','pyjamas.ui.DialogBox','pyjamas.ui.SimplePanel','pyjamas.Location','pyjamas.ui.VerticalPanel','sys','pyjamas.ui.AbsolutePanel','pyjamas.ui.TextBoxBase','pyjamas','pyjamas.ui.HorizontalPanel','pyjamas.ui.RowFormatter','pyjamas.ui.TextBox','pyjamas.ui.Focus','pyjamas.ui.Label','pyjamas.ui.FlexTable','pyjamas.ui.FocusListener','pyjamas.ui.MouseListener','pyjamas.ui.KeyboardListener','math','pyjamas.ui.CustomButton','componentes.soma.Soma','pyjamas.ui.Button','componentes','pyjamas.Window','componentes.soma','pyjamas.ui.Panel','pyjamas.ui.TabPanel','pyjamas.Factory','pyjamas.ui.Composite','PopupPagina','pyjamas.ui.DeckPanel','pyjamas.ui.CellPanel','pyjamas.ui.Image','pyjamas.log','pyjamas.ui.ComplexPanel','pyjslib','pyjamas.ui.ButtonBase','pyjamas.ui.ClickDelegatePanel','pyjamas.ui.RootPanel','dynamic','pyjamas.ui.UIObject','pyjamas.DOM','pyjamas.ui.PushButton','pyjamas.ui.Grid','pyjamas.ui.HTMLTable','pyjamas.ui.HTML','pyjamas.ui.FlexCellFormatter','pyjamas.ui.Event','pyjamas.ui.CellFormatter','pyjamas.ui.ToggleButton','PaginaPrincipal']);
+    wait_for_loading_modules(app_imported, ['pyjamas.ui','pyjamas.ui.TabBar','pyjamas.ui.FocusWidget','pyjamas.ui.PopupPanel','pyjamas.ui.Widget','componentes.subtracao.PopupSub','pyjamas.ui.ClickListener','pyjamas.ui.DialogBox','pyjamas.ui.SimplePanel','pyjamas.Location','pyjamas.ui.VerticalPanel','sys','pyjamas.ui.AbsolutePanel','componentes.produtoescalar','pyjamas.ui.UIObject','pyjamas.ui.TextBoxBase','componentes.produto.PopupProduto','pyjamas','pyjamas.ui.HorizontalPanel','pyjamas.ui.RowFormatter','pyjamas.ui.TextBox','componentes.subtracao','pyjamas.ui.Focus','pyjamas.ui.Label','pyjamas.ui.FlexTable','pyjamas.ui.FocusListener','componentes.produtoescalar.PopupEscalar','pyjamas.ui.MouseListener','pyjamas.ui.KeyboardListener','pyjamas.ui.Grid','pyjamas.ui.CustomButton','PaginaPrincipal','pyjamas.ui.Button','componentes','pyjamas.Window','componentes.soma','pyjamas.ui.Panel','pyjamas.Canvas2D','pyjamas.Factory','pyjamas.ui.Composite','PopupPagina','pyjamas.ui.DeckPanel','pyjamas.ui.CellPanel','pyjamas.ui.TabPanel','pyjamas.ui.Image','pyjamas.ui.FlexCellFormatter','pyjamas.log','pyjamas.ui.ComplexPanel','pyjslib','pyjamas.ui.ButtonBase','pyjamas.ui.ClickDelegatePanel','pyjamas.ui.RootPanel','dynamic','componentes.soma.PopupSoma','pyjamas.DOM','pyjamas.ui.PushButton','pyjamas.ui.HTMLTable','pyjamas.ui.CheckBox','pyjamas.ui.HTML','pyjamas.ui.ListBox','pyjamas.ui.Event','pyjamas.ui.CellFormatter','pyjamas.ui.ToggleButton','componentes.produto']);
 }
 
 function pygwtOnLoad(onLoadError, name) {
@@ -622,8 +622,9 @@ $pyjs.script_onreadystate = function (modname) {
 <script type="text/javascript" src="lib/pyjamas.ui.Label.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.RowFormatter.js"></script>
 <script type="text/javascript" src="lib/PaginaPrincipal.js"></script>
+<script type="text/javascript" src="lib/pyjamas.ui.CheckBox.js"></script>
 <script type="text/javascript" src="lib/sys.js"></script>
-<script type="text/javascript" src="lib/pyjamas.ui.Grid.js"></script>
+<script type="text/javascript" src="lib/componentes.produtoescalar.PopupEscalar.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.ComplexPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.MouseListener.js"></script>
@@ -632,6 +633,7 @@ $pyjs.script_onreadystate = function (modname) {
 <script type="text/javascript" src="lib/PopupPagina.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.Event.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.ToggleButton.js"></script>
+<script type="text/javascript" src="lib/componentes.soma.PopupSoma.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.DeckPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.TabPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.Location.js"></script>
@@ -640,9 +642,9 @@ $pyjs.script_onreadystate = function (modname) {
 <script type="text/javascript" src="lib/dynamic.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.SimplePanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.FlexCellFormatter.js"></script>
-<script type="text/javascript" src="lib/componentes.soma.Soma.js"></script>
-<script type="text/javascript" src="lib/math.js"></script>
+<script type="text/javascript" src="lib/pyjamas.ui.Grid.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.Widget.js"></script>
+<script type="text/javascript" src="lib/pyjamas.ui.ListBox.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.CellFormatter.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.TabBar.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.Button.js"></script>
@@ -659,9 +661,12 @@ $pyjs.script_onreadystate = function (modname) {
 <script type="text/javascript" src="lib/componentes.soma.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.TextBoxBase.js"></script>
 <script type="text/javascript" src="lib/pyjamas.DOM.__mozilla__.js"></script>
+<script type="text/javascript" src="lib/componentes.produtoescalar.js"></script>
 <script type="text/javascript" src="lib/pyjamas.js"></script>
+<script type="text/javascript" src="lib/componentes.subtracao.PopupSub.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.Panel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.Factory.js"></script>
+<script type="text/javascript" src="lib/componentes.produto.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.PopupPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.Window.__mozilla__.js"></script>
 <script type="text/javascript" src="lib/componentes.js"></script>
@@ -670,9 +675,11 @@ $pyjs.script_onreadystate = function (modname) {
 <script type="text/javascript" src="lib/pyjamas.ui.RootPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.Focus.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.HTMLTable.js"></script>
+<script type="text/javascript" src="lib/componentes.produto.PopupProduto.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.VerticalPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.HTML.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.CustomButton.js"></script>
+<script type="text/javascript" src="lib/componentes.subtracao.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.CellPanel.js"></script>
 <script type="text/javascript" src="lib/pyjamas.ui.FocusListener.js"></script>
 

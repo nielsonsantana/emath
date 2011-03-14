@@ -1,6 +1,587 @@
 
-void setup(){
-  rect(2,6,98,300);
-  //size(400,400);
-  //background(51);
+/* @pjs preload="images/colcheteDir_mim.png,images/colcheteEsq_mim.png,images/opmult.png, images/opsoma.png,images/opsub.png,images/igualdade.png"; */
+
+getElement = function(id){
+   return document.getElementById(id);
+};
+
+lm1 = getElement("lm1").value;
+cm1 = getElement("cm1").value;
+lm2 = getElement("lm2").value;
+cm2 = getElement("cm2").value;
+
+
+MatrizGrafica m =  new MatrizGrafica(int(lm1),int(cm1),35,0,50);
+MatrizGrafica m2 =  new MatrizGrafica(int(lm2),int(cm2),515,0,50);
+/*
+MatrizGrafica m =  new MatrizGrafica(5,4,35,0,50);
+MatrizGrafica m2 =  new MatrizGrafica(4,4,515,0,50);
+*/
+MatrizGrafica mMult;
+color vetorColor = new color[8];
+contadorLinha = 0;
+contadorColuna = 0;
+String texto1;
+String texto2;
+/*
+MatrizGrafica mMult;
+*/
+
+
+colcheteEsq = loadImage("images/colcheteEsq_mim.png");
+colcheteDir = loadImage("images/colcheteDir_mim.png");
+
+color planofundo = 150;
+
+void desenharEstruturaMatriz(int x, int y,int distancia, int nlinhas, int ncolunas){
+    
+    image(colcheteEsq,x,y);
+    image(colcheteDir,x+344,y);
+
+    //Desenhando linhas verticais
+    for(int i = 0; i <= 7; i++)
+        line(i*distancia+x+10,y+5,i*distancia+x+10,(5*50)+y);
+
+    //Texto Horizontal
+    for(int i = 0; i <= 6; i++)
+        text(i+1,(i*distancia)+x+28,y);
+
+    //Desenhando linhas horizontais
+    for(int i = 0; i <= 5; i++)
+        line(x+10,i*distancia+(y+5),7*50+x+10,i*distancia+(y+5));
+
+    //Texto Vertical
+    for(int i = 0; i <= 4; i++)
+        text(i+1,x-10,(i*distancia)+y+30);
+    
 }
+
+void setup()
+{
+    size(1000,560);
+    background(planofundo);
+    fill(90);
+    loop();
+    textFont("monospace",15);
+    fill(255);
+
+    opsoma = loadImage("images/opsoma.png");
+    opsub = loadImage("images/opsub.png");
+    opmult = loadImage("images/opmult.png");
+    igualdade = loadImage("images/igualdade.png");
+    
+    image(opmult,435,100);
+    image(igualdade,910,100);
+
+    frameRate(getElement("lbseg").value);
+    strokeWeight(0.2);
+    
+    desenharEstruturaMatriz(50,20,50);
+    desenharEstruturaMatriz(530,20,50);
+    desenharEstruturaMatriz(50,300,50);
+    
+
+    textSize(23);
+    m.desenharMatriz();
+    m2.desenharMatriz();
+    mMult = m.multiplicacao(m2);
+    mMult.desenharMatriz();
+    text("Status da execução da programa:",650,300);
+	text("M1 ",25,20);
+	text("M2 ",505,20);
+	
+	for(int i=0;i<8;i++){
+		vetorColor[i] = color(random(0,255), random(0,255), random(0,255));
+	}
+    noLoop();
+}
+
+void draw(){
+	
+    if(((m.getLinColor()+1) == m.getNlin()) && ((m2.getColColor()+1) == m2.getNcol())){
+		noLoop();
+	}
+	
+	texto1 = "";
+	texto2 = "";
+	int tmpColuna;
+    int tmpLinha;
+    
+    if((contadorLinha) == 0){
+		m.setLinColor(m.getNlin()-1);
+		for(int i = 0; i < m.getNcol(); i++){
+			m.apagarRetangulo();
+			m.setColColor(i);
+		}
+	}
+    
+	m.setLinColor(contadorLinha-1);
+	for(int i = 0; i < m.getNcol(); i++){
+		m.apagarRetangulo();
+		m.setColColor(i);
+	}
+	
+	m.setLinColor(contadorLinha);
+	for(int i = 0; i < m.getNcol(); i++){
+		m.desenharRetangulo(vetorColor[i]);
+		m.setColColor(i);
+		texto1 +=(str("M1("+(m.getLinColor()+1)+","+(m.getColColor()+1)+")*M2("+(i+1)+","+(contadorColuna+1)+")+"));
+		texto2 += str("("+m.getValue(m.getLinColor(),m.getColColor())+")*("+m2.getValue(i,contadorColuna )+")+")
+
+	}
+	
+	m2.setColColor(contadorColuna-1);
+	for(int i = 0; i < m2.getNlin(); i++){
+		m2.apagarRetangulo();
+		m2.setLinColor(i);
+	}
+	
+	m2.setColColor(contadorColuna);
+	for(int i = 0; i < m2.getNlin(); i++){
+		m2.desenharRetangulo(vetorColor[i]);
+		m2.setLinColor(i);
+	}
+	tmpLinha = contadorLinha;
+	contadorLinha +=1;
+	
+	tmpColuna = contadorColuna;
+	if(m.getColColor()+1 == m.getNcol() && m.getLinColor()+1 == m.getNlin()){
+		contadorColuna++;
+		contadorLinha = 0;
+		if(contadorColuna == m2.getNcol()){
+			noLoop();
+		}
+	}
+	
+	mMult.desenharRetanguloETexto(color(random(0,255), random(0,255), random(0,255)));
+	mMult.proxCordenadaVertical();
+	
+	fill(planofundo);
+    noStroke();
+    rectMode(CORNER);
+    rect(470, 320, 520,240);
+    fill(255);
+	lin = m.getLinColor();
+    col = m.getColColor();
+	textLeading(24);
+	
+	textSize(17);
+	text(texto1.substring(0,texto1.length-1)+" = \n",730,400);
+	text(texto2.substring(0,texto2.length-1)+" = \n",720,440);
+	text(mMult.getValue(tmpLinha,tmpColuna),720,480);
+	textSize(23);
+}
+
+void undraw(){
+	
+/*
+	texto1 = "";
+	texto2 = "";
+	int tmpColuna;
+    int tmpLinha;
+    
+    if((contadorLinha) == 0){
+		m.setLinColor(m.getNlin()-1);
+		for(int i = 0; i < m.getNcol(); i++){
+			m.apagarRetangulo();
+			m.setColColor(i);
+		}
+	}
+    
+	m.setLinColor(contadorLinha-1);
+	for(int i = 0; i < m.getNcol(); i++){
+		m.apagarRetangulo();
+		m.setColColor(i);
+	}
+	
+	m.setLinColor(contadorLinha);
+	for(int i = 0; i < m.getNcol(); i++){
+		m.desenharRetangulo(vetorColor[i]);
+		m.setColColor(i);
+		texto1 +=(str("M1("+(m.getLinColor()+1)+","+(m.getColColor()+1)+")*M2("+(i+1)+","+(contadorColuna+1)+")+"));
+		texto2 += str("("+m.getValue(m.getLinColor(),m.getColColor())+")*("+m2.getValue(i,contadorColuna )+")+")
+
+	}
+	
+	m2.setColColor(contadorColuna-1);
+	for(int i = 0; i < m2.getNlin(); i++){
+		m2.apagarRetangulo();
+		m2.setLinColor(i);
+	}
+	
+	m2.setColColor(contadorColuna);
+	for(int i = 0; i < m2.getNlin(); i++){
+		m2.desenharRetangulo(vetorColor[i]);
+		m2.setLinColor(i);
+	}
+	tmpLinha = contadorLinha;
+	contadorLinha --;
+	
+	tmpColuna = contadorColuna;
+	if(m.getColColor()+1 == m.getNcol() && m.getLinColor()+1 == m.getNlin()){
+		contadorColuna--;
+		contadorLinha = m.getLinColor()-1;
+		if(contadorColuna == m2.getNcol()){
+			noLoop();
+		}
+	}
+	
+	mMult.apagarRetanguloETexto(color(random(0,255), random(0,255), random(0,255)));
+	mMult.anterCordenadaVertical();
+	
+	fill(planofundo);
+    noStroke();
+    rectMode(CORNER);
+    rect(470, 320, 520,240);
+    fill(255);
+	lin = m.getLinColor();
+    col = m.getColColor();
+	textLeading(24);
+	
+	textSize(17);
+	text(texto1.substring(0,texto1.length-1)+" = \n",730,400);
+	text(texto2.substring(0,texto2.length-1)+" = \n",720,440);
+	text(mMult.getValue(tmpLinha,tmpColuna),720,480);
+	textSize(23);
+*/
+}
+
+void testarSolucao(){
+	l1 = getElement("linha1").value;
+	c1 = getElement("coluna1").value;
+	l2 = getElement("linha2").value;
+	c2 = getElement("coluna2").value;
+	n1 = getElement("n1").value;
+	n2 = getElement("n2").value;
+	solucao = getElement("n2").value;
+	
+}
+
+//Definição de uma classe matriz com algumas operações não inrentes a esta classe como desenharMatriz, desenharMatrizColorida
+class MatrizGrafica {
+
+	int[][] matriz = new int[10][10];
+	int[][] colorido = new int[10][10];
+	Cordenada[][] mposicao = new Cordenada[10][10];
+	int col, lin;
+	int colElem, linElem;
+	int colColor, linColor; //Armazena os indices da linha e da coluna, para colorir os elementos da matriz
+	int x, y;
+	int distancia;
+	int ladoQuadrado = 39;
+	String posicao;
+
+	MatrizGrafica(int lin, int col, int x, int y, int distancia){
+		for(int i = 0; i < lin; i++){
+			for(int j = 0; j < col; j++){
+				matriz[i][j] = int(random(-9,9));
+				mposicao[i][j] = new Cordenada(((j+1)*distancia+x), ((i+1)*distancia+y));
+			}
+		}
+		
+		this.distancia = distancia;
+		this.y = y;
+		this.x = x;
+		this.col = col;
+		this.lin = lin;
+		this.colColor = 0;
+		this.linColor = 0;
+		this.colElem = 0;
+		this.linElem = 0;
+	}
+	
+	MatrizGrafica(int col, int lin, String posicao, int distancia){
+		for(int i = 0; i < lin; i++){
+			for(int j = 0; j < col; j++){
+				matriz[i][j] = int(random(-9,9));
+				mposicao[i][j] = new Cordenada(((j+1)*distancia+x)-1, ((i+1)*distancia+y)-1);
+				println(mposicao[i][j].getX());
+			}
+		}
+		if(posicao.equals("right")){
+		    
+        }
+        else if(posicao.equals("left")){
+
+        }
+        else{
+            
+        }
+		
+		this.distancia = distancia;
+		this.col = col;
+		this.lin = lin;
+		this.colColor = 0;
+		this.linColor = 0;
+	}
+	
+	void desenharMatriz(){
+		noFill();
+		textAlign(CENTER,CENTER);
+		rectMode(CENTER);
+		noStroke();
+		for(int i = 0; i < lin; i++){
+			for(int j = 0; j < col; j++){
+				rect(mposicao[i][j].getX(),mposicao[i][j].getY(), ladoQuadrado,ladoQuadrado);
+				text(int(matriz[i][j]), mposicao[i][j].getX(),mposicao[i][j].getY());
+			}
+		}
+	 }
+	 
+	     //Desenha retangulo e o texto na posicao atual apontada por linColor e colColor
+    void desenharRetanguloETexto(color c){
+        
+        if((colColor == col) && (linColor >= lin-1)){
+			return;
+		}
+        
+        fill(planofundo);
+        stroke(c);
+        strokeWeight(8);
+		rectMode(CENTER);
+		textAlign(CENTER,CENTER);
+		rect(mposicao[linColor][colColor].getX(),mposicao[linColor][colColor].getY(), ladoQuadrado,ladoQuadrado);
+		fill(255);
+        text(matriz[linColor][colColor],mposicao[linColor][colColor].getX(),mposicao[linColor][colColor].getY());
+    }
+    
+    //Desenha retangulo na posicao atual apontada por linColor e colColor
+    void desenharRetangulo(color c){
+		
+		if((colColor == col) && (linColor >= lin-1)){
+			return;
+		}
+		
+		noFill();
+		stroke(c);
+		strokeWeight(8);
+		rectMode(CENTER);
+		rect(mposicao[linColor][colColor].getX(),mposicao[linColor][colColor].getY(), ladoQuadrado,ladoQuadrado);
+	
+	}
+	
+	void apagarRetangulo(){
+		
+		noFill();
+		stroke(planofundo);
+		strokeWeight(9);
+		rectMode(CENTER);
+		
+		rect(mposicao[linColor][colColor].getX(),mposicao[linColor][colColor].getY(), ladoQuadrado,ladoQuadrado);
+	}
+	
+	void apagarRetanguloETexto(){
+		
+		fill(planofundo);
+		stroke(planofundo);
+		rectMode(CENTER);
+		textAlign(CENTER,CENTER);
+		rect(mposicao[linColor][colColor].getX(),mposicao[linColor][colColor].getY(),ladoQuadrado,ladoQuadrado);
+	}
+	
+	boolean proxCordenadaHorizotal(){
+		
+		colColor = colColor+1;
+		
+		if((colColor == col) && (linColor >= lin-1)){
+			colColor = col-1;
+			return false;
+		}
+		if(colColor == col){
+		  colColor = 0;
+		  linColor = linColor+1;
+		}
+	}
+	
+	boolean anterCordenadaHorizotal(){
+		colColor = colColor-1;
+		
+		if((colColor < 0) && (linColor <= 0)){
+			colColor = 0;
+			return false;
+		}
+			
+		if(colColor < 0){
+			colColor = col-1;
+			linColor = linColor-1;
+		}
+	}
+	
+	boolean proxCordenadaVertical(){
+		
+		linColor = linColor+1;
+		
+		if((colColor == col-1) && (linColor == lin)){
+			linColor = lin-1;
+			return false;
+		}
+		if(linColor == lin){
+			linColor = 0;
+			colColor = colColor+1;
+		}
+	}
+	
+	boolean anterCordenadaVertical(){
+		colColor = colColor-1;
+        if((colColor < 0) && (linColor <= 0)){
+			colColor = 0;
+			return false;
+		}
+			
+		if(colColor < 0){
+		  colColor = col-1;
+		  linColor = linColor-1;
+		}
+	}
+
+	void retanguloLinha(int lin){
+		
+	}
+	
+	void removerRetanguloLinha(int lin){
+		
+	}
+	
+	void retanguloColuna(int col){
+		
+	}
+	
+	void removerRetanguloColuna(int col){
+		
+	}
+
+	MatrizGrafica soma(MatrizGrafica m2){
+
+		MatrizGrafica mResult = new MatrizGrafica(m2.getNlin(), m2.getNcol(), 35, 280,m2.getDist());
+		for(int i = 0; i < lin; i++){
+			for(int j = 0; j < col; j++){
+				mResult.matriz[i][j] = this.matriz[i][j] + m2.matriz[i][j];
+			}
+		}
+		return mResult;
+	}
+	
+	MatrizGrafica multiplicacao(MatrizGrafica m2){
+		
+		MatrizGrafica mResult = new MatrizGrafica(this.getNlin(), m2.getNcol(), 35, 280,m2.getDist());
+		for(int i = 0; i < col; i++){
+			for(int j = 0; j < lin; j++){
+				int sum = 0;
+				for(int k = 0; k < col; k++){
+					sum += matriz[j][k]*m2.matriz[k][i];
+				}
+				mResult.matriz[j][i] = sum;
+			}
+		}
+		return mResult;
+	}
+	
+	MatrizGrafica multiplicacaoPorEscalar(int escalar){
+
+		MatrizGrafica mResult = new MatrizGrafica(this.getNlin(), this.getNcol(), 35, 280,this.getDist());
+		for(int i = 0; i < this.lin; i++){
+			for(int j = 0; j < this.col; j++){
+				mResult.matriz[i][j] = matriz[i][j]*escalar;
+			}
+		}
+		
+		return mResult;
+	}
+
+	MatrizGrafica subtracao(MatrizGrafica m2){
+		
+		MatrizGrafica mResult = new MatrizGrafica(m2.getNlin(), m2.getNcol(), 35, 280,m2.getDist());
+		for(int i = 0; i < lin; i++){
+			for(int j = 0; j < col; j++){
+				mResult.matriz[i][j] = this.matriz[i][j] - matriz2.matriz[i][j];
+			}
+		}
+		return mResult;
+
+	}
+	
+	void setPosicaoCirculo(int lin, int col){
+		this.colColor = col;
+		this.linColor = lin;
+	}
+
+	int getDist(){
+		return this.distancia;
+	}
+ 
+	int getNlin(){
+		return this.lin;
+	}
+
+	int getNcol(){
+	   return this.col;
+	}
+
+	int getX(){
+		return x;
+	}
+
+	void setX(int x){
+		this.x = x;
+	}
+
+	int getY(){
+		return y;
+	}
+
+	void setY(int y){
+		this.y = y;
+	}
+	int getColColor(){
+		return this.colColor;
+	}
+	
+	int getLinColor(){
+		return this.linColor;
+	}
+	
+	void setColColor(int col){
+		if(col < 0){
+		this.colColor = 0;
+		}else{
+		this.colColor = col;
+		}
+	}
+	
+	void setLinColor(int lin){
+		if(lin < 0){
+		this.linColor = 0;
+		}else{
+			this.linColor = lin;
+		}
+	}
+	
+	int getValue(int lin, int col){
+		return matriz[lin][col];
+	}
+
+}
+
+class Cordenada{
+  private int x, y;
+  Cordenada(int x, int y){
+    this.x = x;
+    this.y = y;
+  }
+ 
+  int getX(){
+    return x;
+  }
+  void setX(int x){
+    this.x = x;
+  }
+  
+  int getY(){
+    return y;
+  }
+  void setY(int y){
+    this.y = y;
+  }
+}
+
+

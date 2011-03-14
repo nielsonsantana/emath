@@ -1,1 +1,416 @@
-$pyjs.loaded_modules["pyjamas.ui.CellFormatter"]=function(b){if($pyjs.loaded_modules["pyjamas.ui.CellFormatter"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.ui.CellFormatter"]}if(typeof $pyjs.loaded_modules["pyjamas.ui"]=="undefined"||!$pyjs.loaded_modules["pyjamas.ui"].__was_initialized__){pyjslib.___import___("pyjamas.ui",null)}pyjamas.ui["CellFormatter"]=$pyjs.loaded_modules["pyjamas.ui.CellFormatter"];pyjamas.ui["CellFormatter"].__was_initialized__=true;if((b===null)||(typeof b=="undefined")){b="pyjamas.ui.CellFormatter"}var a=pyjamas.ui["CellFormatter"].__name__=b;var c=pyjamas.ui["CellFormatter"];pyjamas.ui["CellFormatter"]["DOM"]=pyjslib.___import___("pyjamas.DOM","pyjamas.ui",null,false);pyjamas.ui["CellFormatter"]["Factory"]=pyjslib.___import___("pyjamas.Factory","pyjamas.ui",null,false);pyjamas.ui["CellFormatter"]["Applier"]=pyjslib.___import___("pyjamas.ui.Applier","pyjamas.ui",null,false);pyjamas.ui["CellFormatter"]["CellFormatter"]=(function(){var f=$pyjs__class_instance("CellFormatter");var e=new Object();var d;e.__md5__="2dd893bc2291a21052923a9dff39646e";d=$pyjs__bind_method(f,"__init__",function(h){if(this.__is_instance__===true){var g=this;var i=arguments.length>=2?arguments[arguments.length-1]:arguments[arguments.length];if(typeof i!="object"||i.__name__!="dict"||typeof i.$pyjs_is_kwarg=="undefined"){i=arguments[arguments.length+1]}else{delete i["$pyjs_is_kwarg"]}}else{var g=arguments[0];h=arguments[1];var i=arguments.length>=3?arguments[arguments.length-1]:arguments[arguments.length];if(typeof i!="object"||i.__name__!="dict"||typeof i.$pyjs_is_kwarg=="undefined"){i=arguments[arguments.length+1]}else{delete i["$pyjs_is_kwarg"]}}if(typeof i=="undefined"){i=pyjslib.__empty_dict();if(typeof h!="undefined"){if(h!==null&&typeof h["$pyjs_is_kwarg"]!="undefined"){i=h;h=arguments[2]}}else{if(typeof g!="undefined"){if(g!==null&&typeof g["$pyjs_is_kwarg"]!="undefined"){i=g;g=arguments[2]}}else{}}}g.outer=h;$pyjs_kwargs_call(pyjamas.ui["CellFormatter"]["Applier"],"__init__",null,i,[{},g]);return null},1,[null,["kwargs"],["self"],["outer"]]);e.__init__=d;d=$pyjs__bind_method(f,"addStyleName",function(j,i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];j=arguments[1];i=arguments[2];h=arguments[3]}g.outer["prepareCell"](j,i);g.outer["setStyleName"](g.getElement(j,i),h,true);return null},1,[null,null,["self"],["row"],["column"],["styleName"]]);e.addStyleName=d;d=$pyjs__bind_method(f,"getElement",function(j,i){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];j=arguments[1];i=arguments[2]}var g,k;h.outer["checkCellBounds"](j,i);return pyjamas.ui["CellFormatter"]["DOM"]["getChild"](h.outer["rowFormatter"]["getRow"]((((g=h.outer["bodyElem"])!==null&(k=h.outer).__is_instance__)&&typeof g=="function"?pyjslib.getattr(k,"bodyElem"):h.outer["bodyElem"]),j),i)},1,[null,null,["self"],["row"],["column"]]);e.getElement=d;d=$pyjs__bind_method(f,"getStyleName",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}return pyjamas.ui["CellFormatter"]["DOM"]["getAttribute"](g.getElement(i,h),String("className"))},1,[null,null,["self"],["row"],["column"]]);e.getStyleName=d;d=$pyjs__bind_method(f,"isVisible",function(j,i){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];j=arguments[1];i=arguments[2]}var h;h=g.getElement(j,i);return g.outer["isVisible"](h)},1,[null,null,["self"],["row"],["column"]]);e.isVisible=d;d=$pyjs__bind_method(f,"removeStyleName",function(j,i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];j=arguments[1];i=arguments[2];h=arguments[3]}g.outer["checkCellBounds"](j,i);g.outer["setStyleName"](g.getElement(j,i),h,false);return null},1,[null,null,["self"],["row"],["column"],["styleName"]]);e.removeStyleName=d;d=$pyjs__bind_method(f,"setAlignment",function(j,i,h,k){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];j=arguments[1];i=arguments[2];h=arguments[3];k=arguments[4]}g.setHorizontalAlignment(j,i,h);g.setVerticalAlignment(j,i,k);return null},1,[null,null,["self"],["row"],["column"],["hAlign"],["vAlign"]]);e.setAlignment=d;d=$pyjs__bind_method(f,"setHeight",function(m,j,g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];m=arguments[1];j=arguments[2];g=arguments[3]}var k,i,l;h.outer["prepareCell"](m,j);i=h.getCellElement((((l=h.outer["bodyElem"])!==null&(k=h.outer).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"bodyElem"):h.outer["bodyElem"]),m,j);pyjamas.ui["CellFormatter"]["DOM"]["setStyleAttribute"](i,String("height"),g);return null},1,[null,null,["self"],["row"],["column"],["height"]]);e.setHeight=d;d=$pyjs__bind_method(f,"setHorizontalAlignment",function(l,i,m){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];l=arguments[1];i=arguments[2];m=arguments[3]}var k,j,h;g.outer["prepareCell"](l,i);h=g.getCellElement((((k=g.outer["bodyElem"])!==null&(j=g.outer).__is_instance__)&&typeof k=="function"?pyjslib.getattr(j,"bodyElem"):g.outer["bodyElem"]),l,i);pyjamas.ui["CellFormatter"]["DOM"]["setAttribute"](h,String("align"),m);return null},1,[null,null,["self"],["row"],["column"],["align"]]);e.setHorizontalAlignment=d;d=$pyjs__bind_method(f,"setStyleName",function(j,i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];j=arguments[1];i=arguments[2];h=arguments[3]}g.outer["prepareCell"](j,i);g.setAttr(j,i,String("className"),h);return null},1,[null,null,["self"],["row"],["column"],["styleName"]]);e.setStyleName=d;d=$pyjs__bind_method(f,"setVerticalAlignment",function(k,j,l){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];k=arguments[1];j=arguments[2];l=arguments[3]}var h,i;g.outer["prepareCell"](k,j);pyjamas.ui["CellFormatter"]["DOM"]["setStyleAttribute"](g.getCellElement((((i=g.outer["bodyElem"])!==null&(h=g.outer).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"bodyElem"):g.outer["bodyElem"]),k,j),String("verticalAlign"),l);return null},1,[null,null,["self"],["row"],["column"],["align"]]);e.setVerticalAlignment=d;d=$pyjs__bind_method(f,"setVisible",function(k,i,j){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];k=arguments[1];i=arguments[2];j=arguments[3]}var h;h=g.ensureElement(k,i);g.outer["setVisible"](h,j);return null},1,[null,null,["self"],["row"],["column"],["visible"]]);e.setVisible=d;d=$pyjs__bind_method(f,"setWidth",function(l,k,j){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];l=arguments[1];k=arguments[2];j=arguments[3]}var i,h;g.outer["prepareCell"](l,k);pyjamas.ui["CellFormatter"]["DOM"]["setStyleAttribute"](g.getCellElement((((i=g.outer["bodyElem"])!==null&(h=g.outer).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"bodyElem"):g.outer["bodyElem"]),l,k),String("width"),j);return null},1,[null,null,["self"],["row"],["column"],["width"]]);e.setWidth=d;d=$pyjs__bind_method(f,"setWordWrap",function(k,i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];k=arguments[1];i=arguments[2];h=arguments[3]}var j;g.outer["prepareCell"](k,i);if(pyjslib.bool(h)){j=String("")}else{j=String("nowrap")}pyjamas.ui["CellFormatter"]["DOM"]["setStyleAttribute"](g.getElement(k,i),String("whiteSpace"),j);return null},1,[null,null,["self"],["row"],["column"],["wrap"]]);e.setWordWrap=d;d=$pyjs__bind_method(f,"getCellElement",function(p,s,h){if(this.__is_instance__===true){var r=this}else{var r=arguments[0];p=arguments[1];s=arguments[2];h=arguments[3]}var i,o,q,g,k,j,n,l,m;g=(((n=p.rows["length"])!==null&(m=p.rows).__is_instance__)&&typeof n=="function"?pyjslib.getattr(m,"length"):p.rows["length"]);if(pyjslib.bool((((pyjslib.cmp(s,g))|1)==1))){return null}o=(((l=p.rows["item"](s)["cells"])!==null&(k=p.rows["item"](s)).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"cells"):p.rows["item"](s)["cells"]);g=(((j=o.length)!==null&(i=o).__is_instance__)&&typeof j=="function"?pyjslib.getattr(i,"length"):o.length);if(pyjslib.bool((((pyjslib.cmp(h,g))|1)==1))){return null}q=o.item(h);return q},1,[null,null,["self"],["table"],["row"],["col"]]);e.getCellElement=d;d=$pyjs__bind_method(f,"getRawElement",function(k,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];k=arguments[1];h=arguments[2]}var i,j;return g.getCellElement((((j=g.outer["bodyElem"])!==null&(i=g.outer).__is_instance__)&&typeof j=="function"?pyjslib.getattr(i,"bodyElem"):g.outer["bodyElem"]),k,h)},1,[null,null,["self"],["row"],["column"]]);e.getRawElement=d;d=$pyjs__bind_method(f,"ensureElement",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}g.outer["prepareCell"](i,h);return pyjamas.ui["CellFormatter"]["DOM"]["getChild"](g.outer["rowFormatter"]["ensureElement"](i),h)},1,[null,null,["self"],["row"],["column"]]);e.ensureElement=d;d=$pyjs__bind_method(f,"getStyleAttr",function(k,i,g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];k=arguments[1];i=arguments[2];g=arguments[3]}var j;j=h.getElement(k,i);return pyjamas.ui["CellFormatter"]["DOM"]["getStyleAttribute"](j,g)},1,[null,null,["self"],["row"],["column"],["attr"]]);e.getStyleAttr=d;d=$pyjs__bind_method(f,"setStyleAttr",function(l,i,h,k){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];l=arguments[1];i=arguments[2];h=arguments[3];k=arguments[4]}var j;j=g.getElement(l,i);pyjamas.ui["CellFormatter"]["DOM"]["setStyleAttribute"](j,h,k);return null},1,[null,null,["self"],["row"],["column"],["attrName"],["value"]]);e.setStyleAttr=d;d=$pyjs__bind_method(f,"getAttr",function(k,i,g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];k=arguments[1];i=arguments[2];g=arguments[3]}var j;j=h.getElement(k,i);return pyjamas.ui["CellFormatter"]["DOM"]["getAttribute"](j,g)},1,[null,null,["self"],["row"],["column"],["attr"]]);e.getAttr=d;d=$pyjs__bind_method(f,"setAttr",function(l,i,h,k){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];l=arguments[1];i=arguments[2];h=arguments[3];k=arguments[4]}var j;j=g.getElement(l,i);pyjamas.ui["CellFormatter"]["DOM"]["setAttribute"](j,h,k);return null},1,[null,null,["self"],["row"],["column"],["attrName"],["value"]]);e.setAttr=d;return $pyjs__class_function(f,e,new Array(pyjamas.ui["CellFormatter"]["Applier"]))})();return this};
+/* start module: pyjamas.ui.CellFormatter */
+$pyjs.loaded_modules['pyjamas.ui.CellFormatter'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.CellFormatter'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.CellFormatter'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) pyjslib['___import___']('pyjamas.ui', null);
+	pyjamas['ui']['CellFormatter'] = $pyjs.loaded_modules["pyjamas.ui.CellFormatter"];
+	pyjamas['ui']['CellFormatter'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.CellFormatter';
+	var __name__ = pyjamas['ui']['CellFormatter'].__name__ = __mod_name__;
+	var CellFormatter = pyjamas['ui']['CellFormatter'];
+
+
+	pyjamas['ui']['CellFormatter']['DOM'] = pyjslib['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	pyjamas['ui']['CellFormatter']['Factory'] = pyjslib['___import___']('pyjamas.Factory', 'pyjamas.ui', null, false);
+	pyjamas['ui']['CellFormatter']['Applier'] = pyjslib['___import___']('pyjamas.ui.Applier', 'pyjamas.ui', null, false);
+	pyjamas['ui']['CellFormatter']['CellFormatter'] = (function(){
+		var $cls_instance = $pyjs__class_instance('CellFormatter');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = '2dd893bc2291a21052923a9dff39646e';
+		$method = $pyjs__bind_method($cls_instance, '__init__', function(outer) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 2 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				outer = arguments[1];
+				var kwargs = arguments.length >= 3 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = pyjslib['__empty_dict']();
+				if (typeof outer != 'undefined') {
+					if (outer !== null && typeof outer['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = outer;
+						outer = arguments[2];
+					}
+				} else 				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[2];
+					}
+				} else {
+				}
+			}
+
+			self.outer = outer;
+			$pyjs_kwargs_call(pyjamas['ui']['CellFormatter']['Applier'], '__init__', null, kwargs, [{}, self]);
+			return null;
+		}
+	, 1, [null,['kwargs'],['self'],['outer']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'addStyleName', function(row, column, styleName) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				styleName = arguments[3];
+			}
+
+			self['outer']['prepareCell'](row, column);
+			self['outer']['setStyleName'](self['getElement'](row, column), styleName, true);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['styleName']]);
+		$cls_definition['addStyleName'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getElement', function(row, column) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+			}
+			var $attr1,$attr2;
+			self['outer']['checkCellBounds'](row, column);
+			return pyjamas['ui']['CellFormatter']['DOM']['getChild'](self['outer']['rowFormatter']['getRow'](((($attr1=self['outer']['bodyElem']) !== null & ($attr2=self['outer']).__is_instance__) && typeof $attr1 == 'function'?
+						pyjslib['getattr']($attr2, 'bodyElem'):
+						self['outer']['bodyElem']), row), column);
+		}
+	, 1, [null,null,['self'],['row'],['column']]);
+		$cls_definition['getElement'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getStyleName', function(row, column) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+			}
+
+			return pyjamas['ui']['CellFormatter']['DOM']['getAttribute'](self['getElement'](row, column), String('className'));
+		}
+	, 1, [null,null,['self'],['row'],['column']]);
+		$cls_definition['getStyleName'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'isVisible', function(row, column) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+			}
+			var element;
+			element = self['getElement'](row, column);
+			return self['outer']['isVisible'](element);
+		}
+	, 1, [null,null,['self'],['row'],['column']]);
+		$cls_definition['isVisible'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'removeStyleName', function(row, column, styleName) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				styleName = arguments[3];
+			}
+
+			self['outer']['checkCellBounds'](row, column);
+			self['outer']['setStyleName'](self['getElement'](row, column), styleName, false);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['styleName']]);
+		$cls_definition['removeStyleName'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setAlignment', function(row, column, hAlign, vAlign) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				hAlign = arguments[3];
+				vAlign = arguments[4];
+			}
+
+			self['setHorizontalAlignment'](row, column, hAlign);
+			self['setVerticalAlignment'](row, column, vAlign);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['hAlign'],['vAlign']]);
+		$cls_definition['setAlignment'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHeight', function(row, column, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				height = arguments[3];
+			}
+			var $attr4,element,$attr3;
+			self['outer']['prepareCell'](row, column);
+			element = self['getCellElement'](((($attr3=self['outer']['bodyElem']) !== null & ($attr4=self['outer']).__is_instance__) && typeof $attr3 == 'function'?
+						pyjslib['getattr']($attr4, 'bodyElem'):
+						self['outer']['bodyElem']), row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setStyleAttribute'](element, String('height'), height);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['height']]);
+		$cls_definition['setHeight'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHorizontalAlignment', function(row, column, align) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				align = arguments[3];
+			}
+			var $attr5,$attr6,element;
+			self['outer']['prepareCell'](row, column);
+			element = self['getCellElement'](((($attr5=self['outer']['bodyElem']) !== null & ($attr6=self['outer']).__is_instance__) && typeof $attr5 == 'function'?
+						pyjslib['getattr']($attr6, 'bodyElem'):
+						self['outer']['bodyElem']), row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setAttribute'](element, String('align'), align);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['align']]);
+		$cls_definition['setHorizontalAlignment'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setStyleName', function(row, column, styleName) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				styleName = arguments[3];
+			}
+
+			self['outer']['prepareCell'](row, column);
+			self['setAttr'](row, column, String('className'), styleName);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['styleName']]);
+		$cls_definition['setStyleName'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setVerticalAlignment', function(row, column, align) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				align = arguments[3];
+			}
+			var $attr8,$attr7;
+			self['outer']['prepareCell'](row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setStyleAttribute'](self['getCellElement'](((($attr7=self['outer']['bodyElem']) !== null & ($attr8=self['outer']).__is_instance__) && typeof $attr7 == 'function'?
+						pyjslib['getattr']($attr8, 'bodyElem'):
+						self['outer']['bodyElem']), row, column), String('verticalAlign'), align);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['align']]);
+		$cls_definition['setVerticalAlignment'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setVisible', function(row, column, visible) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				visible = arguments[3];
+			}
+			var element;
+			element = self['ensureElement'](row, column);
+			self['outer']['setVisible'](element, visible);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['visible']]);
+		$cls_definition['setVisible'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setWidth', function(row, column, width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				width = arguments[3];
+			}
+			var $attr9,$attr10;
+			self['outer']['prepareCell'](row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setStyleAttribute'](self['getCellElement'](((($attr9=self['outer']['bodyElem']) !== null & ($attr10=self['outer']).__is_instance__) && typeof $attr9 == 'function'?
+						pyjslib['getattr']($attr10, 'bodyElem'):
+						self['outer']['bodyElem']), row, column), String('width'), width);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['width']]);
+		$cls_definition['setWidth'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setWordWrap', function(row, column, wrap) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				wrap = arguments[3];
+			}
+			var wrap_str;
+			self['outer']['prepareCell'](row, column);
+			if (pyjslib['bool'](wrap)) {
+				wrap_str = String('');
+			}
+			else {
+				wrap_str = String('nowrap');
+			}
+			pyjamas['ui']['CellFormatter']['DOM']['setStyleAttribute'](self['getElement'](row, column), String('whiteSpace'), wrap_str);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['wrap']]);
+		$cls_definition['setWordWrap'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getCellElement', function(table, row, col) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				table = arguments[1];
+				row = arguments[2];
+				col = arguments[3];
+			}
+			var $attr16,cols,item,length,$attr14,$attr15,$attr11,$attr13,$attr12;
+			length = ((($attr11=table['rows']['length']) !== null & ($attr12=table['rows']).__is_instance__) && typeof $attr11 == 'function'?
+						pyjslib['getattr']($attr12, 'length'):
+						table['rows']['length']);
+			if (pyjslib['bool']((((pyjslib['cmp'](row, length))|1) == 1))) {
+				return null;
+			}
+			cols = ((($attr13=table['rows']['item'](row)['cells']) !== null & ($attr14=table['rows']['item'](row)).__is_instance__) && typeof $attr13 == 'function'?
+						pyjslib['getattr']($attr14, 'cells'):
+						table['rows']['item'](row)['cells']);
+			length = ((($attr15=cols['length']) !== null & ($attr16=cols).__is_instance__) && typeof $attr15 == 'function'?
+						pyjslib['getattr']($attr16, 'length'):
+						cols['length']);
+			if (pyjslib['bool']((((pyjslib['cmp'](col, length))|1) == 1))) {
+				return null;
+			}
+			item = cols['item'](col);
+			return item;
+		}
+	, 1, [null,null,['self'],['table'],['row'],['col']]);
+		$cls_definition['getCellElement'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getRawElement', function(row, column) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+			}
+			var $attr18,$attr17;
+			return self['getCellElement'](((($attr17=self['outer']['bodyElem']) !== null & ($attr18=self['outer']).__is_instance__) && typeof $attr17 == 'function'?
+						pyjslib['getattr']($attr18, 'bodyElem'):
+						self['outer']['bodyElem']), row, column);
+		}
+	, 1, [null,null,['self'],['row'],['column']]);
+		$cls_definition['getRawElement'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'ensureElement', function(row, column) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+			}
+
+			self['outer']['prepareCell'](row, column);
+			return pyjamas['ui']['CellFormatter']['DOM']['getChild'](self['outer']['rowFormatter']['ensureElement'](row), column);
+		}
+	, 1, [null,null,['self'],['row'],['column']]);
+		$cls_definition['ensureElement'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getStyleAttr', function(row, column, attr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				attr = arguments[3];
+			}
+			var elem;
+			elem = self['getElement'](row, column);
+			return pyjamas['ui']['CellFormatter']['DOM']['getStyleAttribute'](elem, attr);
+		}
+	, 1, [null,null,['self'],['row'],['column'],['attr']]);
+		$cls_definition['getStyleAttr'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setStyleAttr', function(row, column, attrName, value) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				attrName = arguments[3];
+				value = arguments[4];
+			}
+			var elem;
+			elem = self['getElement'](row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setStyleAttribute'](elem, attrName, value);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['attrName'],['value']]);
+		$cls_definition['setStyleAttr'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getAttr', function(row, column, attr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				attr = arguments[3];
+			}
+			var elem;
+			elem = self['getElement'](row, column);
+			return pyjamas['ui']['CellFormatter']['DOM']['getAttribute'](elem, attr);
+		}
+	, 1, [null,null,['self'],['row'],['column'],['attr']]);
+		$cls_definition['getAttr'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setAttr', function(row, column, attrName, value) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				row = arguments[1];
+				column = arguments[2];
+				attrName = arguments[3];
+				value = arguments[4];
+			}
+			var elem;
+			elem = self['getElement'](row, column);
+			pyjamas['ui']['CellFormatter']['DOM']['setAttribute'](elem, attrName, value);
+			return null;
+		}
+	, 1, [null,null,['self'],['row'],['column'],['attrName'],['value']]);
+		$cls_definition['setAttr'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjamas['ui']['CellFormatter']['Applier']));
+	})();
+	return this;
+}; /* end pyjamas.ui.CellFormatter */
+
+
+/* end module: pyjamas.ui.CellFormatter */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.ui.Applier', 'pyjamas.ui']
+*/

@@ -1,1 +1,246 @@
-$pyjs.loaded_modules["pyjamas.ui.Focus"]=function(c){if($pyjs.loaded_modules["pyjamas.ui.Focus"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.ui.Focus"]}if(typeof $pyjs.loaded_modules["pyjamas.ui"]=="undefined"||!$pyjs.loaded_modules["pyjamas.ui"].__was_initialized__){pyjslib.___import___("pyjamas.ui",null)}pyjamas.ui["Focus"]=$pyjs.loaded_modules["pyjamas.ui.Focus"];pyjamas.ui["Focus"].__was_initialized__=true;if((c===null)||(typeof c=="undefined")){c="pyjamas.ui.Focus"}var a=pyjamas.ui["Focus"].__name__=c;var b=pyjamas.ui["Focus"];pyjamas.ui["Focus"]["DOM"]=pyjslib.___import___("pyjamas.DOM","pyjamas.ui",null,false);pyjamas.ui["Focus"]["blur"]=function(d){d.firstChild.blur()};pyjamas.ui["Focus"]["blur"].__name__="blur";pyjamas.ui["Focus"]["blur"].__bind_type__=0;pyjamas.ui["Focus"]["blur"].__args__=[null,null,["elem"]];pyjamas.ui["Focus"]["createFocusable"]=function(){var e=$doc.createElement("div");var d=$doc.createElement("input");d.type="text";d.style.width=d.style.height=0;d.style.zIndex=-1;d.style.position="absolute";d.addEventListener("blur",function(f){if(this.parentNode.onblur){this.parentNode.onblur(f)}},false);d.addEventListener("focus",function(f){if(this.parentNode.onfocus){this.parentNode.onfocus(f)}},false);e.addEventListener("mousedown",function(f){this.firstChild.focus()},false);e.appendChild(d);return e};pyjamas.ui["Focus"]["createFocusable"].__name__="createFocusable";pyjamas.ui["Focus"]["createFocusable"].__bind_type__=0;pyjamas.ui["Focus"]["createFocusable"].__args__=[null,null];pyjamas.ui["Focus"]["focus"]=function(d){d.firstChild.focus()};pyjamas.ui["Focus"]["focus"].__name__="focus";pyjamas.ui["Focus"]["focus"].__bind_type__=0;pyjamas.ui["Focus"]["focus"].__args__=[null,null,["elem"]];pyjamas.ui["Focus"]["getTabIndex"]=function(d){return d.firstChild.tabIndex};pyjamas.ui["Focus"]["getTabIndex"].__name__="getTabIndex";pyjamas.ui["Focus"]["getTabIndex"].__bind_type__=0;pyjamas.ui["Focus"]["getTabIndex"].__args__=[null,null,["elem"]];pyjamas.ui["Focus"]["setAccessKey"]=function(e,d){if(e.firstChild!=null){e.firstChild.accessKey=d}};pyjamas.ui["Focus"]["setAccessKey"].__name__="setAccessKey";pyjamas.ui["Focus"]["setAccessKey"].__bind_type__=0;pyjamas.ui["Focus"]["setAccessKey"].__args__=[null,null,["elem"],["key"]];pyjamas.ui["Focus"]["setTabIndex"]=function(e,d){if(e.firstChild!=null){e.firstChild.tabIndex=d}};pyjamas.ui["Focus"]["setTabIndex"].__name__="setTabIndex";pyjamas.ui["Focus"]["setTabIndex"].__bind_type__=0;pyjamas.ui["Focus"]["setTabIndex"].__args__=[null,null,["elem"],["index"]];pyjamas.ui["Focus"]["FocusMixin"]=(function(){var f=$pyjs__class_instance("FocusMixin");var e=new Object();var d;e.__md5__="ad21fd7a9e57f007dd04b1edaa28909c";d=$pyjs__bind_method(f,"getTabIndex",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["Focus"]["getTabIndex"](g.getElement())},1,[null,null,["self"]]);e.getTabIndex=d;d=$pyjs__bind_method(f,"setAccessKey",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["Focus"]["setAccessKey"](g.getElement(),h);return null},1,[null,null,["self"],["key"]]);e.setAccessKey=d;d=$pyjs__bind_method(f,"setFocus",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}if(pyjslib.bool(h)){pyjamas.ui["Focus"]["focus"](g.getElement())}else{pyjamas.ui["Focus"]["blur"](g.getElement())}return null},1,[null,null,["self"],["focused"]]);e.setFocus=d;d=$pyjs__bind_method(f,"setTabIndex",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["Focus"]["setTabIndex"](g.getElement(),h);return null},1,[null,null,["self"],["index"]]);e.setTabIndex=d;d=$pyjs__bind_method(f,"isEnabled",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var h,i;try{return !pyjslib.bool(pyjamas.ui["Focus"]["DOM"]["getBooleanAttribute"](g.getElement(),String("disabled")))}catch(h){var j=(typeof h.__name__=="undefined"?h.name:h.__name__);$pyjs.__last_exception__={error:h,module:pyjamas.ui.Focus,try_lineno:57};if((j==pyjslib.TypeError.__name__)||pyjslib._isinstance(h,pyjslib.TypeError)){$pyjs.__last_exception__.except_lineno=59;i=h;return true}else{if((j==pyjslib.AttributeError.__name__)||pyjslib._isinstance(h,pyjslib.AttributeError)){$pyjs.__last_exception__.except_lineno=61;i=h;return true}else{throw h}}}return null},1,[null,null,["self"]]);e.isEnabled=d;d=$pyjs__bind_method(f,"setEnabled",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["Focus"]["DOM"]["setBooleanAttribute"](g.getElement(),String("disabled"),!pyjslib.bool(h));return null},1,[null,null,["self"],["enabled"]]);e.setEnabled=d;d=$pyjs__bind_method(f,"isReadonly",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var h,i;try{return !pyjslib.bool(pyjamas.ui["Focus"]["DOM"]["getBooleanAttribute"](g.getElement(),String("readOnly")))}catch(h){var j=(typeof h.__name__=="undefined"?h.name:h.__name__);$pyjs.__last_exception__={error:h,module:pyjamas.ui.Focus,try_lineno:68};if((j==pyjslib.TypeError.__name__)||pyjslib._isinstance(h,pyjslib.TypeError)){$pyjs.__last_exception__.except_lineno=70;i=h;return true}else{if((j==pyjslib.AttributeError.__name__)||pyjslib._isinstance(h,pyjslib.AttributeError)){$pyjs.__last_exception__.except_lineno=72;i=h;return true}else{throw h}}}return null},1,[null,null,["self"]]);e.isReadonly=d;d=$pyjs__bind_method(f,"setReadonly",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["Focus"]["DOM"]["setBooleanAttribute"](g.getElement(),String("readOnly"),h);return null},1,[null,null,["self"],["readonly"]]);e.setReadonly=d;return $pyjs__class_function(f,e,new Array(pyjslib.object))})();return this};
+/* start module: pyjamas.ui.Focus */
+$pyjs.loaded_modules['pyjamas.ui.Focus'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.Focus'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.Focus'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) pyjslib['___import___']('pyjamas.ui', null);
+	pyjamas['ui']['Focus'] = $pyjs.loaded_modules["pyjamas.ui.Focus"];
+	pyjamas['ui']['Focus'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.Focus';
+	var __name__ = pyjamas['ui']['Focus'].__name__ = __mod_name__;
+	var Focus = pyjamas['ui']['Focus'];
+
+
+	pyjamas['ui']['Focus']['DOM'] = pyjslib['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	pyjamas['ui']['Focus']['blur'] = function(elem) {
+
+
+    elem.firstChild.blur();
+    
+	};
+	pyjamas['ui']['Focus']['blur'].__name__ = 'blur';
+
+	pyjamas['ui']['Focus']['blur'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['blur'].__args__ = [null,null,['elem']];
+	pyjamas['ui']['Focus']['createFocusable'] = function() {
+
+
+    var div = $doc.createElement('div');
+    var input = $doc.createElement('input');
+    input.type = 'text';
+    input.style.width = input.style.height = 0;
+    input.style.zIndex = -1;
+    input.style.position = 'absolute';
+
+    input.addEventListener(
+        'blur',
+        function(evt) { if (this.parentNode.onblur) this.parentNode.onblur(evt); },
+        false);
+
+    input.addEventListener(
+        'focus',
+        function(evt) { if (this.parentNode.onfocus) this.parentNode.onfocus(evt); },
+        false);
+
+    div.addEventListener(
+        'mousedown',
+        function(evt) { this.firstChild.focus(); },
+        false);
+    
+    div.appendChild(input);
+    return div;
+    
+	};
+	pyjamas['ui']['Focus']['createFocusable'].__name__ = 'createFocusable';
+
+	pyjamas['ui']['Focus']['createFocusable'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['createFocusable'].__args__ = [null,null];
+	pyjamas['ui']['Focus']['focus'] = function(elem) {
+
+
+    elem.firstChild.focus();
+    
+	};
+	pyjamas['ui']['Focus']['focus'].__name__ = 'focus';
+
+	pyjamas['ui']['Focus']['focus'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['focus'].__args__ = [null,null,['elem']];
+	pyjamas['ui']['Focus']['getTabIndex'] = function(elem) {
+
+
+    return elem.firstChild.tabIndex;
+    
+	};
+	pyjamas['ui']['Focus']['getTabIndex'].__name__ = 'getTabIndex';
+
+	pyjamas['ui']['Focus']['getTabIndex'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['getTabIndex'].__args__ = [null,null,['elem']];
+	pyjamas['ui']['Focus']['setAccessKey'] = function(elem, key) {
+
+
+    if (elem.firstChild != null) elem.firstChild.accessKey = key;
+    
+	};
+	pyjamas['ui']['Focus']['setAccessKey'].__name__ = 'setAccessKey';
+
+	pyjamas['ui']['Focus']['setAccessKey'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['setAccessKey'].__args__ = [null,null,['elem'],['key']];
+	pyjamas['ui']['Focus']['setTabIndex'] = function(elem, index) {
+
+
+    if (elem.firstChild != null) elem.firstChild.tabIndex = index;
+    
+	};
+	pyjamas['ui']['Focus']['setTabIndex'].__name__ = 'setTabIndex';
+
+	pyjamas['ui']['Focus']['setTabIndex'].__bind_type__ = 0;
+	pyjamas['ui']['Focus']['setTabIndex'].__args__ = [null,null,['elem'],['index']];
+	pyjamas['ui']['Focus']['FocusMixin'] = (function(){
+		var $cls_instance = $pyjs__class_instance('FocusMixin');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'ad21fd7a9e57f007dd04b1edaa28909c';
+		$method = $pyjs__bind_method($cls_instance, 'getTabIndex', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['Focus']['getTabIndex'](self['getElement']());
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getTabIndex'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setAccessKey', function(key) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+			}
+
+			pyjamas['ui']['Focus']['setAccessKey'](self['getElement'](), key);
+			return null;
+		}
+	, 1, [null,null,['self'],['key']]);
+		$cls_definition['setAccessKey'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setFocus', function(focused) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				focused = arguments[1];
+			}
+
+			if (pyjslib['bool'](focused)) {
+				pyjamas['ui']['Focus']['focus'](self['getElement']());
+			}
+			else {
+				pyjamas['ui']['Focus']['blur'](self['getElement']());
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['focused']]);
+		$cls_definition['setFocus'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setTabIndex', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+
+			pyjamas['ui']['Focus']['setTabIndex'](self['getElement'](), index);
+			return null;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['setTabIndex'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'isEnabled', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $pyjs_try_err,err;
+			try {
+				return !pyjslib['bool'](pyjamas['ui']['Focus']['DOM']['getBooleanAttribute'](self['getElement'](), String('disabled')));
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: pyjamas.ui.Focus, try_lineno: 57};
+				if (($pyjs_try_err_name == pyjslib['TypeError'].__name__)||pyjslib['_isinstance']($pyjs_try_err,pyjslib['TypeError'])) {
+					$pyjs.__last_exception__.except_lineno = 59;
+					err = $pyjs_try_err;
+					return true;
+				} else if (($pyjs_try_err_name == pyjslib['AttributeError'].__name__)||pyjslib['_isinstance']($pyjs_try_err,pyjslib['AttributeError'])) {
+					$pyjs.__last_exception__.except_lineno = 61;
+					err = $pyjs_try_err;
+					return true;
+				} else { throw $pyjs_try_err; }
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['isEnabled'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setEnabled', function(enabled) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				enabled = arguments[1];
+			}
+
+			pyjamas['ui']['Focus']['DOM']['setBooleanAttribute'](self['getElement'](), String('disabled'), !pyjslib['bool'](enabled));
+			return null;
+		}
+	, 1, [null,null,['self'],['enabled']]);
+		$cls_definition['setEnabled'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'isReadonly', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $pyjs_try_err,err;
+			try {
+				return !pyjslib['bool'](pyjamas['ui']['Focus']['DOM']['getBooleanAttribute'](self['getElement'](), String('readOnly')));
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: pyjamas.ui.Focus, try_lineno: 68};
+				if (($pyjs_try_err_name == pyjslib['TypeError'].__name__)||pyjslib['_isinstance']($pyjs_try_err,pyjslib['TypeError'])) {
+					$pyjs.__last_exception__.except_lineno = 70;
+					err = $pyjs_try_err;
+					return true;
+				} else if (($pyjs_try_err_name == pyjslib['AttributeError'].__name__)||pyjslib['_isinstance']($pyjs_try_err,pyjslib['AttributeError'])) {
+					$pyjs.__last_exception__.except_lineno = 72;
+					err = $pyjs_try_err;
+					return true;
+				} else { throw $pyjs_try_err; }
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['isReadonly'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setReadonly', function(readonly) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				readonly = arguments[1];
+			}
+
+			pyjamas['ui']['Focus']['DOM']['setBooleanAttribute'](self['getElement'](), String('readOnly'), readonly);
+			return null;
+		}
+	, 1, [null,null,['self'],['readonly']]);
+		$cls_definition['setReadonly'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib.object));
+	})();
+	return this;
+}; /* end pyjamas.ui.Focus */
+
+
+/* end module: pyjamas.ui.Focus */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas']
+*/

@@ -1,12 +1,36 @@
-Matriz m =  new Matriz(4,2, 40,40,70);
-Matriz m2 =  new Matriz(2,4, 500,40,70);
-Matriz mSoma;
+/* @pjs preload="images/colcheteDir_mim.png,images/colcheteEsq_mim.png"; */
+
+HashMap mapSeg = new HashMap();
+mapSeg["0.5"] = 2;
+mapSeg["1"] = 1;
+mapSeg["2"] = 0.5;
+mapSeg["3"] = 1/3;
+mapSeg["4"] = 0.25;
+mapSeg["5"] = 0.20;
+mapSeg["6"] = 0.20;
+mapSeg["7"] = 0.143;
+mapSeg["8"] = 0.125;
+mapSeg["10"] = 0.1;
+
+
+
+MatrizGrafica m =  new MatrizGrafica(3,3, 40,30,70);
+MatrizGrafica m2 =  new MatrizGrafica(3,3, 550,30,70);
+MatrizGrafica mSoma;
+function Pausar(){
+instance = Processing.getInstanceById("soma");
+  instance = Processing.getInstanceById('soma');
+  instance.draw();
+  setTimeout("Pausar()", 2000);
+  alert("aaaaaa");
+}
+
 void setup()
 {
-  size(1000,600);
+  size(1000,560);
   background(125);
   fill(255);
-  //noLoop();
+  loop();
   PFont fontA = loadFont("courier");
   textFont(fontA, 14);
   textFont("monospace",26);
@@ -15,19 +39,24 @@ void setup()
   m2.desenharMatriz();
   mSoma = m.soma(m2);
   mSoma.desenharMatriz();
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
-  //m.colorirProximoHorizontal(color(204, 153, 0));
+  text("Soma de Matrizes. Os botões desta tela ainda não estão funcionando.",20,20);
+
+  colcheteEsq = loadImage("images/colcheteEsq_mim.png");
+  colcheteDir = loadImage("images/colcheteDir_mim.png");
+  image(colcheteEsq,50,20);
+  image(colcheteDir,400,20);
   
-  frameRate(1);
+  image(colcheteEsq,500,20);
+  image(colcheteDir,920,20);
+  
+  image(colcheteEsq,300,280);
+  image(colcheteDir,700,280);
+  
+  frameRate(mapSeg["7"]);
+  //Pausar();
 }
 
 void draw(){  
-  text("Hello Web!",20,20);
   color c = color(random(0,255), random(0,255), random(0,255));
   m.colorirProximoHorizontal(c);
   m2.colorirProximoHorizontal(c);
@@ -36,8 +65,8 @@ void draw(){
 }
 
 //Definição de uma classe matriz com algumas operações não inrentes a esta classe como desenharMatriz, desenharMatrizColorida
-class Matriz {
-	
+class MatrizGrafica {
+
 	int[][] matriz = new int[10][10];
  int[][] colorido = new int[10][10];
  Cordenada[][] mposicao = new Cordenada[10][10];
@@ -45,7 +74,7 @@ class Matriz {
 	int colColor, linColor; //Armazena os indices da linha e da coluna colorida
  int x, y;
  int distancia;
-	Matriz(int col, int lin, int x, int y, int distancia) {
+	MatrizGrafica(int col, int lin, int x, int y, int distancia) {
 		for(int i = 0; i < lin; i++){
 			for(int j = 0; j < col; j++){
 				matriz[i][j] = int(random(-50,50));
@@ -87,8 +116,9 @@ class Matriz {
 	 }
 
 	 void colorirProximoHorizontal(color c){
-		if((colColor >= col) && (linColor >= lin))
+		if((colColor >= col) && (linColor >= lin-1))
 			return;
+		//println(linColor+"  "+colColor);
   if(colColor >= col){
       colColor = 0;
       linColor = linColor+1;
@@ -119,8 +149,9 @@ class Matriz {
 		  linColor = linColor+1;
 	 }
 	 
-	 Matriz soma(Matriz matriz2){
-	   Matriz mResult = new Matriz(matriz2.getNlin(), matriz2.getNcol(), 350, 400,matriz2.getDist());
+	 MatrizGrafica soma(MatrizGrafica matriz2){
+	   //int max = matriz2()
+	   MatrizGrafica mResult = new MatrizGrafica(matriz2.getNlin(), matriz2.getNcol(), 300, 250,matriz2.getDist());
 	   for(int i = 0; i < lin; i++){
 		  	   for(int j = 0; j < col; j++){
 				      mResult.matriz[i][j] = this.matriz[i][j] + matriz2.matriz[i][j];

@@ -1,1 +1,188 @@
-$pyjs.loaded_modules["pyjamas.ui"]=function(c){if($pyjs.loaded_modules["pyjamas.ui"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.ui"]}if(typeof $pyjs.loaded_modules.pyjamas=="undefined"||!$pyjs.loaded_modules.pyjamas.__was_initialized__){pyjslib.___import___("pyjamas",null)}pyjamas.ui=$pyjs.loaded_modules["pyjamas.ui"];pyjamas.ui.__was_initialized__=true;if((c===null)||(typeof c=="undefined")){c="pyjamas.ui"}var a=pyjamas.ui.__name__=c;var b=pyjamas.ui;pyjamas.ui["DOM"]=pyjslib.___import___("pyjamas.DOM","pyjamas.ui",null,false);pyjamas.ui["HasHorizontalAlignment"]=(function(){var f=$pyjs__class_instance("HasHorizontalAlignment");var e=new Object();var d;e.__md5__="e854f19702fb51fc1b2afa0bad0d844f";e.ALIGN_LEFT=String("left");e.ALIGN_CENTER=String("center");e.ALIGN_RIGHT=String("right");return $pyjs__class_function(f,e,new Array(pyjslib.object))})();pyjamas.ui["HasVerticalAlignment"]=(function(){var f=$pyjs__class_instance("HasVerticalAlignment");var e=new Object();var d;e.__md5__="c60780cb7418be8137de7e2c4f45b2b3";e.ALIGN_TOP=String("top");e.ALIGN_MIDDLE=String("middle");e.ALIGN_BOTTOM=String("bottom");return $pyjs__class_function(f,e,new Array(pyjslib.object))})();pyjamas.ui["HasAlignment"]=(function(){var f=$pyjs__class_instance("HasAlignment");var e=new Object();var d;e.__md5__="6ea9f55723a1883bd023f77414c84ea6";e.ALIGN_BOTTOM=String("bottom");e.ALIGN_MIDDLE=String("middle");e.ALIGN_TOP=String("top");e.ALIGN_CENTER=String("center");e.ALIGN_LEFT=String("left");e.ALIGN_RIGHT=String("right");return $pyjs__class_function(f,e,new Array(pyjslib.object))})();pyjamas.ui["Applier"]=(function(){var f=$pyjs__class_instance("Applier");var e=new Object();var d;e.__md5__="e507e1e4f4873370088ecec0977758c5";d=$pyjs__bind_method(f,"__init__",function(){if(this.__is_instance__===true){var u=this;var m=arguments.length>=1?arguments[arguments.length-1]:arguments[arguments.length];if(typeof m!="object"||m.__name__!="dict"||typeof m.$pyjs_is_kwarg=="undefined"){m=arguments[arguments.length+1]}else{delete m["$pyjs_is_kwarg"]}}else{var u=arguments[0];var m=arguments.length>=2?arguments[arguments.length-1]:arguments[arguments.length];if(typeof m!="object"||m.__name__!="dict"||typeof m.$pyjs_is_kwarg=="undefined"){m=arguments[arguments.length+1]}else{delete m["$pyjs_is_kwarg"]}}if(typeof m=="undefined"){m=pyjslib.__empty_dict();if(typeof u!="undefined"){if(u!==null&&typeof u["$pyjs_is_kwarg"]!="undefined"){m=u;u=arguments[1]}}else{}}var r,s,n,j,p,q,g,h,o,t;if(pyjslib.bool(m)){o=m.keys();n=pyjslib.len(o);r=(typeof($usub1=1)=="number"?-$usub1:pyjslib.op_usub($usub1));while(pyjslib.bool((pyjslib.cmp(r,(typeof(h=n)==typeof(g=1)&&(typeof h=="number"||typeof h=="string")?h-g:pyjslib.op_sub(h,g)))==-1))){r=(typeof(q=r)==typeof(p=1)&&(typeof q=="number"||typeof q=="string")?q+p:pyjslib.op_add(q,p));j=o.__getitem__(r);t=pyjslib.getattr(u,pyjslib.sprintf(String("set%s"),j),null);if(pyjslib.bool(t)){s=m.__getitem__(j);if(pyjslib.bool(pyjslib.isinstance(s,pyjslib.tuple))){$pyjs_kwargs_call(null,t,s,null,[{}])}else{t(s)}}}}return null},1,[null,["kwargs"],["self"]]);e.__init__=d;return $pyjs__class_function(f,e,new Array(pyjslib.object))})();pyjamas.ui["InnerHTML"]=(function(){var f=$pyjs__class_instance("InnerHTML");var e=new Object();var d;e.__md5__="060e1d91146f12b044a2e366452cbbdc";d=$pyjs__bind_method(f,"getHTML",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["DOM"]["getInnerHTML"](g.getElement())},1,[null,null,["self"]]);e.getHTML=d;d=$pyjs__bind_method(f,"setHTML",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["DOM"]["setInnerHTML"](g.getElement(),h);return null},1,[null,null,["self"],["html"]]);e.setHTML=d;return $pyjs__class_function(f,e,new Array(pyjslib.object))})();pyjamas.ui["InnerText"]=(function(){var f=$pyjs__class_instance("InnerText");var e=new Object();var d;e.__md5__="c295df508cd3787e8d127530f24b75ed";d=$pyjs__bind_method(f,"setText",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}pyjamas.ui["DOM"]["setInnerText"](g.getElement(),h);return null},1,[null,null,["self"],["text"]]);e.setText=d;d=$pyjs__bind_method(f,"getText",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["DOM"]["getInnerText"](g.getElement())},1,[null,null,["self"]]);e.getText=d;return $pyjs__class_function(f,e,new Array(pyjslib.object))})();return this};
+/* start module: pyjamas.ui */
+$pyjs.loaded_modules['pyjamas.ui'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui'];
+	if(typeof $pyjs.loaded_modules['pyjamas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas'].__was_initialized__) pyjslib['___import___']('pyjamas', null);
+	pyjamas['ui'] = $pyjs.loaded_modules["pyjamas.ui"];
+	pyjamas['ui'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui';
+	var __name__ = pyjamas['ui'].__name__ = __mod_name__;
+	var ui = pyjamas['ui'];
+
+
+	pyjamas['ui']['DOM'] = pyjslib['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	pyjamas['ui']['HasHorizontalAlignment'] = (function(){
+		var $cls_instance = $pyjs__class_instance('HasHorizontalAlignment');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'e854f19702fb51fc1b2afa0bad0d844f';
+		$cls_definition['ALIGN_LEFT'] = String('left');
+		$cls_definition['ALIGN_CENTER'] = String('center');
+		$cls_definition['ALIGN_RIGHT'] = String('right');
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib.object));
+	})();
+	pyjamas['ui']['HasVerticalAlignment'] = (function(){
+		var $cls_instance = $pyjs__class_instance('HasVerticalAlignment');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'c60780cb7418be8137de7e2c4f45b2b3';
+		$cls_definition['ALIGN_TOP'] = String('top');
+		$cls_definition['ALIGN_MIDDLE'] = String('middle');
+		$cls_definition['ALIGN_BOTTOM'] = String('bottom');
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib.object));
+	})();
+	pyjamas['ui']['HasAlignment'] = (function(){
+		var $cls_instance = $pyjs__class_instance('HasAlignment');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = '6ea9f55723a1883bd023f77414c84ea6';
+		$cls_definition['ALIGN_BOTTOM'] = String('bottom');
+		$cls_definition['ALIGN_MIDDLE'] = String('middle');
+		$cls_definition['ALIGN_TOP'] = String('top');
+		$cls_definition['ALIGN_CENTER'] = String('center');
+		$cls_definition['ALIGN_LEFT'] = String('left');
+		$cls_definition['ALIGN_RIGHT'] = String('right');
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib.object));
+	})();
+	pyjamas['ui']['Applier'] = (function(){
+		var $cls_instance = $pyjs__class_instance('Applier');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'e507e1e4f4873370088ecec0977758c5';
+		$method = $pyjs__bind_method($cls_instance, '__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 1 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				var kwargs = arguments.length >= 2 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = pyjslib['__empty_dict']();
+				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[1];
+					}
+				} else {
+				}
+			}
+			var i,args,l,prop,$add2,$add1,$sub2,$sub1,k,fn;
+			if (pyjslib['bool'](kwargs)) {
+				k = kwargs['keys']();
+				l = pyjslib['len'](k);
+				i = (typeof ($usub1=1)=='number'?
+					-$usub1:
+					pyjslib['op_usub']($usub1));
+				while (pyjslib['bool']((pyjslib['cmp'](i, (typeof ($sub1=l)==typeof ($sub2=1) && (typeof $sub1=='number'||typeof $sub1=='string')?
+					$sub1-$sub2:
+					pyjslib['op_sub']($sub1,$sub2))) == -1))) {
+					i = (typeof ($add1=i)==typeof ($add2=1) && (typeof $add1=='number'||typeof $add1=='string')?
+						$add1+$add2:
+						pyjslib['op_add']($add1,$add2));
+					prop = k.__getitem__(i);
+					fn = pyjslib['getattr'](self, pyjslib['sprintf'](String('set%s'), prop), null);
+					if (pyjslib['bool'](fn)) {
+						args = kwargs.__getitem__(prop);
+						if (pyjslib['bool'](pyjslib['isinstance'](args, pyjslib['tuple']))) {
+							$pyjs_kwargs_call(null, fn, args, null, [{}]);
+						}
+						else {
+							fn(args);
+						}
+					}
+				}
+			}
+			return null;
+		}
+	, 1, [null,['kwargs'],['self']]);
+		$cls_definition['__init__'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib['object']));
+	})();
+	pyjamas['ui']['InnerHTML'] = (function(){
+		var $cls_instance = $pyjs__class_instance('InnerHTML');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = '060e1d91146f12b044a2e366452cbbdc';
+		$method = $pyjs__bind_method($cls_instance, 'getHTML', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['DOM']['getInnerHTML'](self['getElement']());
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHTML'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHTML', function(html) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				html = arguments[1];
+			}
+
+			pyjamas['ui']['DOM']['setInnerHTML'](self['getElement'](), html);
+			return null;
+		}
+	, 1, [null,null,['self'],['html']]);
+		$cls_definition['setHTML'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib['object']));
+	})();
+	pyjamas['ui']['InnerText'] = (function(){
+		var $cls_instance = $pyjs__class_instance('InnerText');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'c295df508cd3787e8d127530f24b75ed';
+		$method = $pyjs__bind_method($cls_instance, 'setText', function(text) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+			}
+
+			pyjamas['ui']['DOM']['setInnerText'](self['getElement'](), text);
+			return null;
+		}
+	, 1, [null,null,['self'],['text']]);
+		$cls_definition['setText'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getText', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['DOM']['getInnerText'](self['getElement']());
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getText'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib['object']));
+	})();
+	return this;
+}; /* end pyjamas.ui */
+
+
+/* end module: pyjamas.ui */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas']
+*/

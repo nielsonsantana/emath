@@ -1,1 +1,387 @@
-$pyjs.loaded_modules["pyjamas.ui.PopupPanel"]=function(c){if($pyjs.loaded_modules["pyjamas.ui.PopupPanel"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.ui.PopupPanel"]}if(typeof $pyjs.loaded_modules["pyjamas.ui"]=="undefined"||!$pyjs.loaded_modules["pyjamas.ui"].__was_initialized__){pyjslib.___import___("pyjamas.ui",null)}pyjamas.ui["PopupPanel"]=$pyjs.loaded_modules["pyjamas.ui.PopupPanel"];pyjamas.ui["PopupPanel"].__was_initialized__=true;if((c===null)||(typeof c=="undefined")){c="pyjamas.ui.PopupPanel"}var b=pyjamas.ui["PopupPanel"].__name__=c;var a=pyjamas.ui["PopupPanel"];pyjamas.ui["PopupPanel"]["DOM"]=pyjslib.___import___("pyjamas.DOM","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["Factory"]=pyjslib.___import___("pyjamas.Factory","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["SimplePanel"]=pyjslib.___import___("SimplePanel.SimplePanel","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["RootPanel"]=pyjslib.___import___("RootPanel.RootPanel","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["MouseListener"]=pyjslib.___import___("pyjamas.ui.MouseListener","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["KeyboardListener"]=pyjslib.___import___("pyjamas.ui.KeyboardListener","pyjamas.ui",null,false);pyjamas.ui["PopupPanel"]["PopupPanel"]=(function(){var f=$pyjs__class_instance("PopupPanel");var e=new Object();var d;e.__md5__="54ba393aed754f3576e5ec99892ff5ff";d=$pyjs__bind_method(f,"__init__",function(g,k,j){if(this.__is_instance__===true){var h=this;var l=arguments.length>=4?arguments[arguments.length-1]:arguments[arguments.length];if(typeof l!="object"||l.__name__!="dict"||typeof l.$pyjs_is_kwarg=="undefined"){l=arguments[arguments.length+1]}else{delete l["$pyjs_is_kwarg"]}}else{var h=arguments[0];g=arguments[1];k=arguments[2];j=arguments[3];var l=arguments.length>=5?arguments[arguments.length-1]:arguments[arguments.length];if(typeof l!="object"||l.__name__!="dict"||typeof l.$pyjs_is_kwarg=="undefined"){l=arguments[arguments.length+1]}else{delete l["$pyjs_is_kwarg"]}}if(typeof l=="undefined"){l=pyjslib.__empty_dict();if(typeof j!="undefined"){if(j!==null&&typeof j["$pyjs_is_kwarg"]!="undefined"){l=j;j=arguments[4]}}else{if(typeof k!="undefined"){if(k!==null&&typeof k["$pyjs_is_kwarg"]!="undefined"){l=k;k=arguments[4]}}else{if(typeof g!="undefined"){if(g!==null&&typeof g["$pyjs_is_kwarg"]!="undefined"){l=g;g=arguments[4]}}else{if(typeof h!="undefined"){if(h!==null&&typeof h["$pyjs_is_kwarg"]!="undefined"){l=h;h=arguments[4]}}else{}}}}}if(typeof g=="undefined"){g=arguments.callee.__args__[3][1]}if(typeof k=="undefined"){k=arguments.callee.__args__[4][1]}if(typeof j=="undefined"){j=arguments.callee.__args__[5][1]}var i;h.popupListeners=pyjslib.list([]);h.showing=false;h.autoHide=g;h.modal=k;if(pyjslib.bool((j===null))){j=pyjamas.ui["PopupPanel"]["RootPanel"]()}h.rootpanel=j;if(pyjslib.bool(l.has_key(String("Element")))){i=l.pop(String("Element"))}else{i=h.createElement()}pyjamas.ui["PopupPanel"]["DOM"]["setStyleAttribute"](i,String("position"),String("absolute"));$pyjs_kwargs_call(pyjamas.ui["PopupPanel"]["SimplePanel"],"__init__",null,l,[{},h,i]);return null},1,[null,["kwargs"],["self"],["autoHide",false],["modal",true],["rootpanel",null]]);e.__init__=d;d=$pyjs__bind_method(f,"addPopupListener",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.popupListeners["append"](h);return null},1,[null,null,["self"],["listener"]]);e.addPopupListener=d;d=$pyjs__bind_method(f,"getPopupLeft",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["PopupPanel"]["DOM"]["getIntAttribute"](g.getElement(),String("offsetLeft"))},1,[null,null,["self"]]);e.getPopupLeft=d;d=$pyjs__bind_method(f,"getPopupTop",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["PopupPanel"]["DOM"]["getIntAttribute"](g.getElement(),String("offsetTop"))},1,[null,null,["self"]]);e.getPopupTop=d;d=$pyjs__bind_method(f,"createElement",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return pyjamas.ui["PopupPanel"]["DOM"]["createDiv"]()},1,[null,null,["self"]]);e.createElement=d;d=$pyjs__bind_method(f,"hide",function(k){if(this.__is_instance__===true){var p=this}else{var p=arguments[0];k=arguments[1]}if(typeof k=="undefined"){k=arguments.callee.__args__[3][1]}var n,g,m,l,h,i,j,o;if(pyjslib.bool(!pyjslib.bool((((m=p.showing)!==null&(l=p).__is_instance__)&&typeof m=="function"?pyjslib.getattr(l,"showing"):p.showing)))){return null}p.showing=false;pyjamas.ui["PopupPanel"]["DOM"]["removeEventPreview"](p);p.rootpanel["remove"](p);p.onHideImpl(p.getElement());h=p.popupListeners;if(typeof(j=h.__array)!="undefined"){g=0}else{h=h.__iter__();g=typeof(j=h.__array)!="undefined"?0:(typeof h.$genfunc=="function"?1:-1)}o=0;while(typeof(n=(g?(g>0?h.next(true,false):pyjslib.wrapped_next(h)):j[o++]))!="undefined"){i=n;if(pyjslib.bool(pyjslib.hasattr(i,String("onPopupClosed")))){i.onPopupClosed(p,k)}else{i(p,k)}}return null},1,[null,null,["self"],["autoClosed",false]]);e.hide=d;d=$pyjs__bind_method(f,"isModal",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(((i=g.modal)!==null&(h=g).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"modal"):g.modal)},1,[null,null,["self"]]);e.isModal=d;d=$pyjs__bind_method(f,"_event_targets_popup",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}var k,j,i;i=pyjamas.ui["PopupPanel"]["DOM"]["eventGetTarget"](h);return(pyjslib.bool(k=i)?pyjamas.ui["PopupPanel"]["DOM"]["isOrHasChild"](g.getElement(),i):k)},1,[null,null,["self"],["event"]]);e._event_targets_popup=d;d=$pyjs__bind_method(f,"onEventPreview",function(N){if(this.__is_instance__===true){var M=this}else{var M=arguments[0];N=arguments[1]}var u,x,i,m,h,B,j,E,p,s,H,A,D,v,y,L,r,o,J,O,G,z,l,I,K,C,F,g,k,t,w,n,q;g=pyjamas.ui["PopupPanel"]["DOM"]["eventGetType"](N);if(pyjslib.bool(pyjslib.op_eq(g,String("keydown")))){return(pyjslib.bool(y=M.onKeyDownPreview(pyjamas.ui["PopupPanel"]["DOM"]["eventGetKeyCode"](N),pyjamas.ui["PopupPanel"]["KeyboardListener"]["getKeyboardModifiers"](N)))?(pyjslib.bool(H=!pyjslib.bool((((L=M.modal)!==null&(J=M).__is_instance__)&&typeof L=="function"?pyjslib.getattr(J,"modal"):M.modal)))?H:M._event_targets_popup(N)):y)}else{if(pyjslib.bool(pyjslib.op_eq(g,String("keyup")))){return(pyjslib.bool(r=M.onKeyUpPreview(pyjamas.ui["PopupPanel"]["DOM"]["eventGetKeyCode"](N),pyjamas.ui["PopupPanel"]["KeyboardListener"]["getKeyboardModifiers"](N)))?(pyjslib.bool(A=!pyjslib.bool((((G=M.modal)!==null&(E=M).__is_instance__)&&typeof G=="function"?pyjslib.getattr(E,"modal"):M.modal)))?A:M._event_targets_popup(N)):r)}else{if(pyjslib.bool(pyjslib.op_eq(g,String("keypress")))){return(pyjslib.bool(l=M.onKeyPressPreview(pyjamas.ui["PopupPanel"]["DOM"]["eventGetKeyCode"](N),pyjamas.ui["PopupPanel"]["KeyboardListener"]["getKeyboardModifiers"](N)))?(pyjslib.bool(u=!pyjslib.bool((((B=M.modal)!==null&(K=M).__is_instance__)&&typeof B=="function"?pyjslib.getattr(K,"modal"):M.modal)))?u:M._event_targets_popup(N)):l)}else{if(pyjslib.bool((pyjslib.bool(p=pyjslib.op_eq(g,String("mousedown")))?p:pyjslib.op_eq(g,String("blur"))))){if(pyjslib.bool((pyjamas.ui["PopupPanel"]["DOM"]["getCaptureElement"]()!==null))){return true}if(pyjslib.bool((pyjslib.bool(h=(((I=M.autoHide)!==null&(F=M).__is_instance__)&&typeof I=="function"?pyjslib.getattr(F,"autoHide"):M.autoHide))?!pyjslib.bool(M._event_targets_popup(N)):h))){M.hide(true);return true}}else{if(pyjslib.bool((pyjslib.bool(i=pyjslib.op_eq(g,String("mouseup")))?i:(pyjslib.bool(w=pyjslib.op_eq(g,String("click")))?w:(pyjslib.bool(t=pyjslib.op_eq(g,String("mousemove")))?t:pyjslib.op_eq(g,String("dblclick"))))))){if(pyjslib.bool((pyjamas.ui["PopupPanel"]["DOM"]["getCaptureElement"]()!==null))){return true}}}}}}return(pyjslib.bool(n=!pyjslib.bool((((C=M.modal)!==null&(z=M).__is_instance__)&&typeof C=="function"?pyjslib.getattr(z,"modal"):M.modal)))?n:M._event_targets_popup(N))},1,[null,null,["self"],["event"]]);e.onEventPreview=d;d=$pyjs__bind_method(f,"onKeyDownPreview",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}return true},1,[null,null,["self"],["key"],["modifiers"]]);e.onKeyDownPreview=d;d=$pyjs__bind_method(f,"onKeyPressPreview",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}return true},1,[null,null,["self"],["key"],["modifiers"]]);e.onKeyPressPreview=d;d=$pyjs__bind_method(f,"onKeyUpPreview",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}return true},1,[null,null,["self"],["key"],["modifiers"]]);e.onKeyUpPreview=d;d=$pyjs__bind_method(f,"onHideImpl",function(g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];g=arguments[1]}return null},1,[null,null,["self"],["popup"]]);e.onHideImpl=d;d=$pyjs__bind_method(f,"onShowImpl",function(g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];g=arguments[1]}return null},1,[null,null,["self"],["popup"]]);e.onShowImpl=d;d=$pyjs__bind_method(f,"removePopupListener",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.popupListeners["remove"](h);return null},1,[null,null,["self"],["listener"]]);e.removePopupListener=d;d=$pyjs__bind_method(f,"setPopupPosition",function(l,k){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];l=arguments[1];k=arguments[2]}var i,m,n,g,j;if(pyjslib.bool((pyjslib.cmp(l,0)==-1))){l=0}if(pyjslib.bool((pyjslib.cmp(k,0)==-1))){k=0}l=(typeof(g=l)==typeof(n=pyjamas.ui["PopupPanel"]["DOM"]["getBodyOffsetLeft"]())&&(typeof g=="number"||typeof g=="string")?g-n:pyjslib.op_sub(g,n));k=(typeof(m=k)==typeof(j=pyjamas.ui["PopupPanel"]["DOM"]["getBodyOffsetTop"]())&&(typeof m=="number"||typeof m=="string")?m-j:pyjslib.op_sub(m,j));i=h.getElement();pyjamas.ui["PopupPanel"]["DOM"]["setStyleAttribute"](i,String("left"),pyjslib.sprintf(String("%dpx"),l));pyjamas.ui["PopupPanel"]["DOM"]["setStyleAttribute"](i,String("top"),pyjslib.sprintf(String("%dpx"),k));return null},1,[null,null,["self"],["left"],["top"]]);e.setPopupPosition=d;d=$pyjs__bind_method(f,"show",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;if(pyjslib.bool((((i=g.showing)!==null&(h=g).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"showing"):g.showing))){return null}g.showing=true;pyjamas.ui["PopupPanel"]["DOM"]["addEventPreview"](g);g.rootpanel["add"](g);g.onShowImpl(g.getElement());return null},1,[null,null,["self"]]);e.show=d;return $pyjs__class_function(f,e,new Array(pyjamas.ui["PopupPanel"]["SimplePanel"]))})();pyjamas.ui["PopupPanel"]["Factory"]["registerClass"](String("pyjamas.ui.PopupPanel"),pyjamas.ui["PopupPanel"]["PopupPanel"]);return this};
+/* start module: pyjamas.ui.PopupPanel */
+$pyjs.loaded_modules['pyjamas.ui.PopupPanel'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.PopupPanel'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.PopupPanel'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) pyjslib['___import___']('pyjamas.ui', null);
+	pyjamas['ui']['PopupPanel'] = $pyjs.loaded_modules["pyjamas.ui.PopupPanel"];
+	pyjamas['ui']['PopupPanel'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.PopupPanel';
+	var __name__ = pyjamas['ui']['PopupPanel'].__name__ = __mod_name__;
+	var PopupPanel = pyjamas['ui']['PopupPanel'];
+
+
+	pyjamas['ui']['PopupPanel']['DOM'] = pyjslib['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['Factory'] = pyjslib['___import___']('pyjamas.Factory', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['SimplePanel'] = pyjslib['___import___']('SimplePanel.SimplePanel', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['RootPanel'] = pyjslib['___import___']('RootPanel.RootPanel', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['MouseListener'] = pyjslib['___import___']('pyjamas.ui.MouseListener', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['KeyboardListener'] = pyjslib['___import___']('pyjamas.ui.KeyboardListener', 'pyjamas.ui', null, false);
+	pyjamas['ui']['PopupPanel']['PopupPanel'] = (function(){
+		var $cls_instance = $pyjs__class_instance('PopupPanel');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = '54ba393aed754f3576e5ec99892ff5ff';
+		$method = $pyjs__bind_method($cls_instance, '__init__', function(autoHide, modal, rootpanel) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 4 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				autoHide = arguments[1];
+				modal = arguments[2];
+				rootpanel = arguments[3];
+				var kwargs = arguments.length >= 5 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = pyjslib['__empty_dict']();
+				if (typeof rootpanel != 'undefined') {
+					if (rootpanel !== null && typeof rootpanel['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = rootpanel;
+						rootpanel = arguments[4];
+					}
+				} else 				if (typeof modal != 'undefined') {
+					if (modal !== null && typeof modal['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = modal;
+						modal = arguments[4];
+					}
+				} else 				if (typeof autoHide != 'undefined') {
+					if (autoHide !== null && typeof autoHide['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = autoHide;
+						autoHide = arguments[4];
+					}
+				} else 				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[4];
+					}
+				} else {
+				}
+			}
+			if (typeof autoHide == 'undefined') autoHide=arguments.callee.__args__[3][1];
+			if (typeof modal == 'undefined') modal=arguments.callee.__args__[4][1];
+			if (typeof rootpanel == 'undefined') rootpanel=arguments.callee.__args__[5][1];
+			var element;
+			self.popupListeners = pyjslib['list']([]);
+			self.showing = false;
+			self.autoHide = autoHide;
+			self.modal = modal;
+			if (pyjslib['bool']((rootpanel === null))) {
+				rootpanel = pyjamas['ui']['PopupPanel']['RootPanel']();
+			}
+			self.rootpanel = rootpanel;
+			if (pyjslib['bool'](kwargs['has_key'](String('Element')))) {
+				element = kwargs['pop'](String('Element'));
+			}
+			else {
+				element = self['createElement']();
+			}
+			pyjamas['ui']['PopupPanel']['DOM']['setStyleAttribute'](element, String('position'), String('absolute'));
+			$pyjs_kwargs_call(pyjamas['ui']['PopupPanel']['SimplePanel'], '__init__', null, kwargs, [{}, self, element]);
+			return null;
+		}
+	, 1, [null,['kwargs'],['self'],['autoHide', false],['modal', true],['rootpanel', null]]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'addPopupListener', function(listener) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				listener = arguments[1];
+			}
+
+			self['popupListeners']['append'](listener);
+			return null;
+		}
+	, 1, [null,null,['self'],['listener']]);
+		$cls_definition['addPopupListener'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getPopupLeft', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['PopupPanel']['DOM']['getIntAttribute'](self['getElement'](), String('offsetLeft'));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getPopupLeft'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getPopupTop', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['PopupPanel']['DOM']['getIntAttribute'](self['getElement'](), String('offsetTop'));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getPopupTop'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'createElement', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return pyjamas['ui']['PopupPanel']['DOM']['createDiv']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['createElement'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'hide', function(autoClosed) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				autoClosed = arguments[1];
+			}
+			if (typeof autoClosed == 'undefined') autoClosed=arguments.callee.__args__[3][1];
+			var $iter1_nextval,$iter1_type,$attr1,$attr2,$iter1_iter,listener,$iter1_array,$iter1_idx;
+			if (pyjslib['bool'](!pyjslib['bool'](((($attr1=self['showing']) !== null & ($attr2=self).__is_instance__) && typeof $attr1 == 'function'?
+						pyjslib['getattr']($attr2, 'showing'):
+						self['showing'])))) {
+				return null;
+			}
+			self.showing = false;
+			pyjamas['ui']['PopupPanel']['DOM']['removeEventPreview'](self);
+			self['rootpanel']['remove'](self);
+			self['onHideImpl'](self['getElement']());
+			$iter1_iter = self['popupListeners'];
+			if (typeof ($iter1_array = $iter1_iter.__array) != 'undefined') {
+				$iter1_type = 0;
+			} else {
+				$iter1_iter = $iter1_iter.__iter__();
+				$iter1_type = typeof ($iter1_array = $iter1_iter.__array) != 'undefined'? 0 : (typeof $iter1_iter.$genfunc == 'function'? 1 : -1);
+			}
+			$iter1_idx = 0;
+			while (typeof ($iter1_nextval=($iter1_type?($iter1_type > 0?$iter1_iter.next(true,false):pyjslib['wrapped_next']($iter1_iter)):$iter1_array[$iter1_idx++])) != 'undefined') {
+				listener = $iter1_nextval;
+				if (pyjslib['bool'](pyjslib['hasattr'](listener, String('onPopupClosed')))) {
+					listener['onPopupClosed'](self, autoClosed);
+				}
+				else {
+					listener(self, autoClosed);
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['autoClosed', false]]);
+		$cls_definition['hide'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'isModal', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr3,$attr4;
+			return ((($attr3=self['modal']) !== null & ($attr4=self).__is_instance__) && typeof $attr3 == 'function'?
+						pyjslib['getattr']($attr4, 'modal'):
+						self['modal']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['isModal'] = $method;
+		$method = $pyjs__bind_method($cls_instance, '_event_targets_popup', function(event) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				event = arguments[1];
+			}
+			var $and1,$and2,target;
+			target = pyjamas['ui']['PopupPanel']['DOM']['eventGetTarget'](event);
+			return (pyjslib['bool']($and1=target)?pyjamas['ui']['PopupPanel']['DOM']['isOrHasChild'](self['getElement'](), target):$and1);
+		}
+	, 1, [null,null,['self'],['event']]);
+		$cls_definition['_event_targets_popup'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onEventPreview', function(event) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				event = arguments[1];
+			}
+			var $or5,$or4,$or9,$or8,$and9,$attr9,$and8,$attr8,$or7,$or6,$or1,$or3,$or2,$and4,$and3,$attr5,$and5,$and6,$attr6,$and10,$attr7,$attr14,$and7,$attr11,$attr10,$attr13,$attr12,type,$or14,$or11,$or10,$or13,$or12;
+			type = pyjamas['ui']['PopupPanel']['DOM']['eventGetType'](event);
+			if (pyjslib['bool'](pyjslib['op_eq'](type, String('keydown')))) {
+				return (pyjslib['bool']($and3=self['onKeyDownPreview'](pyjamas['ui']['PopupPanel']['DOM']['eventGetKeyCode'](event), pyjamas['ui']['PopupPanel']['KeyboardListener']['getKeyboardModifiers'](event)))?(pyjslib['bool']($or1=!pyjslib['bool'](((($attr5=self['modal']) !== null & ($attr6=self).__is_instance__) && typeof $attr5 == 'function'?
+							pyjslib['getattr']($attr6, 'modal'):
+							self['modal'])))?$or1:self['_event_targets_popup'](event)):$and3);
+			}
+			else if (pyjslib['bool'](pyjslib['op_eq'](type, String('keyup')))) {
+				return (pyjslib['bool']($and5=self['onKeyUpPreview'](pyjamas['ui']['PopupPanel']['DOM']['eventGetKeyCode'](event), pyjamas['ui']['PopupPanel']['KeyboardListener']['getKeyboardModifiers'](event)))?(pyjslib['bool']($or3=!pyjslib['bool'](((($attr7=self['modal']) !== null & ($attr8=self).__is_instance__) && typeof $attr7 == 'function'?
+							pyjslib['getattr']($attr8, 'modal'):
+							self['modal'])))?$or3:self['_event_targets_popup'](event)):$and5);
+			}
+			else if (pyjslib['bool'](pyjslib['op_eq'](type, String('keypress')))) {
+				return (pyjslib['bool']($and7=self['onKeyPressPreview'](pyjamas['ui']['PopupPanel']['DOM']['eventGetKeyCode'](event), pyjamas['ui']['PopupPanel']['KeyboardListener']['getKeyboardModifiers'](event)))?(pyjslib['bool']($or5=!pyjslib['bool'](((($attr9=self['modal']) !== null & ($attr10=self).__is_instance__) && typeof $attr9 == 'function'?
+							pyjslib['getattr']($attr10, 'modal'):
+							self['modal'])))?$or5:self['_event_targets_popup'](event)):$and7);
+			}
+			else if (pyjslib['bool']((pyjslib['bool']($or7=pyjslib['op_eq'](type, String('mousedown')))?$or7:pyjslib['op_eq'](type, String('blur'))))) {
+				if (pyjslib['bool']((pyjamas['ui']['PopupPanel']['DOM']['getCaptureElement']() !== null))) {
+					return true;
+				}
+				if (pyjslib['bool']((pyjslib['bool']($and9=((($attr11=self['autoHide']) !== null & ($attr12=self).__is_instance__) && typeof $attr11 == 'function'?
+							pyjslib['getattr']($attr12, 'autoHide'):
+							self['autoHide']))?!pyjslib['bool'](self['_event_targets_popup'](event)):$and9))) {
+					self['hide'](true);
+					return true;
+				}
+			}
+			else if (pyjslib['bool']((pyjslib['bool']($or9=pyjslib['op_eq'](type, String('mouseup')))?$or9:(pyjslib['bool']($or10=pyjslib['op_eq'](type, String('click')))?$or10:(pyjslib['bool']($or11=pyjslib['op_eq'](type, String('mousemove')))?$or11:pyjslib['op_eq'](type, String('dblclick'))))))) {
+				if (pyjslib['bool']((pyjamas['ui']['PopupPanel']['DOM']['getCaptureElement']() !== null))) {
+					return true;
+				}
+			}
+			return (pyjslib['bool']($or13=!pyjslib['bool'](((($attr13=self['modal']) !== null & ($attr14=self).__is_instance__) && typeof $attr13 == 'function'?
+						pyjslib['getattr']($attr14, 'modal'):
+						self['modal'])))?$or13:self['_event_targets_popup'](event));
+		}
+	, 1, [null,null,['self'],['event']]);
+		$cls_definition['onEventPreview'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onKeyDownPreview', function(key, modifiers) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+				modifiers = arguments[2];
+			}
+
+			return true;
+		}
+	, 1, [null,null,['self'],['key'],['modifiers']]);
+		$cls_definition['onKeyDownPreview'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onKeyPressPreview', function(key, modifiers) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+				modifiers = arguments[2];
+			}
+
+			return true;
+		}
+	, 1, [null,null,['self'],['key'],['modifiers']]);
+		$cls_definition['onKeyPressPreview'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onKeyUpPreview', function(key, modifiers) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+				modifiers = arguments[2];
+			}
+
+			return true;
+		}
+	, 1, [null,null,['self'],['key'],['modifiers']]);
+		$cls_definition['onKeyUpPreview'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onHideImpl', function(popup) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				popup = arguments[1];
+			}
+
+ 			return null;
+		}
+	, 1, [null,null,['self'],['popup']]);
+		$cls_definition['onHideImpl'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onShowImpl', function(popup) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				popup = arguments[1];
+			}
+
+ 			return null;
+		}
+	, 1, [null,null,['self'],['popup']]);
+		$cls_definition['onShowImpl'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'removePopupListener', function(listener) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				listener = arguments[1];
+			}
+
+			self['popupListeners']['remove'](listener);
+			return null;
+		}
+	, 1, [null,null,['self'],['listener']]);
+		$cls_definition['removePopupListener'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setPopupPosition', function(left, top) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				left = arguments[1];
+				top = arguments[2];
+			}
+			var element,$sub3,$sub2,$sub1,$sub4;
+			if (pyjslib['bool']((pyjslib['cmp'](left, 0) == -1))) {
+				left = 0;
+			}
+			if (pyjslib['bool']((pyjslib['cmp'](top, 0) == -1))) {
+				top = 0;
+			}
+			left = (typeof ($sub1=left)==typeof ($sub2=pyjamas['ui']['PopupPanel']['DOM']['getBodyOffsetLeft']()) && (typeof $sub1=='number'||typeof $sub1=='string')?
+				$sub1-$sub2:
+				pyjslib['op_sub']($sub1,$sub2));
+			top = (typeof ($sub3=top)==typeof ($sub4=pyjamas['ui']['PopupPanel']['DOM']['getBodyOffsetTop']()) && (typeof $sub3=='number'||typeof $sub3=='string')?
+				$sub3-$sub4:
+				pyjslib['op_sub']($sub3,$sub4));
+			element = self['getElement']();
+			pyjamas['ui']['PopupPanel']['DOM']['setStyleAttribute'](element, String('left'), pyjslib['sprintf'](String('%dpx'), left));
+			pyjamas['ui']['PopupPanel']['DOM']['setStyleAttribute'](element, String('top'), pyjslib['sprintf'](String('%dpx'), top));
+			return null;
+		}
+	, 1, [null,null,['self'],['left'],['top']]);
+		$cls_definition['setPopupPosition'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'show', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr15,$attr16;
+			if (pyjslib['bool'](((($attr15=self['showing']) !== null & ($attr16=self).__is_instance__) && typeof $attr15 == 'function'?
+						pyjslib['getattr']($attr16, 'showing'):
+						self['showing']))) {
+				return null;
+			}
+			self.showing = true;
+			pyjamas['ui']['PopupPanel']['DOM']['addEventPreview'](self);
+			self['rootpanel']['add'](self);
+			self['onShowImpl'](self['getElement']());
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['show'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjamas['ui']['PopupPanel']['SimplePanel']));
+	})();
+	pyjamas['ui']['PopupPanel']['Factory']['registerClass'](String('pyjamas.ui.PopupPanel'), pyjamas['ui']['PopupPanel']['PopupPanel']);
+	return this;
+}; /* end pyjamas.ui.PopupPanel */
+
+
+/* end module: pyjamas.ui.PopupPanel */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'SimplePanel.SimplePanel', 'SimplePanel', 'RootPanel.RootPanel', 'RootPanel', 'pyjamas.ui.MouseListener', 'pyjamas.ui', 'pyjamas.ui.KeyboardListener']
+*/

@@ -1,1 +1,447 @@
-$pyjs.loaded_modules["pyjamas.ui.TabBar"]=function(b){if($pyjs.loaded_modules["pyjamas.ui.TabBar"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.ui.TabBar"]}if(typeof $pyjs.loaded_modules["pyjamas.ui"]=="undefined"||!$pyjs.loaded_modules["pyjamas.ui"].__was_initialized__){pyjslib.___import___("pyjamas.ui",null)}pyjamas.ui["TabBar"]=$pyjs.loaded_modules["pyjamas.ui.TabBar"];pyjamas.ui["TabBar"].__was_initialized__=true;if((b===null)||(typeof b=="undefined")){b="pyjamas.ui.TabBar"}var a=pyjamas.ui["TabBar"].__name__=b;var c=pyjamas.ui["TabBar"];pyjamas.ui["TabBar"]["DOM"]=pyjslib.___import___("pyjamas.DOM","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["Factory"]=pyjslib.___import___("pyjamas.Factory","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["Composite"]=pyjslib.___import___("Composite.Composite","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["Event"]=pyjslib.___import___("pyjamas.ui.Event","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["HTML"]=pyjslib.___import___("HTML.HTML","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["Label"]=pyjslib.___import___("Label.Label","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["HorizontalPanel"]=pyjslib.___import___("HorizontalPanel.HorizontalPanel","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["ClickDelegatePanel"]=pyjslib.___import___("ClickDelegatePanel.ClickDelegatePanel","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["HasAlignment"]=pyjslib.___import___("pyjamas.ui.HasAlignment","pyjamas.ui",null,false);pyjamas.ui["TabBar"]["TabBar"]=(function(){var f=$pyjs__class_instance("TabBar");var e=new Object();var d;e.__md5__="2047a63b10b6369639ab7932ecc092bb";e.STYLENAME_DEFAULT=String("gwt-TabBarItem");d=$pyjs__bind_method(f,"__init__",function(){if(this.__is_instance__===true){var q=this;var g=arguments.length>=1?arguments[arguments.length-1]:arguments[arguments.length];if(typeof g!="object"||g.__name__!="dict"||typeof g.$pyjs_is_kwarg=="undefined"){g=arguments[arguments.length+1]}else{delete g["$pyjs_is_kwarg"]}}else{var q=arguments[0];var g=arguments.length>=2?arguments[arguments.length-1]:arguments[arguments.length];if(typeof g!="object"||g.__name__!="dict"||typeof g.$pyjs_is_kwarg=="undefined"){g=arguments[arguments.length+1]}else{delete g["$pyjs_is_kwarg"]}}if(typeof g=="undefined"){g=pyjslib.__empty_dict();if(typeof q!="undefined"){if(q!==null&&typeof q["$pyjs_is_kwarg"]!="undefined"){g=q;q=arguments[1]}}else{}}var p,o,l,m,h,i,k,n,j;if(pyjslib.bool(!pyjslib.bool(g.has_key(String("StyleName"))))){g.__setitem__(String("StyleName"),String("gwt-TabBar"))}i=null;if(pyjslib.bool(g.has_key(String("Element")))){i=g.pop(String("Element"))}q.panel=$pyjs_kwargs_call(null,pyjamas.ui["TabBar"]["HorizontalPanel"],null,null,[{Element:i}]);q.selectedTab=null;q.tabListeners=pyjslib.list([]);q.panel["setVerticalAlignment"]((((p=pyjamas.ui["TabBar"]["HasAlignment"]["ALIGN_BOTTOM"])!==null&(o=pyjamas.ui["TabBar"]["HasAlignment"]).__is_instance__)&&typeof p=="function"?pyjslib.getattr(o,"ALIGN_BOTTOM"):pyjamas.ui["TabBar"]["HasAlignment"]["ALIGN_BOTTOM"]));j=pyjamas.ui["TabBar"]["HTML"](String("\x26nbsp\x3B"),true);h=pyjamas.ui["TabBar"]["HTML"](String("\x26nbsp\x3B"),true);j.setStyleName(String("gwt-TabBarFirst"));h.setStyleName(String("gwt-TabBarRest"));j.setHeight(String("100%"));h.setHeight(String("100%"));q.panel["add"](j);q.panel["add"](h);j.setHeight(String("100%"));q.panel["setCellHeight"](j,String("100%"));q.panel["setCellWidth"](h,String("100%"));$pyjs_kwargs_call(pyjamas.ui["TabBar"]["Composite"],"__init__",null,g,[{},q,(((n=q.panel)!==null&(m=q).__is_instance__)&&typeof n=="function"?pyjslib.getattr(m,"panel"):q.panel)]);q.sinkEvents((((l=pyjamas.ui["TabBar"]["Event"]["ONCLICK"])!==null&(k=pyjamas.ui["TabBar"]["Event"]).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"ONCLICK"):pyjamas.ui["TabBar"]["Event"]["ONCLICK"]));return null},1,[null,["kwargs"],["self"]]);e.__init__=d;d=$pyjs__bind_method(f,"addTab",function(h,i){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1];i=arguments[2]}if(typeof i=="undefined"){i=arguments.callee.__args__[4][1]}g.insertTab(h,i,g.getTabCount());return null},1,[null,null,["self"],["text"],["asHTML",false]]);e.addTab=d;d=$pyjs__bind_method(f,"addTabListener",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.tabListeners["append"](h);return null},1,[null,null,["self"],["listener"]]);e.addTabListener=d;d=$pyjs__bind_method(f,"getSelectedTab",function(){if(this.__is_instance__===true){var h=this}else{var h=arguments[0]}var j,k,l,m,g,i;if(pyjslib.bool(((((l=h.selectedTab)!==null&(k=h).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"selectedTab"):h.selectedTab)===null))){return(typeof($usub1=1)=="number"?-$usub1:pyjslib.op_usub($usub1))}return(typeof(g=h.panel["getWidgetIndex"]((((j=h.selectedTab)!==null&(i=h).__is_instance__)&&typeof j=="function"?pyjslib.getattr(i,"selectedTab"):h.selectedTab)))==typeof(m=1)&&(typeof g=="number"||typeof g=="string")?g-m:pyjslib.op_sub(g,m))},1,[null,null,["self"]]);e.getSelectedTab=d;d=$pyjs__bind_method(f,"getTabCount",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(typeof(i=g.panel["getWidgetCount"]())==typeof(h=2)&&(typeof i=="number"||typeof i=="string")?i-h:pyjslib.op_sub(i,h))},1,[null,null,["self"]]);e.getTabCount=d;d=$pyjs__bind_method(f,"getTabHTML",function(i){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];i=arguments[1]}var g,n,m,j,k,l;if(pyjslib.bool((((pyjslib.cmp(i,h.getTabCount()))|1)==1))){return null}m=h.panel["getWidget"]((typeof(k=i)==typeof(j=1)&&(typeof k=="number"||typeof k=="string")?k+j:pyjslib.op_add(k,j)));l=m.getFocusablePanel();n=l.getWidget();if(pyjslib.bool(pyjslib.hasattr(n,String("getHTML")))){return n.getHTML()}else{if(pyjslib.bool(pyjslib.hasattr(n,String("getText")))){return n.getText()}else{g=pyjamas.ui["TabBar"]["DOM"]["getParent"](h.focusablePanel["getElement"]());return pyjamas.ui["TabBar"]["DOM"]["getInnerHTML"](g)}}return null},1,[null,null,["self"],["index"]]);e.getTabHTML=d;d=$pyjs__bind_method(f,"createTabTextWrapper",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return null},1,[null,null,["self"]]);e.createTabTextWrapper=d;d=$pyjs__bind_method(f,"insertTab",function(r,h,i){if(this.__is_instance__===true){var t=this}else{var t=arguments[0];r=arguments[1];h=arguments[2];i=arguments[3]}if(typeof i=="undefined"){i=arguments.callee.__args__[5][1]}var o,g,u,l,p,q,k,m,s,j;if(pyjslib.bool((i===null))){i=h;h=false}if(pyjslib.bool((pyjslib.bool(u=(pyjslib.cmp(i,0)==-1))?u:(pyjslib.cmp(i,t.getTabCount())==1)))){}if(pyjslib.bool((r===null))){r=pyjamas.ui["TabBar"]["HTML"](String("\x26nbsp\x3B"),true);r.setWidth(String("100%"));r.setStyleName(String("gwt-TabBarRest"));t.panel["insert"](r,(typeof(k=i)==typeof(j=1)&&(typeof k=="number"||typeof k=="string")?k+j:pyjslib.op_add(k,j)));t.panel["setCellWidth"](r,String("100%"));return null}try{g=(pyjslib.bool(p=pyjslib.isinstance(r,pyjslib.str))?p:pyjslib.isinstance(r,pyjamas.ui.TabBar.unicode))}catch(m){var n=(typeof m.__name__=="undefined"?m.name:m.__name__);$pyjs.__last_exception__={error:m,module:pyjamas.ui.TabBar,try_lineno:117};if(true){$pyjs.__last_exception__.except_lineno=120;l=m;g=pyjslib.isinstance(r,pyjslib.str)}}if(pyjslib.bool(g)){if(pyjslib.bool(h)){s=pyjamas.ui["TabBar"]["HTML"](r)}else{s=pyjamas.ui["TabBar"]["Label"](r)}s.setWordWrap(false)}else{s=r}t.insertTabWidget(s,i);return null},1,[null,null,["self"],["text"],["asHTML"],["beforeIndex",null]]);e.insertTab=d;d=$pyjs__bind_method(f,"insertTabWidget",function(n,j){if(this.__is_instance__===true){var s=this}else{var s=arguments[0];n=arguments[1];j=arguments[2]}var h,m,r,o,k,i,g,q,l,p;l=pyjamas.ui["TabBar"]["ClickDelegatePanel"](s,n,s,s);l.setStyleName((((q=s.STYLENAME_DEFAULT)!==null&(p=s).__is_instance__)&&typeof q=="function"?pyjslib.getattr(p,"STYLENAME_DEFAULT"):s.STYLENAME_DEFAULT));r=l.getFocusablePanel();s.panel["insert"](l,(typeof(k=j)==typeof(i=1)&&(typeof k=="number"||typeof k=="string")?k+i:pyjslib.op_add(k,i)));s.setStyleName(pyjamas.ui["TabBar"]["DOM"]["getParent"](l.getElement()),(typeof(h=(((o=s.STYLENAME_DEFAULT)!==null&(m=s).__is_instance__)&&typeof o=="function"?pyjslib.getattr(m,"STYLENAME_DEFAULT"):s.STYLENAME_DEFAULT))==typeof(g=String("-wrapper"))&&(typeof h=="number"||typeof h=="string")?h+g:pyjslib.op_add(h,g)),true);return null},1,[null,null,["self"],["widget"],["beforeIndex"]]);e.insertTabWidget=d;d=$pyjs__bind_method(f,"onClick",function(j){if(this.__is_instance__===true){var s=this}else{var s=arguments[0];j=arguments[1]}if(typeof j=="undefined"){j=arguments.callee.__args__[3][1]}var m,g,q,k,h,n,l,o,p,r;h=pyjslib.range(1,(typeof(r=s.panel["getWidgetCount"]())==typeof(p=1)&&(typeof r=="number"||typeof r=="string")?r-p:pyjslib.op_sub(r,p)));if(typeof(l=h.__array)!="undefined"){g=0}else{h=h.__iter__();g=typeof(l=h.__array)!="undefined"?0:(typeof h.$genfunc=="function"?1:-1)}q=0;while(typeof(m=(g?(g>0?h.next(true,false):pyjslib.wrapped_next(h)):l[q++]))!="undefined"){k=m;if(pyjslib.bool(pyjamas.ui["TabBar"]["DOM"]["isOrHasChild"](s.panel["getWidget"](k)["getElement"](),j.getElement()))){return s.selectTab((typeof(o=k)==typeof(n=1)&&(typeof o=="number"||typeof o=="string")?o-n:pyjslib.op_sub(o,n)))}}return false},1,[null,null,["self"],["sender",null]]);e.onClick=d;d=$pyjs__bind_method(f,"removeTab",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}var j,l,i,m,k;g.checkTabIndex(h);j=g.panel["getWidget"]((typeof(k=h)==typeof(i=1)&&(typeof k=="number"||typeof k=="string")?k+i:pyjslib.op_add(k,i)));if(pyjslib.bool(pyjslib.op_eq(j,(((m=g.selectedTab)!==null&(l=g).__is_instance__)&&typeof m=="function"?pyjslib.getattr(l,"selectedTab"):g.selectedTab)))){g.selectedTab=null}g.panel["remove"](j);return null},1,[null,null,["self"],["index"]]);e.removeTab=d;d=$pyjs__bind_method(f,"removeTabListener",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.tabListeners["remove"](h);return null},1,[null,null,["self"],["listener"]]);e.removeTabListener=d;d=$pyjs__bind_method(f,"selectTab",function(m){if(this.__is_instance__===true){var r=this}else{var r=arguments[0];m=arguments[1]}var i,g,s,y,w,v,j,u,n,o,p,k,h,q,t,x,l;r.checkTabIndex(m);s=r.tabListeners;if(typeof(x=s.__array)!="undefined"){g=0}else{s=s.__iter__();g=typeof(x=s.__array)!="undefined"?0:(typeof s.$genfunc=="function"?1:-1)}u=0;while(typeof(i=(g?(g>0?s.next(true,false):pyjslib.wrapped_next(s)):x[u++]))!="undefined"){j=i;if(pyjslib.bool(!pyjslib.bool(j.onBeforeTabSelected(r,m)))){return false}}r.setSelectionStyle((((q=r.selectedTab)!==null&(p=r).__is_instance__)&&typeof q=="function"?pyjslib.getattr(p,"selectedTab"):r.selectedTab),false);if(pyjslib.bool(pyjslib.op_eq(m,(typeof($usub2=1)=="number"?-$usub2:pyjslib.op_usub($usub2))))){r.selectedTab=null;return true}r.selectedTab=r.panel["getWidget"]((typeof(l=m)==typeof(k=1)&&(typeof l=="number"||typeof l=="string")?l+k:pyjslib.op_add(l,k)));r.setSelectionStyle((((o=r.selectedTab)!==null&(y=r).__is_instance__)&&typeof o=="function"?pyjslib.getattr(y,"selectedTab"):r.selectedTab),true);v=r.tabListeners;if(typeof(w=v.__array)!="undefined"){h=0}else{v=v.__iter__();h=typeof(w=v.__array)!="undefined"?0:(typeof v.$genfunc=="function"?1:-1)}n=0;while(typeof(t=(h?(h>0?v.next(true,false):pyjslib.wrapped_next(v)):w[n++]))!="undefined"){j=t;j.onTabSelected(r,m)}return true},1,[null,null,["self"],["index"]]);e.selectTab=d;d=$pyjs__bind_method(f,"checkTabIndex",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}var j,i;if(pyjslib.bool((pyjslib.bool(j=(pyjslib.cmp(h,(typeof($usub3=1)=="number"?-$usub3:pyjslib.op_usub($usub3)))==-1))?j:(((pyjslib.cmp(h,g.getTabCount()))|1)==1)))){}return null},1,[null,null,["self"],["index"]]);e.checkTabIndex=d;d=$pyjs__bind_method(f,"setSelectionStyle",function(i,h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];i=arguments[1];h=arguments[2]}if(pyjslib.bool((i!==null))){if(pyjslib.bool(h)){i.addStyleName(String("gwt-TabBarItem-selected"));g.setStyleName(pyjamas.ui["TabBar"]["DOM"]["getParent"](i.getElement()),String("gwt-TabBarItem-wrapper-selected"),true)}else{i.removeStyleName(String("gwt-TabBarItem-selected"));g.setStyleName(pyjamas.ui["TabBar"]["DOM"]["getParent"](i.getElement()),String("gwt-TabBarItem-wrapper-selected"),false)}}return null},1,[null,null,["self"],["item"],["selected"]]);e.setSelectionStyle=d;return $pyjs__class_function(f,e,new Array(pyjamas.ui["TabBar"]["Composite"]))})();pyjamas.ui["TabBar"]["Factory"]["registerClass"](String("pyjamas.ui.TabBar"),pyjamas.ui["TabBar"]["TabBar"]);return this};
+/* start module: pyjamas.ui.TabBar */
+$pyjs.loaded_modules['pyjamas.ui.TabBar'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.TabBar'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.TabBar'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) pyjslib['___import___']('pyjamas.ui', null);
+	pyjamas['ui']['TabBar'] = $pyjs.loaded_modules["pyjamas.ui.TabBar"];
+	pyjamas['ui']['TabBar'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.TabBar';
+	var __name__ = pyjamas['ui']['TabBar'].__name__ = __mod_name__;
+	var TabBar = pyjamas['ui']['TabBar'];
+
+
+	pyjamas['ui']['TabBar']['DOM'] = pyjslib['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['Factory'] = pyjslib['___import___']('pyjamas.Factory', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['Composite'] = pyjslib['___import___']('Composite.Composite', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['Event'] = pyjslib['___import___']('pyjamas.ui.Event', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['HTML'] = pyjslib['___import___']('HTML.HTML', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['Label'] = pyjslib['___import___']('Label.Label', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['HorizontalPanel'] = pyjslib['___import___']('HorizontalPanel.HorizontalPanel', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['ClickDelegatePanel'] = pyjslib['___import___']('ClickDelegatePanel.ClickDelegatePanel', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['HasAlignment'] = pyjslib['___import___']('pyjamas.ui.HasAlignment', 'pyjamas.ui', null, false);
+	pyjamas['ui']['TabBar']['TabBar'] = (function(){
+		var $cls_instance = $pyjs__class_instance('TabBar');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = '2047a63b10b6369639ab7932ecc092bb';
+		$cls_definition['STYLENAME_DEFAULT'] = String('gwt-TabBarItem');
+		$method = $pyjs__bind_method($cls_instance, '__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 1 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				var kwargs = arguments.length >= 2 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = pyjslib['__empty_dict']();
+				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[1];
+					}
+				} else {
+				}
+			}
+			var $attr1,$attr2,$attr5,$attr4,rest,element,$attr6,$attr3,first;
+			if (pyjslib['bool'](!pyjslib['bool'](kwargs['has_key'](String('StyleName'))))) {
+				kwargs.__setitem__(String('StyleName'), String('gwt-TabBar'));
+			}
+			element = null;
+			if (pyjslib['bool'](kwargs['has_key'](String('Element')))) {
+				element = kwargs['pop'](String('Element'));
+			}
+			self.panel = $pyjs_kwargs_call(null, pyjamas['ui']['TabBar']['HorizontalPanel'], null, null, [{Element:element}]);
+			self.selectedTab = null;
+			self.tabListeners = pyjslib['list']([]);
+			self['panel']['setVerticalAlignment'](((($attr1=pyjamas['ui']['TabBar']['HasAlignment']['ALIGN_BOTTOM']) !== null & ($attr2=pyjamas['ui']['TabBar']['HasAlignment']).__is_instance__) && typeof $attr1 == 'function'?
+						pyjslib['getattr']($attr2, 'ALIGN_BOTTOM'):
+						pyjamas['ui']['TabBar']['HasAlignment']['ALIGN_BOTTOM']));
+			first = pyjamas['ui']['TabBar']['HTML'](String('\x26nbsp\x3B'), true);
+			rest = pyjamas['ui']['TabBar']['HTML'](String('\x26nbsp\x3B'), true);
+			first['setStyleName'](String('gwt-TabBarFirst'));
+			rest['setStyleName'](String('gwt-TabBarRest'));
+			first['setHeight'](String('100%'));
+			rest['setHeight'](String('100%'));
+			self['panel']['add'](first);
+			self['panel']['add'](rest);
+			first['setHeight'](String('100%'));
+			self['panel']['setCellHeight'](first, String('100%'));
+			self['panel']['setCellWidth'](rest, String('100%'));
+			$pyjs_kwargs_call(pyjamas['ui']['TabBar']['Composite'], '__init__', null, kwargs, [{}, self, ((($attr3=self['panel']) !== null & ($attr4=self).__is_instance__) && typeof $attr3 == 'function'?
+						pyjslib['getattr']($attr4, 'panel'):
+						self['panel'])]);
+			self['sinkEvents'](((($attr5=pyjamas['ui']['TabBar']['Event']['ONCLICK']) !== null & ($attr6=pyjamas['ui']['TabBar']['Event']).__is_instance__) && typeof $attr5 == 'function'?
+						pyjslib['getattr']($attr6, 'ONCLICK'):
+						pyjamas['ui']['TabBar']['Event']['ONCLICK']));
+			return null;
+		}
+	, 1, [null,['kwargs'],['self']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'addTab', function(text, asHTML) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				asHTML = arguments[2];
+			}
+			if (typeof asHTML == 'undefined') asHTML=arguments.callee.__args__[4][1];
+
+			self['insertTab'](text, asHTML, self['getTabCount']());
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['asHTML', false]]);
+		$cls_definition['addTab'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'addTabListener', function(listener) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				listener = arguments[1];
+			}
+
+			self['tabListeners']['append'](listener);
+			return null;
+		}
+	, 1, [null,null,['self'],['listener']]);
+		$cls_definition['addTabListener'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getSelectedTab', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr9,$attr8,$attr7,$sub2,$sub1,$attr10;
+			if (pyjslib['bool']((((($attr7=self['selectedTab']) !== null & ($attr8=self).__is_instance__) && typeof $attr7 == 'function'?
+						pyjslib['getattr']($attr8, 'selectedTab'):
+						self['selectedTab']) === null))) {
+				return (typeof ($usub1=1)=='number'?
+					-$usub1:
+					pyjslib['op_usub']($usub1));
+			}
+			return (typeof ($sub1=self['panel']['getWidgetIndex'](((($attr9=self['selectedTab']) !== null & ($attr10=self).__is_instance__) && typeof $attr9 == 'function'?
+						pyjslib['getattr']($attr10, 'selectedTab'):
+						self['selectedTab'])))==typeof ($sub2=1) && (typeof $sub1=='number'||typeof $sub1=='string')?
+				$sub1-$sub2:
+				pyjslib['op_sub']($sub1,$sub2));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getSelectedTab'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getTabCount', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $sub3,$sub4;
+			return (typeof ($sub3=self['panel']['getWidgetCount']())==typeof ($sub4=2) && (typeof $sub3=='number'||typeof $sub3=='string')?
+				$sub3-$sub4:
+				pyjslib['op_sub']($sub3,$sub4));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getTabCount'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getTabHTML', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+			var fpe,widget,delPanel,$add2,$add1,focusablePanel;
+			if (pyjslib['bool']((((pyjslib['cmp'](index, self['getTabCount']()))|1) == 1))) {
+				return null;
+			}
+			delPanel = self['panel']['getWidget']((typeof ($add1=index)==typeof ($add2=1) && (typeof $add1=='number'||typeof $add1=='string')?
+				$add1+$add2:
+				pyjslib['op_add']($add1,$add2)));
+			focusablePanel = delPanel['getFocusablePanel']();
+			widget = focusablePanel['getWidget']();
+			if (pyjslib['bool'](pyjslib['hasattr'](widget, String('getHTML')))) {
+				return widget['getHTML']();
+			}
+			else if (pyjslib['bool'](pyjslib['hasattr'](widget, String('getText')))) {
+				return widget['getText']();
+			}
+			else {
+				fpe = pyjamas['ui']['TabBar']['DOM']['getParent'](self['focusablePanel']['getElement']());
+				return pyjamas['ui']['TabBar']['DOM']['getInnerHTML'](fpe);
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['getTabHTML'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'createTabTextWrapper', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['createTabTextWrapper'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'insertTab', function(text, asHTML, beforeIndex) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				asHTML = arguments[2];
+				beforeIndex = arguments[3];
+			}
+			if (typeof beforeIndex == 'undefined') beforeIndex=arguments.callee.__args__[5][1];
+			var $or4,istext,$or1,err,$or3,$or2,$add3,$pyjs_try_err,item,$add4;
+			if (pyjslib['bool']((beforeIndex === null))) {
+				beforeIndex = asHTML;
+				asHTML = false;
+			}
+			if (pyjslib['bool']((pyjslib['bool']($or1=(pyjslib['cmp'](beforeIndex, 0) == -1))?$or1:(pyjslib['cmp'](beforeIndex, self['getTabCount']()) == 1)))) {
+			}
+			if (pyjslib['bool']((text === null))) {
+				text = pyjamas['ui']['TabBar']['HTML'](String('\x26nbsp\x3B'), true);
+				text['setWidth'](String('100%'));
+				text['setStyleName'](String('gwt-TabBarRest'));
+				self['panel']['insert'](text, (typeof ($add3=beforeIndex)==typeof ($add4=1) && (typeof $add3=='number'||typeof $add3=='string')?
+					$add3+$add4:
+					pyjslib['op_add']($add3,$add4)));
+				self['panel']['setCellWidth'](text, String('100%'));
+				return null;
+			}
+			try {
+				istext = (pyjslib['bool']($or3=pyjslib['isinstance'](text, pyjslib['str']))?$or3:pyjslib['isinstance'](text, pyjamas.ui.TabBar.unicode));
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: pyjamas.ui.TabBar, try_lineno: 117};
+				if (true) {
+					$pyjs.__last_exception__.except_lineno = 120;
+					err = $pyjs_try_err;
+					istext = pyjslib['isinstance'](text, pyjslib['str']);
+				}
+			}
+			if (pyjslib['bool'](istext)) {
+				if (pyjslib['bool'](asHTML)) {
+					item = pyjamas['ui']['TabBar']['HTML'](text);
+				}
+				else {
+					item = pyjamas['ui']['TabBar']['Label'](text);
+				}
+				item['setWordWrap'](false);
+			}
+			else {
+				item = text;
+			}
+			self['insertTabWidget'](item, beforeIndex);
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['asHTML'],['beforeIndex', null]]);
+		$cls_definition['insertTab'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'insertTabWidget', function(widget, beforeIndex) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				widget = arguments[1];
+				beforeIndex = arguments[2];
+			}
+			var $add7,$attr14,focusablePanel,$attr13,$add5,$add6,$add8,$attr11,delWidget,$attr12;
+			delWidget = pyjamas['ui']['TabBar']['ClickDelegatePanel'](self, widget, self, self);
+			delWidget['setStyleName'](((($attr11=self['STYLENAME_DEFAULT']) !== null & ($attr12=self).__is_instance__) && typeof $attr11 == 'function'?
+						pyjslib['getattr']($attr12, 'STYLENAME_DEFAULT'):
+						self['STYLENAME_DEFAULT']));
+			focusablePanel = delWidget['getFocusablePanel']();
+			self['panel']['insert'](delWidget, (typeof ($add5=beforeIndex)==typeof ($add6=1) && (typeof $add5=='number'||typeof $add5=='string')?
+				$add5+$add6:
+				pyjslib['op_add']($add5,$add6)));
+			self['setStyleName'](pyjamas['ui']['TabBar']['DOM']['getParent'](delWidget['getElement']()), (typeof ($add7=((($attr13=self['STYLENAME_DEFAULT']) !== null & ($attr14=self).__is_instance__) && typeof $attr13 == 'function'?
+						pyjslib['getattr']($attr14, 'STYLENAME_DEFAULT'):
+						self['STYLENAME_DEFAULT']))==typeof ($add8=String('-wrapper')) && (typeof $add7=='number'||typeof $add7=='string')?
+				$add7+$add8:
+				pyjslib['op_add']($add7,$add8)), true);
+			return null;
+		}
+	, 1, [null,null,['self'],['widget'],['beforeIndex']]);
+		$cls_definition['insertTabWidget'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'onClick', function(sender) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				sender = arguments[1];
+			}
+			if (typeof sender == 'undefined') sender=arguments.callee.__args__[3][1];
+			var $iter1_nextval,$iter1_type,$iter1_idx,i,$iter1_iter,$sub8,$iter1_array,$sub7,$sub6,$sub5;
+			$iter1_iter = pyjslib['range'](1, (typeof ($sub5=self['panel']['getWidgetCount']())==typeof ($sub6=1) && (typeof $sub5=='number'||typeof $sub5=='string')?
+				$sub5-$sub6:
+				pyjslib['op_sub']($sub5,$sub6)));
+			if (typeof ($iter1_array = $iter1_iter.__array) != 'undefined') {
+				$iter1_type = 0;
+			} else {
+				$iter1_iter = $iter1_iter.__iter__();
+				$iter1_type = typeof ($iter1_array = $iter1_iter.__array) != 'undefined'? 0 : (typeof $iter1_iter.$genfunc == 'function'? 1 : -1);
+			}
+			$iter1_idx = 0;
+			while (typeof ($iter1_nextval=($iter1_type?($iter1_type > 0?$iter1_iter.next(true,false):pyjslib['wrapped_next']($iter1_iter)):$iter1_array[$iter1_idx++])) != 'undefined') {
+				i = $iter1_nextval;
+				if (pyjslib['bool'](pyjamas['ui']['TabBar']['DOM']['isOrHasChild'](self['panel']['getWidget'](i)['getElement'](), sender['getElement']()))) {
+					return self['selectTab']((typeof ($sub7=i)==typeof ($sub8=1) && (typeof $sub7=='number'||typeof $sub7=='string')?
+						$sub7-$sub8:
+						pyjslib['op_sub']($sub7,$sub8)));
+				}
+			}
+			return false;
+		}
+	, 1, [null,null,['self'],['sender', null]]);
+		$cls_definition['onClick'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'removeTab', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+			var toRemove,$attr16,$add10,$attr15,$add9;
+			self['checkTabIndex'](index);
+			toRemove = self['panel']['getWidget']((typeof ($add9=index)==typeof ($add10=1) && (typeof $add9=='number'||typeof $add9=='string')?
+				$add9+$add10:
+				pyjslib['op_add']($add9,$add10)));
+			if (pyjslib['bool'](pyjslib['op_eq'](toRemove, ((($attr15=self['selectedTab']) !== null & ($attr16=self).__is_instance__) && typeof $attr15 == 'function'?
+						pyjslib['getattr']($attr16, 'selectedTab'):
+						self['selectedTab'])))) {
+				self.selectedTab = null;
+			}
+			self['panel']['remove'](toRemove);
+			return null;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['removeTab'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'removeTabListener', function(listener) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				listener = arguments[1];
+			}
+
+			self['tabListeners']['remove'](listener);
+			return null;
+		}
+	, 1, [null,null,['self'],['listener']]);
+		$cls_definition['removeTabListener'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'selectTab', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+			var $iter2_nextval,$iter2_type,$iter2_iter,$attr20,$iter3_array,$iter3_iter,listener,$iter2_idx,$iter3_idx,$attr19,$attr18,$add12,$iter3_type,$attr17,$iter3_nextval,$iter2_array,$add11;
+			self['checkTabIndex'](index);
+			$iter2_iter = self['tabListeners'];
+			if (typeof ($iter2_array = $iter2_iter.__array) != 'undefined') {
+				$iter2_type = 0;
+			} else {
+				$iter2_iter = $iter2_iter.__iter__();
+				$iter2_type = typeof ($iter2_array = $iter2_iter.__array) != 'undefined'? 0 : (typeof $iter2_iter.$genfunc == 'function'? 1 : -1);
+			}
+			$iter2_idx = 0;
+			while (typeof ($iter2_nextval=($iter2_type?($iter2_type > 0?$iter2_iter.next(true,false):pyjslib['wrapped_next']($iter2_iter)):$iter2_array[$iter2_idx++])) != 'undefined') {
+				listener = $iter2_nextval;
+				if (pyjslib['bool'](!pyjslib['bool'](listener['onBeforeTabSelected'](self, index)))) {
+					return false;
+				}
+			}
+			self['setSelectionStyle'](((($attr17=self['selectedTab']) !== null & ($attr18=self).__is_instance__) && typeof $attr17 == 'function'?
+						pyjslib['getattr']($attr18, 'selectedTab'):
+						self['selectedTab']), false);
+			if (pyjslib['bool'](pyjslib['op_eq'](index, (typeof ($usub2=1)=='number'?
+				-$usub2:
+				pyjslib['op_usub']($usub2))))) {
+				self.selectedTab = null;
+				return true;
+			}
+			self.selectedTab = self['panel']['getWidget']((typeof ($add11=index)==typeof ($add12=1) && (typeof $add11=='number'||typeof $add11=='string')?
+				$add11+$add12:
+				pyjslib['op_add']($add11,$add12)));
+			self['setSelectionStyle'](((($attr19=self['selectedTab']) !== null & ($attr20=self).__is_instance__) && typeof $attr19 == 'function'?
+						pyjslib['getattr']($attr20, 'selectedTab'):
+						self['selectedTab']), true);
+			$iter3_iter = self['tabListeners'];
+			if (typeof ($iter3_array = $iter3_iter.__array) != 'undefined') {
+				$iter3_type = 0;
+			} else {
+				$iter3_iter = $iter3_iter.__iter__();
+				$iter3_type = typeof ($iter3_array = $iter3_iter.__array) != 'undefined'? 0 : (typeof $iter3_iter.$genfunc == 'function'? 1 : -1);
+			}
+			$iter3_idx = 0;
+			while (typeof ($iter3_nextval=($iter3_type?($iter3_type > 0?$iter3_iter.next(true,false):pyjslib['wrapped_next']($iter3_iter)):$iter3_array[$iter3_idx++])) != 'undefined') {
+				listener = $iter3_nextval;
+				listener['onTabSelected'](self, index);
+			}
+			return true;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['selectTab'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'checkTabIndex', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+			var $or5,$or6;
+			if (pyjslib['bool']((pyjslib['bool']($or5=(pyjslib['cmp'](index, (typeof ($usub3=1)=='number'?
+				-$usub3:
+				pyjslib['op_usub']($usub3))) == -1))?$or5:(((pyjslib['cmp'](index, self['getTabCount']()))|1) == 1)))) {
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['checkTabIndex'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setSelectionStyle', function(item, selected) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				item = arguments[1];
+				selected = arguments[2];
+			}
+
+			if (pyjslib['bool']((item !== null))) {
+				if (pyjslib['bool'](selected)) {
+					item['addStyleName'](String('gwt-TabBarItem-selected'));
+					self['setStyleName'](pyjamas['ui']['TabBar']['DOM']['getParent'](item['getElement']()), String('gwt-TabBarItem-wrapper-selected'), true);
+				}
+				else {
+					item['removeStyleName'](String('gwt-TabBarItem-selected'));
+					self['setStyleName'](pyjamas['ui']['TabBar']['DOM']['getParent'](item['getElement']()), String('gwt-TabBarItem-wrapper-selected'), false);
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['item'],['selected']]);
+		$cls_definition['setSelectionStyle'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjamas['ui']['TabBar']['Composite']));
+	})();
+	pyjamas['ui']['TabBar']['Factory']['registerClass'](String('pyjamas.ui.TabBar'), pyjamas['ui']['TabBar']['TabBar']);
+	return this;
+}; /* end pyjamas.ui.TabBar */
+
+
+/* end module: pyjamas.ui.TabBar */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'Composite.Composite', 'Composite', 'pyjamas.ui.Event', 'pyjamas.ui', 'HTML.HTML', 'HTML', 'Label.Label', 'Label', 'HorizontalPanel.HorizontalPanel', 'HorizontalPanel', 'ClickDelegatePanel.ClickDelegatePanel', 'ClickDelegatePanel', 'pyjamas.ui.HasAlignment']
+*/

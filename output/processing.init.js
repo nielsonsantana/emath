@@ -1,24 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+    init.codes = {};
+},false);
+
+//
 //if(window.addEventListener)
 //{
-    //window.addEventListener("load",function(){
-           //var scripts=document.getElementsByTagName("script");
-
-           //for(var i=0;i<scripts.length;i++){
-                //if(scripts[i].type=="application/processing"){
-                //var src=scripts[i].src,canvas = scripts[i].nextSibling;
-                //if(src&&src.indexOf("#")){
-                    //canvas=document.getElementById(src.substr(src.indexOf("#")+1));
-                //}
-                //else{
-                    //while(canvas&&canvas.nodeName.toUpperCase()!="CANVAS")
-                        //canvas=canvas.nextSibling;
-                //}
-                //if(canvas){
-                    //Processing(canvas,scripts[i].text);
-                //}
-            //}
-       //}
-   //},false);
+//    window.addEventListener("load",function(){
+//           //alert("qqqqqqqqqq");
+//           
+//           var scripts=document.getElementsByTagName("script");
+//
+//       for(var i=0;i<scripts.length;i++){
+//            if(scripts[i].type=="application/processing"){
+//                var src=scripts[i].src,
+//                canvas = scripts[i].nextSibling;
+//                if(src&&src.indexOf("#")){
+//                    canvas=document.getElementById(src.substr(src.indexOf("#")+1));
+//                }
+//                else{
+//                    while(canvas&&canvas.nodeName.toUpperCase()!="CANVAS")
+//                        canvas=canvas.nextSibling;
+//                }
+//                if(canvas){
+//                    Processing(canvas,scripts[i].text);
+//                }
+//            }
+//       }
+//   },false);
 //}
 
 var ajax = function ajax(url) {
@@ -57,13 +65,34 @@ var ajax = function ajax(url) {
         var code = "";
         for (var j = 0, fl = filenames.length; j < fl; j++) {
           if (filenames[j]) {
-            var block = ajax(filenames[j]);
-            if (block !== false) {
-              code += ";\n" + block;
+            if(!init.codes[filenames[j]]){
+                var block = ajax(filenames[j]);
+                if (block !== false) {
+                  code += ";\n" + block;
+                }
+                init.codes[filenames[0]] = code;
             }
           }
         }
-        Processing.addInstance(new Processing(canvas[i], code));
+        //if(!init.codes[filenames[0]]){
+		//alert(canvas[0].id);
+		instance = Processing.getInstanceById(canvas[0].id);
+		if (instance) {
+			//alert(instance);
+			instance.noLoop();
+		}
+		Processing.removeInstance(canvas[0].id);
+        Processing.addInstance(new Processing(canvas[0], init.codes[filenames[0]]));
+		//instance = Processing.getInstanceById(canvas[0].id);
+		//instance.noLoop();
+            //init.codes[filenames[0]] = code;
+        //}
       }
     }
   };
+  
+  var pausarAnim = function(idcanvas){
+  	
+	p = Processing.getInstanceById(idcanvas);
+	p.loop();
+  }

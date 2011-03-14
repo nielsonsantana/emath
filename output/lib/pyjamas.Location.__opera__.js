@@ -1,1 +1,348 @@
-$pyjs.loaded_modules["pyjamas.Location"]=function(c){if($pyjs.loaded_modules["pyjamas.Location"].__was_initialized__){return $pyjs.loaded_modules["pyjamas.Location"]}if(typeof $pyjs.loaded_modules.pyjamas=="undefined"||!$pyjs.loaded_modules.pyjamas.__was_initialized__){pyjslib.___import___("pyjamas",null)}pyjamas.Location=$pyjs.loaded_modules["pyjamas.Location"];pyjamas.Location.__was_initialized__=true;if((c===null)||(typeof c=="undefined")){c="pyjamas.Location"}var b=pyjamas.Location.__name__=c;var a=pyjamas.Location;pyjamas.Location["makeUrlDict"]=function(h){var f,l,d,e,g,j,i,k,m;g=pyjslib.dict([]);f=h["$$split"](String("\x26"));e=f;if(typeof(j=e.__array)!="undefined"){d=0}else{e=e.__iter__();d=typeof(j=e.__array)!="undefined"?0:(typeof e.$genfunc=="function"?1:-1)}m=0;while(typeof(l=(d?(d>0?e.next(true,false):pyjslib.wrapped_next(e)):j[m++]))!="undefined"){i=l;if(pyjslib.bool((pyjslib.cmp(pyjslib.len(i),3)==-1))){continue}k=i["$$split"](String("="),1);g.__setitem__(k.__getitem__(0),k.__getitem__(1))}return g};pyjamas.Location["makeUrlDict"].__name__="makeUrlDict";pyjamas.Location["makeUrlDict"].__bind_type__=0;pyjamas.Location["makeUrlDict"].__args__=[null,null,["urlstring"]];pyjamas.Location["makeUrlStringFromDict"]=function(p){var e,n,l,o,j,i,h,q,m,g,r,f;e=pyjslib.list([]);o=p.iteritems();if(typeof(f=o.__array)!="undefined"){l=0}else{o=o.__iter__();l=typeof(f=o.__array)!="undefined"?0:(typeof o.$genfunc=="function"?1:-1)}q=0;while(typeof(n=(l?(l>0?o.next(true,true):pyjslib.wrapped_next(o)):f[q++]))!="undefined"){j=n.__array[0];r=n.__array[1];e.append((typeof(h=(typeof(m=j)==typeof(i=String("="))&&(typeof m=="number"||typeof m=="string")?m+i:pyjslib.op_add(m,i)))==typeof(g=r)&&(typeof h=="number"||typeof h=="string")?h+g:pyjslib.op_add(h,g)))}return String("\x26")["join"](e)};pyjamas.Location["makeUrlStringFromDict"].__name__="makeUrlStringFromDict";pyjamas.Location["makeUrlStringFromDict"].__bind_type__=0;pyjamas.Location["makeUrlStringFromDict"].__args__=[null,null,["d"]];pyjamas.Location["Location"]=(function(){var f=$pyjs__class_instance("Location");var e=new Object();var d;e.__md5__="f53a36321ede9aaa6aec3365a0ef0a68";d=$pyjs__bind_method(f,"__init__",function(g){if(this.__is_instance__===true){var h=this}else{var h=arguments[0];g=arguments[1]}h.location=g;h.searchDict=null;return null},1,[null,null,["self"],["location"]]);e.__init__=d;d=$pyjs__bind_method(f,"getHash",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return unescape(g.location.hash)},1,[null,null,["self"]]);e.getHash=d;d=$pyjs__bind_method(f,"getHashDict",function(){if(this.__is_instance__===true){var n=this}else{var n=arguments[0]}var o,m,l,k,h,i,g,j;if(pyjslib.bool((pyjslib.bool(o=!pyjslib.bool((((l=n.hashDict)!==null&(k=n).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"hashDict"):n.hashDict)))?o:!pyjslib.op_eq((((j=n.hashDictHash)!==null&(i=n).__is_instance__)&&typeof j=="function"?pyjslib.getattr(i,"hashDictHash"):n.hashDictHash),n.getHash())))){n.hashDictHash=n.getHash();n.hashDict=pyjamas.Location["makeUrlDict"](pyjslib.slice(n.getHash(),1,null))}return(((h=n.hashDict)!==null&(g=n).__is_instance__)&&typeof h=="function"?pyjslib.getattr(g,"hashDict"):n.hashDict)},1,[null,null,["self"]]);e.getHashDict=d;d=$pyjs__bind_method(f,"getHost",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var h,i;return(((i=g.location["host"])!==null&(h=g.location).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"host"):g.location["host"])},1,[null,null,["self"]]);e.getHost=d;d=$pyjs__bind_method(f,"getHostname",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(((i=g.location["hostname"])!==null&(h=g.location).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"hostname"):g.location["hostname"])},1,[null,null,["self"]]);e.getHostname=d;d=$pyjs__bind_method(f,"getHref",function(){if(this.__is_instance__===true){var i=this}else{var i=arguments[0]}var h,g;return(((h=i.location["href"])!==null&(g=i.location).__is_instance__)&&typeof h=="function"?pyjslib.getattr(g,"href"):i.location["href"])},1,[null,null,["self"]]);e.getHref=d;d=$pyjs__bind_method(f,"getPageHref",function(){if(this.__is_instance__===true){var i=this}else{var i=arguments[0]}var j,h,g;h=(((g=i.location["href"])!==null&(j=i.location).__is_instance__)&&typeof g=="function"?pyjslib.getattr(j,"href"):i.location["href"]);if(pyjslib.bool(h.find(String("?")))){h=h["$$split"](String("?")).__getitem__(0)}if(pyjslib.bool(h.find(String("#")))){h=h["$$split"](String("#")).__getitem__(0)}return h},1,[null,null,["self"]]);e.getPageHref=d;d=$pyjs__bind_method(f,"getPathname",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(((i=g.location["pathname"])!==null&(h=g.location).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"pathname"):g.location["pathname"])},1,[null,null,["self"]]);e.getPathname=d;d=$pyjs__bind_method(f,"getPort",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(((i=g.location["port"])!==null&(h=g.location).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"port"):g.location["port"])},1,[null,null,["self"]]);e.getPort=d;d=$pyjs__bind_method(f,"getProtocol",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}var i,h;return(((h=g.location["protocol"])!==null&(i=g.location).__is_instance__)&&typeof h=="function"?pyjslib.getattr(i,"protocol"):g.location["protocol"])},1,[null,null,["self"]]);e.getProtocol=d;d=$pyjs__bind_method(f,"getSearch",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}return unescape(g.location.search)},1,[null,null,["self"]]);e.getSearch=d;d=$pyjs__bind_method(f,"getSearchDict",function(){if(this.__is_instance__===true){var j=this}else{var j=arguments[0]}var m,l,k,i,h,g,n;if(pyjslib.bool(pyjslib.isinstance((((l=j.location)!==null&(k=j).__is_instance__)&&typeof l=="function"?pyjslib.getattr(k,"location"):j.location),pyjslib.str))){return pyjslib.dict([])}if(pyjslib.bool(!pyjslib.bool((((i=j.searchDict)!==null&(h=j).__is_instance__)&&typeof i=="function"?pyjslib.getattr(h,"searchDict"):j.searchDict)))){j.searchDict=pyjslib.dict([]);m=pyjslib.slice(j.getSearch(),1,null);j.searchDict=pyjamas.Location["makeUrlDict"](m)}return(((g=j.searchDict)!==null&(n=j).__is_instance__)&&typeof g=="function"?pyjslib.getattr(n,"searchDict"):j.searchDict)},1,[null,null,["self"]]);e.getSearchDict=d;d=$pyjs__bind_method(f,"getSearchVar",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}var i;i=g.getSearchDict();return i.get(h)},1,[null,null,["self"],["key"]]);e.getSearchVar=d;d=$pyjs__bind_method(f,"reload",function(){if(this.__is_instance__===true){var g=this}else{var g=arguments[0]}g.location["reload"]();return null},1,[null,null,["self"]]);e.reload=d;d=$pyjs__bind_method(f,"setHref",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.location.href=h;return null},1,[null,null,["self"],["href"]]);e.setHref=d;d=$pyjs__bind_method(f,"setSearch",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.location.search=h;return null},1,[null,null,["self"],["search"]]);e.setSearch=d;d=$pyjs__bind_method(f,"setSearchDict",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.setSearch(pyjamas.Location["makeUrlStringFromDict"](h));return null},1,[null,null,["self"],["searchDict"]]);e.setSearchDict=d;d=$pyjs__bind_method(f,"setHash",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.location.hash=h;return null},1,[null,null,["self"],["hash"]]);e.setHash=d;d=$pyjs__bind_method(f,"setHashDict",function(h){if(this.__is_instance__===true){var g=this}else{var g=arguments[0];h=arguments[1]}g.setHash(pyjamas.Location["makeUrlStringFromDict"](h));return null},1,[null,null,["self"],["hashDict"]]);e.setHashDict=d;return $pyjs__class_function(f,e,new Array(pyjslib.object))})();return this};
+/* start module: pyjamas.Location */
+$pyjs.loaded_modules['pyjamas.Location'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Location'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Location'];
+	if(typeof $pyjs.loaded_modules['pyjamas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas'].__was_initialized__) pyjslib['___import___']('pyjamas', null);
+	pyjamas['Location'] = $pyjs.loaded_modules["pyjamas.Location"];
+	pyjamas['Location'].__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Location';
+	var __name__ = pyjamas['Location'].__name__ = __mod_name__;
+	var Location = pyjamas['Location'];
+
+
+	pyjamas['Location']['makeUrlDict'] = function(urlstring) {
+		var pairs,$iter1_nextval,$iter1_type,$iter1_iter,dict,$iter1_array,pair,kv,$iter1_idx;
+		dict = pyjslib['dict']([]);
+		pairs = urlstring['$$split'](String('\x26'));
+		$iter1_iter = pairs;
+		if (typeof ($iter1_array = $iter1_iter.__array) != 'undefined') {
+			$iter1_type = 0;
+		} else {
+			$iter1_iter = $iter1_iter.__iter__();
+			$iter1_type = typeof ($iter1_array = $iter1_iter.__array) != 'undefined'? 0 : (typeof $iter1_iter.$genfunc == 'function'? 1 : -1);
+		}
+		$iter1_idx = 0;
+		while (typeof ($iter1_nextval=($iter1_type?($iter1_type > 0?$iter1_iter.next(true,false):pyjslib['wrapped_next']($iter1_iter)):$iter1_array[$iter1_idx++])) != 'undefined') {
+			pair = $iter1_nextval;
+			if (pyjslib['bool']((pyjslib['cmp'](pyjslib['len'](pair), 3) == -1))) {
+				continue;
+			}
+			kv = pair['$$split'](String('='), 1);
+			dict.__setitem__(kv.__getitem__(0), kv.__getitem__(1));
+		}
+		return dict;
+	};
+	pyjamas['Location']['makeUrlDict'].__name__ = 'makeUrlDict';
+
+	pyjamas['Location']['makeUrlDict'].__bind_type__ = 0;
+	pyjamas['Location']['makeUrlDict'].__args__ = [null,null,['urlstring']];
+	pyjamas['Location']['makeUrlStringFromDict'] = function(d) {
+		var pairs,$iter2_nextval,$iter2_type,$iter2_iter,k,$add2,$add3,$iter2_idx,$add1,$add4,v,$iter2_array;
+		pairs = pyjslib['list']([]);
+		$iter2_iter = d['iteritems']();
+		if (typeof ($iter2_array = $iter2_iter.__array) != 'undefined') {
+			$iter2_type = 0;
+		} else {
+			$iter2_iter = $iter2_iter.__iter__();
+			$iter2_type = typeof ($iter2_array = $iter2_iter.__array) != 'undefined'? 0 : (typeof $iter2_iter.$genfunc == 'function'? 1 : -1);
+		}
+		$iter2_idx = 0;
+		while (typeof ($iter2_nextval=($iter2_type?($iter2_type > 0?$iter2_iter.next(true,true):pyjslib['wrapped_next']($iter2_iter)):$iter2_array[$iter2_idx++])) != 'undefined') {
+			k = $iter2_nextval.__array[0];
+			v = $iter2_nextval.__array[1];
+			pairs['append']((typeof ($add3=(typeof ($add1=k)==typeof ($add2=String('=')) && (typeof $add1=='number'||typeof $add1=='string')?
+				$add1+$add2:
+				pyjslib['op_add']($add1,$add2)))==typeof ($add4=v) && (typeof $add3=='number'||typeof $add3=='string')?
+				$add3+$add4:
+				pyjslib['op_add']($add3,$add4)));
+		}
+		return String('\x26')['join'](pairs);
+	};
+	pyjamas['Location']['makeUrlStringFromDict'].__name__ = 'makeUrlStringFromDict';
+
+	pyjamas['Location']['makeUrlStringFromDict'].__bind_type__ = 0;
+	pyjamas['Location']['makeUrlStringFromDict'].__args__ = [null,null,['d']];
+	pyjamas['Location']['Location'] = (function(){
+		var $cls_instance = $pyjs__class_instance('Location');
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__md5__ = 'f53a36321ede9aaa6aec3365a0ef0a68';
+		$method = $pyjs__bind_method($cls_instance, '__init__', function(location) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				location = arguments[1];
+			}
+
+			self.location = location;
+			self.searchDict = null;
+			return null;
+		}
+	, 1, [null,null,['self'],['location']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getHash', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return unescape(self.location.hash);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHash'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getHashDict', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $or1,$or2,$attr1,$attr2,$attr5,$attr4,$attr6,$attr3;
+			if (pyjslib['bool']((pyjslib['bool']($or1=!pyjslib['bool'](((($attr1=self['hashDict']) !== null & ($attr2=self).__is_instance__) && typeof $attr1 == 'function'?
+						pyjslib['getattr']($attr2, 'hashDict'):
+						self['hashDict'])))?$or1:!pyjslib['op_eq'](((($attr3=self['hashDictHash']) !== null & ($attr4=self).__is_instance__) && typeof $attr3 == 'function'?
+						pyjslib['getattr']($attr4, 'hashDictHash'):
+						self['hashDictHash']), self['getHash']())))) {
+				self.hashDictHash = self['getHash']();
+				self.hashDict = pyjamas['Location']['makeUrlDict'](pyjslib['slice'](self['getHash'](), 1, null));
+			}
+			return ((($attr5=self['hashDict']) !== null & ($attr6=self).__is_instance__) && typeof $attr5 == 'function'?
+						pyjslib['getattr']($attr6, 'hashDict'):
+						self['hashDict']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHashDict'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getHost', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr8,$attr7;
+			return ((($attr7=self['location']['host']) !== null & ($attr8=self['location']).__is_instance__) && typeof $attr7 == 'function'?
+						pyjslib['getattr']($attr8, 'host'):
+						self['location']['host']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHost'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getHostname', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr9,$attr10;
+			return ((($attr9=self['location']['hostname']) !== null & ($attr10=self['location']).__is_instance__) && typeof $attr9 == 'function'?
+						pyjslib['getattr']($attr10, 'hostname'):
+						self['location']['hostname']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHostname'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getHref', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr11,$attr12;
+			return ((($attr11=self['location']['href']) !== null & ($attr12=self['location']).__is_instance__) && typeof $attr11 == 'function'?
+						pyjslib['getattr']($attr12, 'href'):
+						self['location']['href']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getHref'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getPageHref', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr14,href,$attr13;
+			href = ((($attr13=self['location']['href']) !== null & ($attr14=self['location']).__is_instance__) && typeof $attr13 == 'function'?
+						pyjslib['getattr']($attr14, 'href'):
+						self['location']['href']);
+			if (pyjslib['bool'](href['find'](String('?')))) {
+				href = href['$$split'](String('?')).__getitem__(0);
+			}
+			if (pyjslib['bool'](href['find'](String('#')))) {
+				href = href['$$split'](String('#')).__getitem__(0);
+			}
+			return href;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getPageHref'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getPathname', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr15,$attr16;
+			return ((($attr15=self['location']['pathname']) !== null & ($attr16=self['location']).__is_instance__) && typeof $attr15 == 'function'?
+						pyjslib['getattr']($attr16, 'pathname'):
+						self['location']['pathname']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getPathname'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getPort', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr17,$attr18;
+			return ((($attr17=self['location']['port']) !== null & ($attr18=self['location']).__is_instance__) && typeof $attr17 == 'function'?
+						pyjslib['getattr']($attr18, 'port'):
+						self['location']['port']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getPort'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getProtocol', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $attr20,$attr19;
+			return ((($attr19=self['location']['protocol']) !== null & ($attr20=self['location']).__is_instance__) && typeof $attr19 == 'function'?
+						pyjslib['getattr']($attr20, 'protocol'):
+						self['location']['protocol']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getProtocol'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getSearch', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return unescape(self.location.search);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getSearch'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getSearchDict', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var search,$attr21,$attr22,$attr23,$attr24,$attr25,$attr26;
+			if (pyjslib['bool'](pyjslib['isinstance'](((($attr21=self['location']) !== null & ($attr22=self).__is_instance__) && typeof $attr21 == 'function'?
+						pyjslib['getattr']($attr22, 'location'):
+						self['location']), pyjslib['str']))) {
+				return pyjslib['dict']([]);
+			}
+			if (pyjslib['bool'](!pyjslib['bool'](((($attr23=self['searchDict']) !== null & ($attr24=self).__is_instance__) && typeof $attr23 == 'function'?
+						pyjslib['getattr']($attr24, 'searchDict'):
+						self['searchDict'])))) {
+				self.searchDict = pyjslib['dict']([]);
+				search = pyjslib['slice'](self['getSearch'](), 1, null);
+				self.searchDict = pyjamas['Location']['makeUrlDict'](search);
+			}
+			return ((($attr25=self['searchDict']) !== null & ($attr26=self).__is_instance__) && typeof $attr25 == 'function'?
+						pyjslib['getattr']($attr26, 'searchDict'):
+						self['searchDict']);
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getSearchDict'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'getSearchVar', function(key) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+			}
+			var searchDict;
+			searchDict = self['getSearchDict']();
+			return searchDict['get'](key);
+		}
+	, 1, [null,null,['self'],['key']]);
+		$cls_definition['getSearchVar'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'reload', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['location']['reload']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['reload'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHref', function(href) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				href = arguments[1];
+			}
+
+			self['location'].href = href;
+			return null;
+		}
+	, 1, [null,null,['self'],['href']]);
+		$cls_definition['setHref'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setSearch', function(search) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				search = arguments[1];
+			}
+
+			self['location'].search = search;
+			return null;
+		}
+	, 1, [null,null,['self'],['search']]);
+		$cls_definition['setSearch'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setSearchDict', function(searchDict) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				searchDict = arguments[1];
+			}
+
+			self['setSearch'](pyjamas['Location']['makeUrlStringFromDict'](searchDict));
+			return null;
+		}
+	, 1, [null,null,['self'],['searchDict']]);
+		$cls_definition['setSearchDict'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHash', function(hash) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				hash = arguments[1];
+			}
+
+			self['location'].hash = hash;
+			return null;
+		}
+	, 1, [null,null,['self'],['hash']]);
+		$cls_definition['setHash'] = $method;
+		$method = $pyjs__bind_method($cls_instance, 'setHashDict', function(hashDict) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				hashDict = arguments[1];
+			}
+
+			self['setHash'](pyjamas['Location']['makeUrlStringFromDict'](hashDict));
+			return null;
+		}
+	, 1, [null,null,['self'],['hashDict']]);
+		$cls_definition['setHashDict'] = $method;
+		return $pyjs__class_function($cls_instance, $cls_definition, 
+		                            new Array(pyjslib.object));
+	})();
+	return this;
+}; /* end pyjamas.Location */
+
+
+/* end module: pyjamas.Location */
+
+

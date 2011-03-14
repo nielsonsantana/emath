@@ -12,15 +12,12 @@ $pyjs.loaded_modules['PaginaPrincipal'] = function (__mod_name__) {
 	PaginaPrincipal['RootPanel'] = pyjslib['___import___']('pyjamas.ui.RootPanel.RootPanel', null, null, false);
 	PaginaPrincipal['getFirstChild'] = pyjslib['___import___']('pyjamas.DOM.getFirstChild', null, null, false);
 	PaginaPrincipal['Window'] = pyjslib['___import___']('pyjamas.Window', null, null, false);
-	PaginaPrincipal['math'] = pyjslib['___import___']('math', null);
 	PaginaPrincipal['Button'] = pyjslib['___import___']('pyjamas.ui.Button.Button', null, null, false);
-	PaginaPrincipal['CustomButton'] = pyjslib['___import___']('pyjamas.ui.CustomButton.CustomButton', null, null, false);
 	PaginaPrincipal['Image'] = pyjslib['___import___']('pyjamas.ui.Image.Image', null, null, false);
 	PaginaPrincipal['HTML'] = pyjslib['___import___']('pyjamas.ui.HTML.HTML', null, null, false);
 	PaginaPrincipal['Label'] = pyjslib['___import___']('pyjamas.ui.Label.Label', null, null, false);
 	PaginaPrincipal['Grid'] = pyjslib['___import___']('pyjamas.ui.Grid.Grid', null, null, false);
 	PaginaPrincipal['TabPanel'] = pyjslib['___import___']('pyjamas.ui.TabPanel.TabPanel', null, null, false);
-	PaginaPrincipal['Soma'] = pyjslib['___import___']('componentes.soma.Soma', null, null, false);
 	PaginaPrincipal['ToggleButton'] = pyjslib['___import___']('pyjamas.ui.ToggleButton.ToggleButton', null, null, false);
 	PaginaPrincipal['PushButton'] = pyjslib['___import___']('pyjamas.ui.PushButton.PushButton', null, null, false);
 	PaginaPrincipal['PopupPanel'] = pyjslib['___import___']('pyjamas.ui.PopupPanel.PopupPanel', null, null, false);
@@ -28,62 +25,76 @@ $pyjs.loaded_modules['PaginaPrincipal'] = function (__mod_name__) {
 	PaginaPrincipal['VerticalPanel'] = pyjslib['___import___']('pyjamas.ui.VerticalPanel.VerticalPanel', null, null, false);
 	PaginaPrincipal['PopupPagina'] = pyjslib['___import___']('PopupPagina.PopupPagina', null, null, false);
 	PaginaPrincipal['DOM'] = pyjslib['___import___']('pyjamas.DOM', null, null, false);
-	PaginaPrincipal['pyjslib'] = pyjslib['___import___']('pyjslib', null);
-	PaginaPrincipal['dynamic'] = pyjslib['___import___']('dynamic', null);
+	PaginaPrincipal['PopupSoma'] = pyjslib['___import___']('componentes.soma.PopupSoma.PopupSoma', null, null, false);
+	PaginaPrincipal['PopupSub'] = pyjslib['___import___']('componentes.subtracao.PopupSub.PopupSub', null, null, false);
+	PaginaPrincipal['PopupEscalar'] = pyjslib['___import___']('componentes.produtoescalar.PopupEscalar.PopupEscalar', null, null, false);
+	PaginaPrincipal['PopupProduto'] = pyjslib['___import___']('componentes.produto.PopupProduto.PopupProduto', null, null, false);
 	PaginaPrincipal['initCanvas'] = function() {
 
-window.parent.init();
+		PaginaPrincipal.JS(String('window.parent.init()\x3B'));
+		return null;
 	};
 	PaginaPrincipal['initCanvas'].__name__ = 'initCanvas';
 
 	PaginaPrincipal['initCanvas'].__bind_type__ = 0;
 	PaginaPrincipal['initCanvas'].__args__ = [null,null];
+	PaginaPrincipal['AnimacaoSoma'] = function() {
+
+		PaginaPrincipal.JS(String('p = window.parent.Processing.getInstanceById(\x27soma\x27)\x3B p.loop()\x3B'));
+		return null;
+	};
+	PaginaPrincipal['AnimacaoSoma'].__name__ = 'AnimacaoSoma';
+
+	PaginaPrincipal['AnimacaoSoma'].__bind_type__ = 0;
+	PaginaPrincipal['AnimacaoSoma'].__args__ = [null,null];
 	PaginaPrincipal['MainPage'] = (function(){
 		var $cls_instance = $pyjs__class_instance('MainPage');
 		var $cls_definition = new Object();
 		var $method;
-		$cls_definition.__md5__ = '7d79d69e629d8586271fdb9e42d3c038';
+		$cls_definition.__md5__ = '4736b0cac6fa5762df424f5f6601bd5d';
 		$method = $pyjs__bind_method($cls_instance, 'onModuleLoad', function() {
 			if (this.__is_instance__ === true) {
 				var self = this;
 			} else {
 				var self = arguments[0];
 			}
-			var multiplicacaobutton,imagemSubtracao,imagemSoma,imagemMultiplicacao,grid,tabpanel,imagemMultiplicacaoPorEscalar,somabutton,MultiplicacaoPorEscalarbutton,contents,subtracaobutton;
-			self.popupsubtraca = $pyjs_kwargs_call(null, PaginaPrincipal['PopupPagina'], null, null, [{id:String('subtracaobutton'), datasrc:String('fsubtracao.pjs')}]);
-			self.popupsoma = $pyjs_kwargs_call(null, PaginaPrincipal['PopupPagina'], null, null, [{id:String('soma'), datasrc:String('fsoma.pjs')}]);
-			self.popupmultescalar = $pyjs_kwargs_call(null, PaginaPrincipal['PopupPagina'], null, null, [{id:String('escalar'), datasrc:String('fmultescalar.pjs')}]);
-			self.popupmult = $pyjs_kwargs_call(null, PaginaPrincipal['PopupPagina'], null, null, [{id:String('mult'), datasrc:String('fmult.pjs')}]);
-			self.dialogbbox = PaginaPrincipal['DialogBox']();
+			var imgbtnMultiplicacao,$attr8,$attr1,$attr2,$attr5,$attr4,$attr7,imgbtnMultiplicacaoPorEscalar,grid,tabpanel,imgbtnSubtracao,$attr6,$attr3,contents,imgbtnSoma;
+			self.popupsubtraca = $pyjs_kwargs_call(null, PaginaPrincipal['PopupSub'], null, null, [{id:String('sub'), datasrc:String('fsubtracao.pjs')}]);
+			self.popupsoma = $pyjs_kwargs_call(null, PaginaPrincipal['PopupSoma'], null, null, [{id:String('soma'), datasrc:String('fsoma.pjs')}]);
+			self.popupmultescalar = $pyjs_kwargs_call(null, PaginaPrincipal['PopupEscalar'], null, null, [{id:String('escalar'), datasrc:String('fmultescalar.pjs')}]);
+			self.popupmult = $pyjs_kwargs_call(null, PaginaPrincipal['PopupProduto'], null, null, [{id:String('mult'), datasrc:String('fmult.pjs')}]);
+			self['popupsoma'].iniciado = false;
 			tabpanel = PaginaPrincipal['TabPanel']();
 			grid = PaginaPrincipal['Grid'](4, 2);
-			imagemSoma = PaginaPrincipal['Image'](String('images/Soma_Matriz_sum_matrix.png'));
-			imagemSubtracao = PaginaPrincipal['Image'](String('images/subtracao_Matriz_subtract_matrix.png'));
-			imagemMultiplicacao = PaginaPrincipal['Image'](String('images/multiplicacao_Matriz_product_matrix.png'));
-			imagemMultiplicacaoPorEscalar = PaginaPrincipal['Image'](String('images/multiplicacao_por_escalar.png'));
-			somabutton = PaginaPrincipal['PushButton'](imagemSoma, imagemSoma, pyjslib['getattr'](self, String('onSomaButtonClick')));
-			subtracaobutton = PaginaPrincipal['PushButton'](imagemSubtracao, imagemSubtracao, pyjslib['getattr'](self, String('onSubtracaoButtonClick')));
-			multiplicacaobutton = PaginaPrincipal['PushButton'](imagemMultiplicacao, imagemMultiplicacao, pyjslib['getattr'](self, String('onMultiplicacaoButtonClick')));
-			MultiplicacaoPorEscalarbutton = PaginaPrincipal['PushButton'](imagemMultiplicacaoPorEscalar, imagemMultiplicacaoPorEscalar, pyjslib['getattr'](self, String('onMulPorEscalarButtonClick')));
-			somabutton['setWidth'](325);
-			subtracaobutton['setWidth'](325);
-			multiplicacaobutton['setWidth'](325);
-			MultiplicacaoPorEscalarbutton['setWidth'](325);
+			imgbtnSoma = $pyjs_kwargs_call(null, PaginaPrincipal['Image'], null, null, [{StyleName:String('gwt-ImageButton')}, String('images/Soma_Matriz_sum_matrix.png')]);
+			imgbtnSubtracao = $pyjs_kwargs_call(null, PaginaPrincipal['Image'], null, null, [{StyleName:String('gwt-ImageButton')}, String('images/subtracao_Matriz_subtract_matrix.png')]);
+			imgbtnMultiplicacao = $pyjs_kwargs_call(null, PaginaPrincipal['Image'], null, null, [{StyleName:String('gwt-ImageButton')}, String('images/multiplicacao_Matriz_product_matrix.png')]);
+			imgbtnMultiplicacaoPorEscalar = $pyjs_kwargs_call(null, PaginaPrincipal['Image'], null, null, [{StyleName:String('gwt-ImageButton')}, String('images/multiplicacao_por_escalar.png')]);
+			imgbtnSoma['addClickListener'](((($attr1=self['onSomaButtonClick']) !== null & ($attr2=self).__is_instance__) && typeof $attr1 == 'function'?
+						pyjslib['getattr']($attr2, 'onSomaButtonClick'):
+						self['onSomaButtonClick']));
+			imgbtnSubtracao['addClickListener'](((($attr3=self['onSubtracaoButtonClick']) !== null & ($attr4=self).__is_instance__) && typeof $attr3 == 'function'?
+						pyjslib['getattr']($attr4, 'onSubtracaoButtonClick'):
+						self['onSubtracaoButtonClick']));
+			imgbtnMultiplicacao['addClickListener'](((($attr5=self['onMultiplicacaoButtonClick']) !== null & ($attr6=self).__is_instance__) && typeof $attr5 == 'function'?
+						pyjslib['getattr']($attr6, 'onMultiplicacaoButtonClick'):
+						self['onMultiplicacaoButtonClick']));
+			imgbtnMultiplicacaoPorEscalar['addClickListener'](((($attr7=self['onMulPorEscalarButtonClick']) !== null & ($attr8=self).__is_instance__) && typeof $attr7 == 'function'?
+						pyjslib['getattr']($attr8, 'onMulPorEscalarButtonClick'):
+						self['onMulPorEscalarButtonClick']));
 			contents = PaginaPrincipal['VerticalPanel']();
 			contents['setSpacing'](4);
 			contents['add'](PaginaPrincipal['HTML'](String('You can place any contents you like in a dialog box.')));
-			self['dialogbbox']['setHTML'](String('\x3Cb\x3EWelcome to the dialog box\x3C/b\x3E'));
-			self['dialogbbox']['setTitle'](String('ssssssssss'));
-			self['dialogbbox']['setWidget'](contents);
-			grid['setWidget'](0, 0, somabutton);
-			grid['setWidget'](0, 1, subtracaobutton);
-			grid['setWidget'](2, 0, multiplicacaobutton);
-			grid['setWidget'](2, 1, MultiplicacaoPorEscalarbutton);
+			grid['setWidget'](0, 0, imgbtnSoma);
+			grid['setWidget'](0, 1, imgbtnSubtracao);
+			grid['setWidget'](2, 0, imgbtnMultiplicacao);
+			grid['setWidget'](2, 1, imgbtnMultiplicacaoPorEscalar);
 			grid['setStyleName'](PaginaPrincipal.element);
 			tabpanel['add'](PaginaPrincipal['HTML'](String('Modulo de introducao a matrizes')), String('\x3Ch2\x3EModulo de introducao a Matrizes\x3C/h2\x3E'), true);
-			tabpanel['add'](grid, String('\x3Ch2\x3E  eMath  \x3C/h2\x3E'), true);
+			tabpanel['add'](grid, String('\x3Ch2\x3E  Matrizes  \x3C/h2\x3E'), true);
 			tabpanel['add'](PaginaPrincipal['HTML'](String('Modulo de introducao a matrizes')), String('\x3Ch2\x3EAjuda para usar a ferramenta\x3C/h2\x3E'), true);
 			tabpanel['setSize'](String('90%'), String(' 70%'));
+			tabpanel['selectTab'](1);
 			PaginaPrincipal['RootPanel'](String('conteudo'))['add'](tabpanel);
 			return null;
 		}
@@ -98,7 +109,6 @@ window.parent.init();
 			}
 
 			self['popupsoma']['show']();
-			PaginaPrincipal['initCanvas']();
 			return null;
 		}
 	, 1, [null,null,['self'],['event']]);
@@ -112,7 +122,6 @@ window.parent.init();
 			}
 
 			self['popupsubtraca']['show']();
-			PaginaPrincipal['initCanvas']();
 			return null;
 		}
 	, 1, [null,null,['self'],['event']]);
@@ -126,7 +135,6 @@ window.parent.init();
 			}
 
 			self['popupmultescalar']['show']();
-			PaginaPrincipal['initCanvas']();
 			return null;
 		}
 	, 1, [null,null,['self'],['event']]);
@@ -140,7 +148,6 @@ window.parent.init();
 			}
 
 			self['popupmult']['show']();
-			PaginaPrincipal['initCanvas']();
 			return null;
 		}
 	, 1, [null,null,['self'],['event']]);
@@ -160,5 +167,5 @@ window.parent.init();
 
 
 /*
-PYJS_DEPS: ['pyjamas.Canvas2D.Canvas', 'pyjamas', 'pyjamas.Canvas2D', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui', 'pyjamas.ui.RootPanel', 'pyjamas.DOM.getFirstChild', 'pyjamas.DOM', 'pyjamas.Window', 'math', 'pyjamas.ui.Button.Button', 'pyjamas.ui.Button', 'pyjamas.ui.CustomButton.CustomButton', 'pyjamas.ui.CustomButton', 'pyjamas.ui.Image.Image', 'pyjamas.ui.Image', 'pyjamas.ui.HTML.HTML', 'pyjamas.ui.HTML', 'pyjamas.ui.Label.Label', 'pyjamas.ui.Label', 'pyjamas.ui.Grid.Grid', 'pyjamas.ui.Grid', 'pyjamas.ui.TabPanel.TabPanel', 'pyjamas.ui.TabPanel', 'componentes.soma.Soma', 'componentes', 'componentes.soma', 'pyjamas.ui.ToggleButton.ToggleButton', 'pyjamas.ui.ToggleButton', 'pyjamas.ui.PushButton.PushButton', 'pyjamas.ui.PushButton', 'pyjamas.ui.PopupPanel.PopupPanel', 'pyjamas.ui.PopupPanel', 'pyjamas.ui.DialogBox.DialogBox', 'pyjamas.ui.DialogBox', 'pyjamas.ui.VerticalPanel.VerticalPanel', 'pyjamas.ui.VerticalPanel', 'PopupPagina.PopupPagina', 'PopupPagina', 'pyjslib', 'dynamic']
+PYJS_DEPS: ['pyjamas.Canvas2D.Canvas', 'pyjamas', 'pyjamas.Canvas2D', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui', 'pyjamas.ui.RootPanel', 'pyjamas.DOM.getFirstChild', 'pyjamas.DOM', 'pyjamas.Window', 'pyjamas.ui.Button.Button', 'pyjamas.ui.Button', 'pyjamas.ui.Image.Image', 'pyjamas.ui.Image', 'pyjamas.ui.HTML.HTML', 'pyjamas.ui.HTML', 'pyjamas.ui.Label.Label', 'pyjamas.ui.Label', 'pyjamas.ui.Grid.Grid', 'pyjamas.ui.Grid', 'pyjamas.ui.TabPanel.TabPanel', 'pyjamas.ui.TabPanel', 'pyjamas.ui.ToggleButton.ToggleButton', 'pyjamas.ui.ToggleButton', 'pyjamas.ui.PushButton.PushButton', 'pyjamas.ui.PushButton', 'pyjamas.ui.PopupPanel.PopupPanel', 'pyjamas.ui.PopupPanel', 'pyjamas.ui.DialogBox.DialogBox', 'pyjamas.ui.DialogBox', 'pyjamas.ui.VerticalPanel.VerticalPanel', 'pyjamas.ui.VerticalPanel', 'PopupPagina.PopupPagina', 'PopupPagina', 'componentes.soma.PopupSoma.PopupSoma', 'componentes', 'componentes.soma', 'componentes.soma.PopupSoma', 'componentes.subtracao.PopupSub.PopupSub', 'componentes.subtracao', 'componentes.subtracao.PopupSub', 'componentes.produtoescalar.PopupEscalar.PopupEscalar', 'componentes.produtoescalar', 'componentes.produtoescalar.PopupEscalar', 'componentes.produto.PopupProduto.PopupProduto', 'componentes.produto', 'componentes.produto.PopupProduto']
 */
